@@ -21,7 +21,7 @@
 		8E9264802AA84B5D00BB63E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8E9264822AA84B5E00BB63E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E9264852AA84B5E00BB63E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8E92648D2AA84DB700BB63E1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		8E92648D2AA84DB700BB63E1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = freewill/Resources/R.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +55,8 @@
 		8E92647D2AA84B5D00BB63E1 /* freewill */ = {
 			isa = PBXGroup;
 			children = (
-				8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */,
-				8E9264802AA84B5D00BB63E1 /* ContentView.swift */,
-				8E9264822AA84B5E00BB63E1 /* Assets.xcassets */,
-				8E92648D2AA84DB700BB63E1 /* R.generated.swift */,
+				8E9264942AA8543A00BB63E1 /* Sources */,
+				8E9264932AA8543000BB63E1 /* Resources */,
 				8E9264842AA84B5E00BB63E1 /* Preview Content */,
 			);
 			path = freewill;
@@ -70,6 +68,32 @@
 				8E9264852AA84B5E00BB63E1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8E9264922AA8542500BB63E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E9264802AA84B5D00BB63E1 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E9264932AA8543000BB63E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E9264822AA84B5E00BB63E1 /* Assets.xcassets */,
+				8E92648D2AA84DB700BB63E1 /* R.generated.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8E9264942AA8543A00BB63E1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */,
+				8E9264922AA8542500BB63E1 /* Views */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
