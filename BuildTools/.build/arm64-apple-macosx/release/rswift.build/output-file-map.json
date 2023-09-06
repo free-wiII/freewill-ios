@@ -1,0 +1,22 @@
+{
+  "": {
+    "dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/rswift.build/rswift.d",
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/rswift.build/rswift.o",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/rswift.build/master.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/rswift/App.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/rswift.build/App.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/rswift.build/App~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/rswift.build/App.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/rswift/Config.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/rswift.build/Config.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/rswift.build/Config~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/rswift.build/Config.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/rswift/RswiftCore.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/rswift.build/RswiftCore.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/rswift.build/RswiftCore~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/rswift.build/RswiftCore.swiftdeps"
+  }
+}

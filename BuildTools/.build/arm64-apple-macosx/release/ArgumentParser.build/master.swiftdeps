@@ -1,0 +1,87 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "b9fe14d179ace6f9e482e0149122df69eee82fe986b601db746db2a06bae58c5"
+build_start_time: [1693980177, 79725000]
+build_end_time: [1693980184, 523744000]
+inputs:
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/BashCompletionsGenerator.swift"
+  : [1693980174, 521267903]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/CompletionsGenerator.swift"
+  : [1693980174, 521352445]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/FishCompletionsGenerator.swift"
+  : [1693980174, 521429112]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/ZshCompletionsGenerator.swift"
+  : [1693980174, 521519945]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Argument.swift"
+  : [1693980174, 526705956]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentHelp.swift"
+  : [1693980174, 526801331]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentVisibility.swift"
+  : [1693980174, 526876290]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/CompletionKind.swift"
+  : [1693980174, 526939540]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Errors.swift"
+  : [1693980174, 527011040]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Flag.swift"
+  : [1693980174, 527285374]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/NameSpecification.swift"
+  : [1693980174, 527385749]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Option.swift"
+  : [1693980174, 527537708]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/OptionGroup.swift"
+  : [1693980174, 527624625]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/AsyncParsableCommand.swift"
+  : [1693980174, 527940375]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandConfiguration.swift"
+  : [1693980174, 528047500]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/EnumerableFlag.swift"
+  : [1693980174, 528125209]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ExpressibleByArgument.swift"
+  : [1693980174, 528204126]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArguments.swift"
+  : [1693980174, 528309084]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArgumentsValidation.swift"
+  : [1693980174, 528401626]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableCommand.swift"
+  : [1693980174, 528495418]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDecoder.swift"
+  : [1693980174, 528629710]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDefinition.swift"
+  : [1693980174, 528733960]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentSet.swift"
+  : [1693980174, 528887169]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/CommandParser.swift"
+  : [1693980174, 529024544]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputKey.swift"
+  : [1693980174, 529086711]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputOrigin.swift"
+  : [1693980174, 529171836]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Name.swift"
+  : [1693980174, 529240336]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Parsed.swift"
+  : [1693980174, 529314336]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParsedValues.swift"
+  : [1693980174, 529379795]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParserError.swift"
+  : [1693980174, 529450586]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/SplitArguments.swift"
+  : [1693980174, 529571129]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/DumpHelpGenerator.swift"
+  : [1693980174, 529700795]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpCommand.swift"
+  : [1693980174, 529901087]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpGenerator.swift"
+  : [1693980174, 530088880]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/MessageInfo.swift"
+  : [1693980174, 530197838]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/UsageGenerator.swift"
+  : [1693980174, 530331047]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/CollectionExtensions.swift"
+  : [1693980174, 530507172]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Platform.swift"
+  : [1693980174, 530691089]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SequenceExtensions.swift"
+  : [1693980174, 530772923]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/StringExtensions.swift"
+  : [1693980174, 530824464]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Tree.swift"
+  : [1693980174, 530893214]

@@ -1,0 +1,43 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "e3df21bccc0f0aebf76f845c060f3ad82dbd777d104e520e698e64f8233b79e1"
+build_start_time: [1693980181, 705814000]
+build_end_time: [1693980191, 976559000]
+inputs:
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/AccessibilityIdentifier+Generator.swift"
+  : [1693980174, 854934585]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/AssetCatalog+Generator.swift"
+  : [1693980174, 855023169]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/Extensions/Array+Extensions.swift"
+  : [1693980174, 855146169]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/Extensions/String+Extensions.swift"
+  : [1693980174, 855230920]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/FileResource+Generator.swift"
+  : [1693980174, 855305086]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/FontResource+Generator.swift"
+  : [1693980174, 855388462]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/Nib+Generator.swift"
+  : [1693980174, 855492670]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/PropertyListResource+Generator.swift"
+  : [1693980174, 855777837]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/ReuseIdentifier+Generator.swift"
+  : [1693980174, 855899171]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/Segue+Generator.swift"
+  : [1693980174, 855990754]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/Shared/AssetCatalogMergedNamespaces.swift"
+  : [1693980174, 856100755]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/Shared/LocaleReference+Generator.swift"
+  : [1693980174, 856165880]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/Shared/SwiftIdentifier.swift"
+  : [1693980174, 856247797]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/Shared/TypeReference+Generator.swift"
+  : [1693980174, 856313922]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/Storyboard+Generator.swift"
+  : [1693980174, 856376338]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/StringsTable+Generator.swift"
+  : [1693980174, 856500297]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/SwiftSyntax/Struct.swift"
+  : [1693980174, 856654922]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/SwiftSyntax/StructMembersBuilder.swift"
+  : [1693980174, 856741423]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftGenerators/XcodeProject+Generator.swift"
+  : [1693980174, 856842923]
