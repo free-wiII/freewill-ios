@@ -1,0 +1,172 @@
+{
+  "": {
+    "dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/RswiftResources.d",
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/RswiftResources.o",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/master.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/AssetCatalog.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/AssetCatalog.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/AssetCatalog~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/AssetCatalog.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/ColorResource.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/ColorResource.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/ColorResource~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/ColorResource.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/DataResource.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/DataResource.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/DataResource~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/DataResource.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/FileResource.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/FileResource.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/FileResource~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/FileResource.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/FontResource.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/FontResource.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/FontResource~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/FontResource.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/ImageResource.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/ImageResource.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/ImageResource~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/ImageResource.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/Bundle+Extensions.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/Bundle+Extensions.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/Bundle+Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/Bundle+Extensions.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/ColorResource+Integrations.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/ColorResource+Integrations.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/ColorResource+Integrations~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/ColorResource+Integrations.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/DataResource+Integrations.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/DataResource+Integrations.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/DataResource+Integrations~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/DataResource+Integrations.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/FileResource+Integrations.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/FileResource+Integrations.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/FileResource+Integrations~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/FileResource+Integrations.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/FontResource+Integrations.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/FontResource+Integrations.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/FontResource+Integrations~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/FontResource+Integrations.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/ImageResource+Integrations.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/ImageResource+Integrations.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/ImageResource+Integrations~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/ImageResource+Integrations.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/NibReference+Integrations.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/NibReference+Integrations.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/NibReference+Integrations~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/NibReference+Integrations.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/ReuseIdentifier+Integrations.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/ReuseIdentifier+Integrations.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/ReuseIdentifier+Integrations~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/ReuseIdentifier+Integrations.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/SegueIdentifier+Integrations.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/SegueIdentifier+Integrations.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/SegueIdentifier+Integrations~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/SegueIdentifier+Integrations.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/StoryboardReference+Integrations.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/StoryboardReference+Integrations.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/StoryboardReference+Integrations~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/StoryboardReference+Integrations.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/StringResource+Integrations.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/StringResource+Integrations.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/StringResource+Integrations~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Integrations/StringResource+Integrations.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/NibResource.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/NibResource.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/NibResource~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/NibResource.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/PropertyListResource.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/PropertyListResource.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/PropertyListResource~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/PropertyListResource.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/DeploymentTarget.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/DeploymentTarget.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/DeploymentTarget~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/DeploymentTarget.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/LocaleReference.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/LocaleReference.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/LocaleReference~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/LocaleReference.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/ModuleReference.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/ModuleReference.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/ModuleReference~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/ModuleReference.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/NameCatalog.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/NameCatalog.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/NameCatalog~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/NameCatalog.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/Reusable.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/Reusable.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/Reusable~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/Reusable.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/StoryboardReference.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/StoryboardReference.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/StoryboardReference~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/StoryboardReference.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/StringParam+Extensions.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/StringParam+Extensions.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/StringParam+Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/StringParam+Extensions.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/StringParam.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/StringParam.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/StringParam~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/StringParam.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/StringsTable.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/StringsTable.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/StringsTable~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/StringsTable.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/TypeReference.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/TypeReference.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/TypeReference~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/TypeReference.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/Unifiable.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/Unifiable.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/Unifiable~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/Unifiable.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/ValidationError.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/ValidationError.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/ValidationError~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/Shared/ValidationError.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/StoryboardResource.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/StoryboardResource.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/StoryboardResource~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/StoryboardResource.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/StringResource.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/StringResource.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/StringResource~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/StringResource.swiftdeps"
+  }
+}

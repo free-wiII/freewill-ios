@@ -1,0 +1,4 @@
+module RswiftGenerators {
+    header "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftGenerators.build/RswiftGenerators-Swift.h"
+    requires objc
+}

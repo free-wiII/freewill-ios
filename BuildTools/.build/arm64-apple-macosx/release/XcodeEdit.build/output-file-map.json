@@ -1,0 +1,47 @@
+{
+  "": {
+    "dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/XcodeEdit.d",
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/XcodeEdit.o",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/master.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/XcodeEdit/Sources/XcodeEdit/AllObjects.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/AllObjects.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/AllObjects~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/AllObjects.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/XcodeEdit/Sources/XcodeEdit/Extensions.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/Extensions.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/Extensions.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/XcodeEdit/Sources/XcodeEdit/PBXIdentifier.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/PBXIdentifier.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/PBXIdentifier~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/PBXIdentifier.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/XcodeEdit/Sources/XcodeEdit/PBXObject+Fields.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/PBXObject+Fields.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/PBXObject+Fields~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/PBXObject+Fields.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/XcodeEdit/Sources/XcodeEdit/PBXObject.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/PBXObject.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/PBXObject~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/PBXObject.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/XcodeEdit/Sources/XcodeEdit/Serialization.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/Serialization.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/Serialization~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/Serialization.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/XcodeEdit/Sources/XcodeEdit/XCProjectFile+Rswift.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/XCProjectFile+Rswift.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/XCProjectFile+Rswift~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/XCProjectFile+Rswift.swiftdeps"
+  },
+  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/XcodeEdit/Sources/XcodeEdit/XCProjectFile.swift": {
+    "object": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/XCProjectFile.swift.o",
+    "swiftmodule": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/XCProjectFile~partial.swiftmodule",
+    "swift-dependencies": "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/XCProjectFile.swiftdeps"
+  }
+}

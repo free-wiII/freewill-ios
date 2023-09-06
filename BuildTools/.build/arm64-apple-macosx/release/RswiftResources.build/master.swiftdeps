@@ -1,0 +1,71 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "c6b416af876d80a8e1c57b8f6d37baf7e29a52dc0e64f135817bf9bbff66726e"
+build_start_time: [1693980176, 106596000]
+build_end_time: [1693980181, 619419000]
+inputs:
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/AssetCatalog.swift"
+  : [1693980174, 858831635]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/ColorResource.swift"
+  : [1693980174, 858907677]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/DataResource.swift"
+  : [1693980174, 858978344]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/FileResource.swift"
+  : [1693980174, 859038219]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/FontResource.swift"
+  : [1693980174, 859093344]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/ImageResource.swift"
+  : [1693980174, 859147969]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/Bundle+Extensions.swift"
+  : [1693980174, 859245053]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/ColorResource+Integrations.swift"
+  : [1693980174, 859322511]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/DataResource+Integrations.swift"
+  : [1693980174, 859379220]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/FileResource+Integrations.swift"
+  : [1693980174, 859442178]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/FontResource+Integrations.swift"
+  : [1693980174, 859559845]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/ImageResource+Integrations.swift"
+  : [1693980174, 859623137]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/NibReference+Integrations.swift"
+  : [1693980174, 859698679]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/ReuseIdentifier+Integrations.swift"
+  : [1693980174, 859777220]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/SegueIdentifier+Integrations.swift"
+  : [1693980174, 859863804]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/StoryboardReference+Integrations.swift"
+  : [1693980174, 859967971]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Integrations/StringResource+Integrations.swift"
+  : [1693980174, 860091471]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/NibResource.swift"
+  : [1693980174, 860226596]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/PropertyListResource.swift"
+  : [1693980174, 860306513]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/DeploymentTarget.swift"
+  : [1693980174, 860465680]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/LocaleReference.swift"
+  : [1693980174, 860552555]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/ModuleReference.swift"
+  : [1693980174, 860630097]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/NameCatalog.swift"
+  : [1693980174, 860698264]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/Reusable.swift"
+  : [1693980174, 860766097]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/StoryboardReference.swift"
+  : [1693980174, 860848639]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/StringParam+Extensions.swift"
+  : [1693980174, 860930640]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/StringParam.swift"
+  : [1693980174, 861034015]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/StringsTable.swift"
+  : [1693980174, 861110473]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/TypeReference.swift"
+  : [1693980174, 861175348]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/Unifiable.swift"
+  : [1693980174, 861246140]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/Shared/ValidationError.swift"
+  : [1693980174, 861306807]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/StoryboardResource.swift"
+  : [1693980174, 861366015]
+  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/RswiftResources/StringResource.swift"
+  : [1693980174, 861435057]

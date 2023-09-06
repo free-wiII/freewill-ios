@@ -11,6 +11,8 @@
 		8E9264812AA84B5D00BB63E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264802AA84B5D00BB63E1 /* ContentView.swift */; };
 		8E9264832AA84B5E00BB63E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9264822AA84B5E00BB63E1 /* Assets.xcassets */; };
 		8E9264862AA84B5E00BB63E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9264852AA84B5E00BB63E1 /* Preview Assets.xcassets */; };
+		8E92648E2AA84DB700BB63E1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92648D2AA84DB700BB63E1 /* R.generated.swift */; };
+		8E9264912AA84DEA00BB63E1 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9264902AA84DEA00BB63E1 /* RswiftLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		8E9264802AA84B5D00BB63E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8E9264822AA84B5E00BB63E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E9264852AA84B5E00BB63E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8E92648D2AA84DB700BB63E1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E9264912AA84DEA00BB63E1 /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +58,7 @@
 				8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */,
 				8E9264802AA84B5D00BB63E1 /* ContentView.swift */,
 				8E9264822AA84B5E00BB63E1 /* Assets.xcassets */,
+				8E92648D2AA84DB700BB63E1 /* R.generated.swift */,
 				8E9264842AA84B5E00BB63E1 /* Preview Content */,
 			);
 			path = freewill;
@@ -74,6 +79,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E9264892AA84B5E00BB63E1 /* Build configuration list for PBXNativeTarget "freewill" */;
 			buildPhases = (
+				8E92648C2AA84CDF00BB63E1 /* r.swift */,
 				8E9264772AA84B5D00BB63E1 /* Sources */,
 				8E9264782AA84B5D00BB63E1 /* Frameworks */,
 				8E9264792AA84B5D00BB63E1 /* Resources */,
@@ -83,6 +89,9 @@
 			dependencies = (
 			);
 			name = freewill;
+			packageProductDependencies = (
+				8E9264902AA84DEA00BB63E1 /* RswiftLibrary */,
+			);
 			productName = freewill;
 			productReference = 8E92647B2AA84B5D00BB63E1 /* freewill.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +120,9 @@
 				Base,
 			);
 			mainGroup = 8E9264722AA84B5D00BB63E1;
+			packageReferences = (
+				8E92648F2AA84DEA00BB63E1 /* XCRemoteSwiftPackageReference "R.swift" */,
+			);
 			productRefGroup = 8E92647C2AA84B5D00BB63E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,6 +144,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8E92648C2AA84CDF00BB63E1 /* r.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = r.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd BuildTools\nSDKROOT=macosx\nswift run -c release rswift generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8E9264772AA84B5D00BB63E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +174,7 @@
 			files = (
 				8E9264812AA84B5D00BB63E1 /* ContentView.swift in Sources */,
 				8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */,
+				8E92648E2AA84DB700BB63E1 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +375,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E92648F2AA84DEA00BB63E1 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E9264902AA84DEA00BB63E1 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E92648F2AA84DEA00BB63E1 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E9264732AA84B5D00BB63E1 /* Project object */;
 }

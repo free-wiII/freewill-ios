@@ -1,0 +1,4 @@
+module XcodeEdit {
+    header "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/XcodeEdit.build/XcodeEdit-Swift.h"
+    requires objc
+}
