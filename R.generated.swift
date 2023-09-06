@@ -12,8 +12,12 @@ let R = _R(bundle: Bundle(for: BundleFinder.self))
 struct _R {
   let bundle: Foundation.Bundle
   var color: color { .init(bundle: bundle) }
+  var image: image { .init(bundle: bundle) }
 
   func color(bundle: Foundation.Bundle) -> color {
+    .init(bundle: bundle)
+  }
+  func image(bundle: Foundation.Bundle) -> image {
     .init(bundle: bundle)
   }
   func validate() throws {
@@ -57,5 +61,19 @@ struct _R {
 
     /// Color `white`.
     var white: RswiftResources.ColorResource { .init(name: "white", path: [], bundle: bundle) }
+  }
+
+  /// This `_R.image` struct is generated, and contains static references to 3 images.
+  struct image {
+    let bundle: Foundation.Bundle
+
+    /// Image `bookmark`.
+    var bookmark: RswiftResources.ImageResource { .init(name: "bookmark", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `house`.
+    var house: RswiftResources.ImageResource { .init(name: "house", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `person_circle`.
+    var person_circle: RswiftResources.ImageResource { .init(name: "person_circle", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 }
