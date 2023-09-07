@@ -11,19 +11,23 @@ struct NavigationBar<LeadingContent, CenterContent, TrailingContent>: View where
   
   // MARK: - Properties
   
-  let leadingContent: () -> LeadingContent?
-  let centerContent: () -> CenterContent?
-  let trailingContent: () -> TrailingContent?
+  private let leadingContent: () -> LeadingContent?
+  private let centerContent: () -> CenterContent?
+  private let trailingContent: () -> TrailingContent?
+  private let isDividerShown: Bool
+  
   
   
   // MARK: - Initializers
   
   init(@ViewBuilder leadingContent: @escaping () -> LeadingContent? = { nil },
        @ViewBuilder centerContent: @escaping () -> CenterContent? = { nil },
-       @ViewBuilder trailingContent: @escaping () -> TrailingContent? = { nil }) {
+       @ViewBuilder trailingContent: @escaping () -> TrailingContent? = { nil },
+       isDividerShown: Bool = true) {
     self.leadingContent = leadingContent
     self.centerContent = centerContent
     self.trailingContent = trailingContent
+    self.isDividerShown = isDividerShown
   }
   
   
@@ -40,10 +44,12 @@ struct NavigationBar<LeadingContent, CenterContent, TrailingContent>: View where
       
       centerContent()
       
-      VStack {
-        Spacer()
-        Divider()
-          .overlay(Color.fwGray30)
+      if isDividerShown {
+        VStack {
+          Spacer()
+          Divider()
+            .overlay(Color.fwGray30)
+        }
       }
     }
     .background(Color.white.ignoresSafeArea())
