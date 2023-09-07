@@ -19,7 +19,7 @@ struct MainTabbedView: View {
   var body: some View {
     ZStack(alignment: .bottom) {
       TabView(selection: $selectedTab) {
-        Text("main")
+        MainView()
           .tag(TabItem.main)
         
         Text("bookmark")
