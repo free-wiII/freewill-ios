@@ -49,7 +49,16 @@ struct MainView: View {
       }, isDividerShown: false)
       
       FilterCriteriaSelector(selectedCriteria: $viewModel.selectedCriteria)
-      Spacer()
+      
+      ScrollView {
+        LazyVStack(spacing: 24) {
+          ForEach(0..<10) { _ in
+            FeedItem()
+          }
+        }
+        .padding(.vertical, 20)
+        .padding(.horizontal, 16)
+      }
     }
   }
 }

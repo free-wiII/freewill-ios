@@ -22,6 +22,8 @@
 		8E9264CB2AA9D98000BB63E1 /* FilterCriteriaSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264CA2AA9D98000BB63E1 /* FilterCriteriaSelector.swift */; };
 		8E9264CD2AA9DB6000BB63E1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264CC2AA9DB6000BB63E1 /* MainView.swift */; };
 		8E9264CF2AA9DDE700BB63E1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264CE2AA9DDE700BB63E1 /* MainViewModel.swift */; };
+		8E9264D12AA9E0B000BB63E1 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264D02AA9E0B000BB63E1 /* FeedItem.swift */; };
+		8E9264D32AA9E44800BB63E1 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264D22AA9E44800BB63E1 /* BlurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		8E9264CA2AA9D98000BB63E1 /* FilterCriteriaSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCriteriaSelector.swift; sourceTree = "<group>"; };
 		8E9264CC2AA9DB6000BB63E1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		8E9264CE2AA9DDE700BB63E1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8E9264D02AA9E0B000BB63E1 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		8E9264D22AA9E44800BB63E1 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 				8E9264962AA854B100BB63E1 /* TabBar.swift */,
 				8E9264C32AA9C55B00BB63E1 /* NavigationBar.swift */,
 				8E9264C92AA9D96400BB63E1 /* FilterCriteria */,
+				8E9264D02AA9E0B000BB63E1 /* FeedItem.swift */,
+				8E9264D22AA9E44800BB63E1 /* BlurView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -248,11 +254,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E9264812AA84B5D00BB63E1 /* MainTabbedView.swift in Sources */,
+				8E9264D32AA9E44800BB63E1 /* BlurView.swift in Sources */,
 				8E9264CB2AA9D98000BB63E1 /* FilterCriteriaSelector.swift in Sources */,
 				8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */,
 				8E92649C2AA856E700BB63E1 /* R.generated.swift in Sources */,
 				8E92649A2AA854C800BB63E1 /* TabItem.swift in Sources */,
 				8E9264C82AA9D6CF00BB63E1 /* FilterCriteriaChip.swift in Sources */,
+				8E9264D12AA9E0B000BB63E1 /* FeedItem.swift in Sources */,
 				8E9264C42AA9C55B00BB63E1 /* NavigationBar.swift in Sources */,
 				8E9264CD2AA9DB6000BB63E1 /* MainView.swift in Sources */,
 				8E9264A02AA857C100BB63E1 /* ColorSet.swift in Sources */,
