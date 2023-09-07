@@ -12,6 +12,7 @@ struct MainTabbedView: View {
   // MARK: - Properties
   
   @State private var selectedTab: TabItem = .main
+  @State private var isLoginViewShown = false
   
   
   // MARK: - Views
@@ -30,6 +31,12 @@ struct MainTabbedView: View {
       }
       
       TabBar(selectedTab: $selectedTab)
+    }
+    .fullScreenCover(isPresented: $isLoginViewShown) {
+      LoginView()
+    }
+    .onAppear {
+      isLoginViewShown = true
     }
   }
 }

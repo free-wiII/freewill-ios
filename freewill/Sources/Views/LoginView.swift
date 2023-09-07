@@ -9,6 +9,10 @@ import SwiftUI
 
 struct LoginView: View {
   
+  // MARK: - Properties
+  
+  @Environment(\.dismiss) private var dismiss
+  
   
   // MARK: - Views
   
@@ -34,7 +38,7 @@ struct LoginView: View {
         .frame(height: 36)
       
       Button {
-        // action
+        dismiss()
       } label: {
         Text("로그인 없이 둘러보기")
           .font(.system(size: 15))
