@@ -1,5 +1,5 @@
 //
-//  FilterCriterialChip.swift
+//  FilterCriteriaChip.swift
 //  freewill
 //
 //  Created by 이승기 on 2023/09/07.
@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct FilterCriterialChip: View {
+struct FilterCriteriaChip: View {
   
   // MARK: - Properties
   
   @Binding var isSelected: Bool
-  let criterial: FilterCriteria
+  let criteria: FilterCriteria
   
 
   // MARK: - Views
   
   var body: some View {
-    Text(criterial.description)
+    Text(criteria.description)
       .font(.system(size: 13, weight: .bold))
       .foregroundColor(isSelected ? Color.fwWhite : Color.fwBlack)
       .padding(.horizontal, 16)
@@ -31,11 +31,11 @@ struct FilterCriterialChip: View {
 
 // MARK: - Preview
 
-struct FilterCriterialChip_Preview: PreviewProvider {
+struct FilterCriteriaChip_Preview: PreviewProvider {
   static var previews: some View {
     VStack {
       ForEach(FilterCriteria.allCases, id: \.self) { criteria in
-        FilterCriterialChip(isSelected: .constant(Bool.random()), criterial: criteria)
+        FilterCriteriaChip(isSelected: .constant(Bool.random()), criteria: criteria)
       }
     }
     .previewLayout(.sizeThatFits)

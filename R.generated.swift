@@ -63,7 +63,7 @@ struct _R {
     var white: RswiftResources.ColorResource { .init(name: "white", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 3 images.
+  /// This `_R.image` struct is generated, and contains static references to 5 images.
   struct image {
     let bundle: Foundation.Bundle
 
@@ -73,7 +73,13 @@ struct _R {
     /// Image `house`.
     var house: RswiftResources.ImageResource { .init(name: "house", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
+    /// Image `loupe`.
+    var loupe: RswiftResources.ImageResource { .init(name: "loupe", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `person_circle`.
     var person_circle: RswiftResources.ImageResource { .init(name: "person_circle", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `plus`.
+    var plus: RswiftResources.ImageResource { .init(name: "plus", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 }

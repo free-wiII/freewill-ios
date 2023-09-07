@@ -18,7 +18,10 @@
 		8E9264A02AA857C100BB63E1 /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92649F2AA857C100BB63E1 /* ColorSet.swift */; };
 		8E9264C42AA9C55B00BB63E1 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264C32AA9C55B00BB63E1 /* NavigationBar.swift */; };
 		8E9264C62AA9D48400BB63E1 /* FilterCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264C52AA9D48400BB63E1 /* FilterCriteria.swift */; };
-		8E9264C82AA9D6CF00BB63E1 /* FilterCriterialChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264C72AA9D6CF00BB63E1 /* FilterCriterialChip.swift */; };
+		8E9264C82AA9D6CF00BB63E1 /* FilterCriteriaChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264C72AA9D6CF00BB63E1 /* FilterCriteriaChip.swift */; };
+		8E9264CB2AA9D98000BB63E1 /* FilterCriteriaSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264CA2AA9D98000BB63E1 /* FilterCriteriaSelector.swift */; };
+		8E9264CD2AA9DB6000BB63E1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264CC2AA9DB6000BB63E1 /* MainView.swift */; };
+		8E9264CF2AA9DDE700BB63E1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264CE2AA9DDE700BB63E1 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +36,10 @@
 		8E92649F2AA857C100BB63E1 /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
 		8E9264C32AA9C55B00BB63E1 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		8E9264C52AA9D48400BB63E1 /* FilterCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCriteria.swift; sourceTree = "<group>"; };
-		8E9264C72AA9D6CF00BB63E1 /* FilterCriterialChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCriterialChip.swift; sourceTree = "<group>"; };
+		8E9264C72AA9D6CF00BB63E1 /* FilterCriteriaChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCriteriaChip.swift; sourceTree = "<group>"; };
+		8E9264CA2AA9D98000BB63E1 /* FilterCriteriaSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCriteriaSelector.swift; sourceTree = "<group>"; };
+		8E9264CC2AA9DB6000BB63E1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8E9264CE2AA9DDE700BB63E1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */,
+				8E9264CC2AA9DB6000BB63E1 /* MainView.swift */,
+				8E9264CE2AA9DDE700BB63E1 /* MainViewModel.swift */,
 				8E9264952AA854A000BB63E1 /* Components */,
 			);
 			path = Views;
@@ -116,7 +124,7 @@
 			children = (
 				8E9264962AA854B100BB63E1 /* TabBar.swift */,
 				8E9264C32AA9C55B00BB63E1 /* NavigationBar.swift */,
-				8E9264C72AA9D6CF00BB63E1 /* FilterCriterialChip.swift */,
+				8E9264C92AA9D96400BB63E1 /* FilterCriteria */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -128,6 +136,15 @@
 				8E9264C52AA9D48400BB63E1 /* FilterCriteria.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8E9264C92AA9D96400BB63E1 /* FilterCriteria */ = {
+			isa = PBXGroup;
+			children = (
+				8E9264CA2AA9D98000BB63E1 /* FilterCriteriaSelector.swift */,
+				8E9264C72AA9D6CF00BB63E1 /* FilterCriteriaChip.swift */,
+			);
+			path = FilterCriteria;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,14 +248,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E9264812AA84B5D00BB63E1 /* MainTabbedView.swift in Sources */,
+				8E9264CB2AA9D98000BB63E1 /* FilterCriteriaSelector.swift in Sources */,
 				8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */,
 				8E92649C2AA856E700BB63E1 /* R.generated.swift in Sources */,
 				8E92649A2AA854C800BB63E1 /* TabItem.swift in Sources */,
-				8E9264C82AA9D6CF00BB63E1 /* FilterCriterialChip.swift in Sources */,
+				8E9264C82AA9D6CF00BB63E1 /* FilterCriteriaChip.swift in Sources */,
 				8E9264C42AA9C55B00BB63E1 /* NavigationBar.swift in Sources */,
+				8E9264CD2AA9DB6000BB63E1 /* MainView.swift in Sources */,
 				8E9264A02AA857C100BB63E1 /* ColorSet.swift in Sources */,
 				8E9264972AA854B100BB63E1 /* TabBar.swift in Sources */,
 				8E9264C62AA9D48400BB63E1 /* FilterCriteria.swift in Sources */,
+				8E9264CF2AA9DDE700BB63E1 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
