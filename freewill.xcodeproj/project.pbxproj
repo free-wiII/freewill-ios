@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */; };
-		8E9264812AA84B5D00BB63E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264802AA84B5D00BB63E1 /* ContentView.swift */; };
+		8E9264812AA84B5D00BB63E1 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */; };
 		8E9264832AA84B5E00BB63E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9264822AA84B5E00BB63E1 /* Assets.xcassets */; };
 		8E9264862AA84B5E00BB63E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9264852AA84B5E00BB63E1 /* Preview Assets.xcassets */; };
 		8E9264912AA84DEA00BB63E1 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9264902AA84DEA00BB63E1 /* RswiftLibrary */; };
@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		8E92647B2AA84B5D00BB63E1 /* freewill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = freewill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freewillApp.swift; sourceTree = "<group>"; };
-		8E9264802AA84B5D00BB63E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
 		8E9264822AA84B5E00BB63E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E9264852AA84B5E00BB63E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E9264962AA854B100BB63E1 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		8E9264922AA8542500BB63E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8E9264802AA84B5D00BB63E1 /* ContentView.swift */,
+				8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */,
 				8E9264952AA854A000BB63E1 /* Components */,
 			);
 			path = Views;
@@ -221,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E9264812AA84B5D00BB63E1 /* ContentView.swift in Sources */,
+				8E9264812AA84B5D00BB63E1 /* MainTabbedView.swift in Sources */,
 				8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */,
 				8E92649C2AA856E700BB63E1 /* R.generated.swift in Sources */,
 				8E92649A2AA854C800BB63E1 /* TabItem.swift in Sources */,
