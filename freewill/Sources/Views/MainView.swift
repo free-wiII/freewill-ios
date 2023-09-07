@@ -1,0 +1,64 @@
+//
+//  MainView.swift
+//  freewill
+//
+//  Created by 이승기 on 2023/09/07.
+//
+
+import SwiftUI
+
+struct MainView: View {
+  
+  // MARK: - Properties
+  
+  @StateObject var viewModel = MainViewModel()
+  
+  
+  // MARK: - Views
+  
+  var body: some View {
+    VStack(spacing: 0) {
+      NavigationBar(leadingContent: {
+        Text("자유의지")
+          .font(.system(size: 24, weight: .bold))
+          .foregroundColor(Color.fwBlack)
+      }, centerContent: {
+        EmptyView()
+      }, trailingContent: {
+        HStack(spacing: 8) {
+          Button {
+            // action
+          } label: {
+            Image(uiImage: R.image.loupe()!)
+              .resizable()
+              .padding(6)
+              .frame(width: 32, height: 32)
+              .foregroundColor(Color.fwBlack)
+          }
+          
+          Button {
+            // action
+          } label: {
+            Image(uiImage: R.image.plus()!)
+              .resizable()
+              .padding(6)
+              .frame(width: 32, height: 32)
+              .foregroundColor(Color.fwBlack)
+          }
+        }
+      }, isDividerShown: false)
+      
+      FilterCriteriaSelector(selectedCriteria: $viewModel.selectedCriteria)
+      Spacer()
+    }
+  }
+}
+
+
+// MARK: - Preview
+
+struct MainView_Previews: PreviewProvider {
+  static var previews: some View {
+    MainView()
+  }
+}
