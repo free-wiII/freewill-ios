@@ -16,6 +16,7 @@
 		8E92649A2AA854C800BB63E1 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264992AA854C800BB63E1 /* TabItem.swift */; };
 		8E92649C2AA856E700BB63E1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92649B2AA856E700BB63E1 /* R.generated.swift */; };
 		8E9264A02AA857C100BB63E1 /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92649F2AA857C100BB63E1 /* ColorSet.swift */; };
+		8E9264C42AA9C55B00BB63E1 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264C32AA9C55B00BB63E1 /* NavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8E9264992AA854C800BB63E1 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		8E92649B2AA856E700BB63E1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8E92649F2AA857C100BB63E1 /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
+		8E9264C32AA9C55B00BB63E1 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				8E9264962AA854B100BB63E1 /* TabBar.swift */,
+				8E9264C32AA9C55B00BB63E1 /* NavigationBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */,
 				8E92649C2AA856E700BB63E1 /* R.generated.swift in Sources */,
 				8E92649A2AA854C800BB63E1 /* TabItem.swift in Sources */,
+				8E9264C42AA9C55B00BB63E1 /* NavigationBar.swift in Sources */,
 				8E9264A02AA857C100BB63E1 /* ColorSet.swift in Sources */,
 				8E9264972AA854B100BB63E1 /* TabBar.swift in Sources */,
 			);
