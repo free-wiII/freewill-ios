@@ -17,47 +17,48 @@ struct MainView: View {
   // MARK: - Views
   
   var body: some View {
-    VStack(spacing: 0) {
-      NavigationBar(leadingContent: {
-        Text("자유의지")
-          .font(.system(size: 24, weight: .bold))
-          .foregroundColor(Color.fwBlack)
-      }, centerContent: {
-        EmptyView()
-      }, trailingContent: {
-        HStack(spacing: 8) {
-          Button {
-            // action
-          } label: {
-            Image(uiImage: R.image.loupe()!)
-              .resizable()
-              .padding(6)
-              .frame(width: 32, height: 32)
-              .foregroundColor(Color.fwBlack)
+    NavigationView {
+      VStack(spacing: 0) {
+        NavigationBar(leadingContent: {
+          Text("자유의지")
+            .font(.system(size: 24, weight: .bold))
+            .foregroundColor(Color.fwBlack)
+        }, trailingContent: {
+          HStack(spacing: 8) {
+            NavigationLink {
+              SearchView(viewModel: .init())
+                .toolbar(.hidden, for: .navigationBar)
+            } label: {
+              Image(uiImage: R.image.loupe()!)
+                .resizable()
+                .padding(6)
+                .frame(width: 32, height: 32)
+                .foregroundColor(Color.fwBlack)
+            }
+            
+            Button {
+              // action
+            } label: {
+              Image(uiImage: R.image.plus()!)
+                .resizable()
+                .padding(6)
+                .frame(width: 32, height: 32)
+                .foregroundColor(Color.fwBlack)
+            }
           }
-          
-          Button {
-            // action
-          } label: {
-            Image(uiImage: R.image.plus()!)
-              .resizable()
-              .padding(6)
-              .frame(width: 32, height: 32)
-              .foregroundColor(Color.fwBlack)
+        }, isDividerShown: false)
+        
+        FilterCriteriaSelector(selectedCriteria: $viewModel.selectedCriteria)
+        
+        ScrollView {
+          LazyVStack(spacing: 24) {
+            ForEach(0..<10) { _ in
+              FeedItem()
+            }
           }
+          .padding(.vertical, 20)
+          .padding(.horizontal, 16)
         }
-      }, isDividerShown: false)
-      
-      FilterCriteriaSelector(selectedCriteria: $viewModel.selectedCriteria)
-      
-      ScrollView {
-        LazyVStack(spacing: 24) {
-          ForEach(0..<10) { _ in
-            FeedItem()
-          }
-        }
-        .padding(.vertical, 20)
-        .padding(.horizontal, 16)
       }
     }
   }
