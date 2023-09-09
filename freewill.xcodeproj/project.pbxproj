@@ -14,6 +14,7 @@
 		8E13CD2F2AAB576F00D769EE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13CD2E2AAB576F00D769EE /* SearchViewModel.swift */; };
 		8E13CD352AACD24200D769EE /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13CD342AACD24200D769EE /* MyPageView.swift */; };
 		8E13CD372AACD45E00D769EE /* UnderlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13CD362AACD45E00D769EE /* UnderlinedButton.swift */; };
+		8E13CD3D2AACD78300D769EE /* BottomContainerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13CD3C2AACD78300D769EE /* BottomContainerButton.swift */; };
 		8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */; };
 		8E9264812AA84B5D00BB63E1 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */; };
 		8E9264832AA84B5E00BB63E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9264822AA84B5E00BB63E1 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		8E13CD2E2AAB576F00D769EE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		8E13CD342AACD24200D769EE /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		8E13CD362AACD45E00D769EE /* UnderlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedButton.swift; sourceTree = "<group>"; };
+		8E13CD3C2AACD78300D769EE /* BottomContainerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomContainerButton.swift; sourceTree = "<group>"; };
 		8E92647B2AA84B5D00BB63E1 /* freewill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = freewill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freewillApp.swift; sourceTree = "<group>"; };
 		8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				8E9264D22AA9E44800BB63E1 /* BlurView.swift */,
 				8E13CD2B2AAB51B200D769EE /* GirdView */,
 				8E13CD362AACD45E00D769EE /* UnderlinedButton.swift */,
+				8E13CD3C2AACD78300D769EE /* BottomContainerButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			files = (
 				8E13CD2A2AAB51A600D769EE /* GridView.swift in Sources */,
 				8E9264812AA84B5D00BB63E1 /* MainTabbedView.swift in Sources */,
+				8E13CD3D2AACD78300D769EE /* BottomContainerButton.swift in Sources */,
 				8E9264DB2AA9EF3400BB63E1 /* LoginType.swift in Sources */,
 				8E9264D32AA9E44800BB63E1 /* BlurView.swift in Sources */,
 				8E9264CB2AA9D98000BB63E1 /* FilterCriteriaSelector.swift in Sources */,
