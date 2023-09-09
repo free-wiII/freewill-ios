@@ -26,7 +26,7 @@ struct MainTabbedView: View {
         Text("bookmark")
           .tag(TabItem.bookmark)
         
-        Text("myPage")
+        MyPageView()
           .tag(TabItem.myPage)
       }
       

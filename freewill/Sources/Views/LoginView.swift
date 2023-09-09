@@ -36,16 +36,9 @@ struct LoginView: View {
       
       Spacer()
         .frame(height: 36)
-      
-      Button {
+
+      UnderlinedButton("로그인 없이 둘러보기") {
         dismiss()
-      } label: {
-        Text("로그인 없이 둘러보기")
-          .font(.system(size: 15))
-          .foregroundColor(.fwGray60)
-          .underline()
-          .padding(.vertical, 8)
-          .padding(.horizontal, 12)
       }
   
       Spacer()

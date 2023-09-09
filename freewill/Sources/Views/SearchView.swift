@@ -53,7 +53,10 @@ struct SearchView: View {
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .ignoresSafeArea()
       
-      searchBox()
+      BottomContainerButton("검색", enabled: .constant(true)) {
+        // action
+      }
+      .shadow(color: .fwBlack.opacity(0.1), radius: 20, x: 0, y: -4)
     }
   }
   
@@ -162,35 +165,6 @@ struct SearchView: View {
     .frame(height: 32)
     .background(Color.fwBlack)
     .clipShape(Capsule())
-  }
-  
-  private func searchBox() -> some View {
-    ZStack(alignment: .top) {
-      Divider()
-        .overlay {
-          Color.fwGray30
-        }
-      
-      Button {
-        // action
-      } label: {
-        RoundedRectangle(cornerRadius: 12)
-          .fill(Color.fwBlack)
-          .frame(maxWidth: .infinity, minHeight: 52)
-          .overlay {
-            Text("검색")
-              .font(.system(size: 15, weight: .bold))
-              .foregroundColor(.fwWhite)
-          }
-      }
-      .padding(.horizontal, 16)
-      .padding(.vertical, 12)
-    }
-    .frame(maxWidth: .infinity, maxHeight: 72)
-    .background(
-      Color.fwWhite.ignoresSafeArea()
-        .shadow(color: .fwBlack.opacity(0.1), radius: 20, x: 0, y: -4)
-    )
   }
 }
 
