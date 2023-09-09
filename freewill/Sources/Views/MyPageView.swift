@@ -12,31 +12,34 @@ struct MyPageView: View {
   // MARK: - Views
   
   var body: some View {
-    VStack {
-      NavigationBar {
-        Text("마이 페이지")
-          .font(.system(size: 24, weight: .bold))
-          .foregroundColor(.fwBlack)
-      } trailingContent: {
-        Button {
-          // action
-        } label: {
-          Image(uiImage: R.image.edit()!)
-            .resizable()
-            .padding(6)
-            .frame(width: 32, height: 32)
+    NavigationView {
+      VStack {
+        NavigationBar {
+          Text("마이 페이지")
+            .font(.system(size: 24, weight: .bold))
             .foregroundColor(.fwBlack)
+        } trailingContent: {
+          NavigationLink {
+            EditProfileView()
+              .toolbar(.hidden, for: .navigationBar)
+          } label: {
+            Image(uiImage: R.image.edit()!)
+              .resizable()
+              .padding(6)
+              .frame(width: 32, height: 32)
+              .foregroundColor(.fwBlack)
+          }
         }
-      }
-      
-      VStack(spacing: 0) {
-        infoSection()
         
-        Spacer()
-        
-        logoutButton()
+        VStack(spacing: 0) {
+          infoSection()
+          
+          Spacer()
+          
+          logoutButton()
+        }
+        .padding(.vertical, 20)
       }
-      .padding(.vertical, 20)
     }
   }
   
