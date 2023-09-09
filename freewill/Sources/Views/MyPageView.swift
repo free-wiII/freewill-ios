@@ -33,6 +33,8 @@ struct MyPageView: View {
         infoSection()
         
         Spacer()
+        
+        logoutButton()
       }
       .padding(.vertical, 20)
     }
@@ -58,6 +60,12 @@ struct MyPageView: View {
       }
     }
     .padding(.horizontal, 24)
+  }
+  
+  private func logoutButton() -> some View {
+    UnderlinedButton("로그아웃") {
+      // logout action
+    }
   }
 }
 
