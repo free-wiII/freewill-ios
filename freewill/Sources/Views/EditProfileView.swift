@@ -62,6 +62,10 @@ struct EditProfileView: View {
         }
       }
       
+      UnderlineTextField(placeholder: "새로운 닉네임", text: .constant("홍길동"), focused: false)
+        .padding(.horizontal, 24)
+        .padding(.top, 48)
+      
       Spacer()
       
       UnderlinedButton("회원탈퇴") {
