@@ -11,11 +11,11 @@
     }
   },
   "generatedSourceTargetSet" : [
-    "RswiftGenerateInternalResources",
-    "RswiftModifyXcodePackages",
-    "RswiftGenerateResourcesCommand",
+    "GenerateManual",
     "RswiftGeneratePublicResources",
-    "GenerateManual"
+    "RswiftGenerateResourcesCommand",
+    "RswiftGenerateInternalResources",
+    "RswiftModifyXcodePackages"
   ],
   "pluginDescriptions" : [
     {
