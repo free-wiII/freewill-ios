@@ -13,9 +13,9 @@
   "generatedSourceTargetSet" : [
     "RswiftGenerateResourcesCommand",
     "RswiftGeneratePublicResources",
-    "GenerateManual",
+    "RswiftModifyXcodePackages",
     "RswiftGenerateInternalResources",
-    "RswiftModifyXcodePackages"
+    "GenerateManual"
   ],
   "pluginDescriptions" : [
     {
