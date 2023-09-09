@@ -28,7 +28,7 @@ struct UnderlinedButton: View {
   
   var body: some View {
     Button {
-      // logout action
+      action()
     } label: {
       Text(text)
         .font(.system(size: 15))
