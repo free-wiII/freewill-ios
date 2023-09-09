@@ -20,9 +20,9 @@ struct NavigationBar<LeadingContent, CenterContent, TrailingContent>: View where
   
   // MARK: - Initializers
   
-  init(@ViewBuilder leadingContent: @escaping () -> LeadingContent? = { nil },
-       @ViewBuilder centerContent: @escaping () -> CenterContent? = { nil },
-       @ViewBuilder trailingContent: @escaping () -> TrailingContent? = { nil },
+  init(@ViewBuilder leadingContent: @escaping () -> LeadingContent? = { EmptyView() },
+       @ViewBuilder centerContent: @escaping () -> CenterContent? = { EmptyView() },
+       @ViewBuilder trailingContent: @escaping () -> TrailingContent? = { EmptyView() },
        isDividerShown: Bool = true) {
     self.leadingContent = leadingContent
     self.centerContent = centerContent
