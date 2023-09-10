@@ -120,7 +120,6 @@
 		8E546F992AADC85E005BCAD4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */,
 				8E546F9B2AADC8DF005BCAD4 /* Scene */,
 			);
 			path = Presentation;
@@ -306,6 +305,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		8E546FB12AADD22B005BCAD4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		8E9264722AA84B5D00BB63E1 = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +359,7 @@
 		8E9264942AA8543A00BB63E1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8E546FB12AADD22B005BCAD4 /* Application */,
 				8E546FB02AADD093005BCAD4 /* Network */,
 				8E546F982AADC850005BCAD4 /* Data */,
 				8E546F972AADC836005BCAD4 /* Domain */,
