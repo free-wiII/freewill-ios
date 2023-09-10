@@ -1,9 +1,0 @@
-version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
-options: "0f6402488d885c5f29af62816ec282e2b02404606c27f5eff16c4f0086f2a6e1"
-build_start_time: [1694175154, 395967000]
-build_end_time: [1694175155, 933200000]
-inputs:
-  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/rswift/App.swift": [1693980174, 861579141]
-  "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/rswift/Config.swift": [1693980174, 861653266]
-  ? "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/checkouts/R.swift/Sources/rswift/RswiftCore.swift"
-  : [1693980174, 861764766]

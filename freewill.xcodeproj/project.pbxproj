@@ -22,10 +22,8 @@
 		8E9264812AA84B5D00BB63E1 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */; };
 		8E9264832AA84B5E00BB63E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9264822AA84B5E00BB63E1 /* Assets.xcassets */; };
 		8E9264862AA84B5E00BB63E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9264852AA84B5E00BB63E1 /* Preview Assets.xcassets */; };
-		8E9264912AA84DEA00BB63E1 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9264902AA84DEA00BB63E1 /* RswiftLibrary */; };
 		8E9264972AA854B100BB63E1 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264962AA854B100BB63E1 /* TabBar.swift */; };
 		8E92649A2AA854C800BB63E1 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264992AA854C800BB63E1 /* TabItem.swift */; };
-		8E92649C2AA856E700BB63E1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92649B2AA856E700BB63E1 /* R.generated.swift */; };
 		8E9264A02AA857C100BB63E1 /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92649F2AA857C100BB63E1 /* ColorSet.swift */; };
 		8E9264C42AA9C55B00BB63E1 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264C32AA9C55B00BB63E1 /* NavigationBar.swift */; };
 		8E9264C62AA9D48400BB63E1 /* FilterCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264C52AA9D48400BB63E1 /* FilterCriteria.swift */; };
@@ -37,6 +35,7 @@
 		8E9264D32AA9E44800BB63E1 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264D22AA9E44800BB63E1 /* BlurView.swift */; };
 		8E9264D72AA9EDDB00BB63E1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264D62AA9EDDB00BB63E1 /* LoginView.swift */; };
 		8E9264DB2AA9EF3400BB63E1 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264DA2AA9EF3400BB63E1 /* LoginType.swift */; };
+		8EB9F6212AACE8BE00FA3EF1 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB9F6202AACE8BE00FA3EF1 /* RswiftLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +57,6 @@
 		8E9264852AA84B5E00BB63E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E9264962AA854B100BB63E1 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		8E9264992AA854C800BB63E1 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
-		8E92649B2AA856E700BB63E1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8E92649F2AA857C100BB63E1 /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
 		8E9264C32AA9C55B00BB63E1 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		8E9264C52AA9D48400BB63E1 /* FilterCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCriteria.swift; sourceTree = "<group>"; };
@@ -77,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E9264912AA84DEA00BB63E1 /* RswiftLibrary in Frameworks */,
+				8EB9F6212AACE8BE00FA3EF1 /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				8E9264822AA84B5E00BB63E1 /* Assets.xcassets */,
-				8E92649B2AA856E700BB63E1 /* R.generated.swift */,
 				8E92649F2AA857C100BB63E1 /* ColorSet.swift */,
 			);
 			path = Resources;
@@ -207,7 +204,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E9264892AA84B5E00BB63E1 /* Build configuration list for PBXNativeTarget "freewill" */;
 			buildPhases = (
-				8E92648C2AA84CDF00BB63E1 /* r.swift */,
 				8E9264772AA84B5D00BB63E1 /* Sources */,
 				8E9264782AA84B5D00BB63E1 /* Frameworks */,
 				8E9264792AA84B5D00BB63E1 /* Resources */,
@@ -215,10 +211,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				8EB9F6232AACEADA00FA3EF1 /* PBXTargetDependency */,
 			);
 			name = freewill;
 			packageProductDependencies = (
-				8E9264902AA84DEA00BB63E1 /* RswiftLibrary */,
+				8EB9F6202AACE8BE00FA3EF1 /* RswiftLibrary */,
 			);
 			productName = freewill;
 			productReference = 8E92647B2AA84B5D00BB63E1 /* freewill.app */;
@@ -249,7 +246,7 @@
 			);
 			mainGroup = 8E9264722AA84B5D00BB63E1;
 			packageReferences = (
-				8E92648F2AA84DEA00BB63E1 /* XCRemoteSwiftPackageReference "R.swift" */,
+				8EB9F61F2AACE8BE00FA3EF1 /* XCRemoteSwiftPackageReference "R.swift" */,
 			);
 			productRefGroup = 8E92647C2AA84B5D00BB63E1 /* Products */;
 			projectDirPath = "";
@@ -272,29 +269,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		8E92648C2AA84CDF00BB63E1 /* r.swift */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = r.swift;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				$SRCROOT/R.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd BuildTools\nSDKROOT=macosx\nswift run -c release rswift generate \"$SRCROOT/R.generated.swift\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		8E9264772AA84B5D00BB63E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -310,7 +284,6 @@
 				8E9264D72AA9EDDB00BB63E1 /* LoginView.swift in Sources */,
 				8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */,
 				8E13CD262AAB474600D769EE /* SearchView.swift in Sources */,
-				8E92649C2AA856E700BB63E1 /* R.generated.swift in Sources */,
 				8E92649A2AA854C800BB63E1 /* TabItem.swift in Sources */,
 				8E13CD282AAB519800D769EE /* GridCalculator.swift in Sources */,
 				8E9264C82AA9D6CF00BB63E1 /* FilterCriteriaChip.swift in Sources */,
@@ -331,6 +304,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8EB9F6232AACEADA00FA3EF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 8EB9F6222AACEADA00FA3EF1 /* RswiftGenerateInternalResources */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8E9264872AA84B5E00BB63E1 /* Debug */ = {
@@ -531,7 +511,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8E92648F2AA84DEA00BB63E1 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+		8EB9F61F2AACE8BE00FA3EF1 /* XCRemoteSwiftPackageReference "R.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
 			requirement = {
@@ -542,10 +522,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8E9264902AA84DEA00BB63E1 /* RswiftLibrary */ = {
+		8EB9F6202AACE8BE00FA3EF1 /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8E92648F2AA84DEA00BB63E1 /* XCRemoteSwiftPackageReference "R.swift" */;
+			package = 8EB9F61F2AACE8BE00FA3EF1 /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = RswiftLibrary;
+		};
+		8EB9F6222AACEADA00FA3EF1 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

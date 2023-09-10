@@ -1,4 +1,0 @@
-module RswiftResources {
-    header "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftResources.build/RswiftResources-Swift.h"
-    requires objc
-}

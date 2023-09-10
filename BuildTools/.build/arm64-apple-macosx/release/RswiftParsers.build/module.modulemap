@@ -1,4 +1,0 @@
-module RswiftParsers {
-    header "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/RswiftParsers.build/RswiftParsers-Swift.h"
-    requires objc
-}
