@@ -1,4 +1,0 @@
-module ArgumentParser {
-    header "/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/BuildTools/.build/arm64-apple-macosx/release/ArgumentParser.build/ArgumentParser-Swift.h"
-    requires objc
-}
