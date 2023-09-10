@@ -19,7 +19,9 @@
 		8E13CD452AACDDE400D769EE /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13CD442AACDDE400D769EE /* UnderlineTextField.swift */; };
 		8E13CD472AACDE2F00D769EE /* FocusableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13CD462AACDE2F00D769EE /* FocusableTextField.swift */; };
 		8E546F8A2AAD9F54005BCAD4 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F892AAD9F54005BCAD4 /* BookmarkView.swift */; };
-		8E546F8D2AAD9F62005BCAD4 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F8C2AAD9F62005BCAD4 /* Bookmark.swift */; };
+		8E546F8D2AAD9F62005BCAD4 /* BookmarkGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */; };
+		8E546F912AADA34F005BCAD4 /* BookmarkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F902AADA34F005BCAD4 /* BookmarkDetailView.swift */; };
+		8E546F942AADA3B7005BCAD4 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F932AADA3B7005BCAD4 /* Bookmark.swift */; };
 		8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */; };
 		8E9264812AA84B5D00BB63E1 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */; };
 		8E9264832AA84B5E00BB63E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9264822AA84B5E00BB63E1 /* Assets.xcassets */; };
@@ -53,7 +55,9 @@
 		8E13CD442AACDDE400D769EE /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		8E13CD462AACDE2F00D769EE /* FocusableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusableTextField.swift; sourceTree = "<group>"; };
 		8E546F892AAD9F54005BCAD4 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
-		8E546F8C2AAD9F62005BCAD4 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkGroup.swift; sourceTree = "<group>"; };
+		8E546F902AADA34F005BCAD4 /* BookmarkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDetailView.swift; sourceTree = "<group>"; };
+		8E546F932AADA3B7005BCAD4 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		8E92647B2AA84B5D00BB63E1 /* freewill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = freewill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freewillApp.swift; sourceTree = "<group>"; };
 		8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 				8E13CD342AACD24200D769EE /* MyPageView.swift */,
 				8E13CD3E2AACDA9A00D769EE /* EditProfileView.swift */,
 				8E546F892AAD9F54005BCAD4 /* BookmarkView.swift */,
+				8E546F902AADA34F005BCAD4 /* BookmarkDetailView.swift */,
 				8E9264952AA854A000BB63E1 /* Components */,
 			);
 			path = Views;
@@ -189,7 +194,8 @@
 				8E9264C52AA9D48400BB63E1 /* FilterCriteria.swift */,
 				8E9264DA2AA9EF3400BB63E1 /* LoginType.swift */,
 				8E13CD2C2AAB51CD00D769EE /* Rating.swift */,
-				8E546F8C2AAD9F62005BCAD4 /* Bookmark.swift */,
+				8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */,
+				8E546F932AADA3B7005BCAD4 /* Bookmark.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -285,9 +291,11 @@
 				8E9264812AA84B5D00BB63E1 /* MainTabbedView.swift in Sources */,
 				8E13CD3D2AACD78300D769EE /* BottomContainerButton.swift in Sources */,
 				8E9264DB2AA9EF3400BB63E1 /* LoginType.swift in Sources */,
+				8E546F942AADA3B7005BCAD4 /* Bookmark.swift in Sources */,
 				8E9264D32AA9E44800BB63E1 /* BlurView.swift in Sources */,
 				8E9264CB2AA9D98000BB63E1 /* FilterCriteriaSelector.swift in Sources */,
 				8E9264D72AA9EDDB00BB63E1 /* LoginView.swift in Sources */,
+				8E546F912AADA34F005BCAD4 /* BookmarkDetailView.swift in Sources */,
 				8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */,
 				8E546F8A2AAD9F54005BCAD4 /* BookmarkView.swift in Sources */,
 				8E13CD262AAB474600D769EE /* SearchView.swift in Sources */,
@@ -299,7 +307,7 @@
 				8E13CD3F2AACDA9A00D769EE /* EditProfileView.swift in Sources */,
 				8E9264C42AA9C55B00BB63E1 /* NavigationBar.swift in Sources */,
 				8E13CD2F2AAB576F00D769EE /* SearchViewModel.swift in Sources */,
-				8E546F8D2AAD9F62005BCAD4 /* Bookmark.swift in Sources */,
+				8E546F8D2AAD9F62005BCAD4 /* BookmarkGroup.swift in Sources */,
 				8E13CD372AACD45E00D769EE /* UnderlinedButton.swift in Sources */,
 				8E9264CD2AA9DB6000BB63E1 /* MainView.swift in Sources */,
 				8E13CD352AACD24200D769EE /* MyPageView.swift in Sources */,

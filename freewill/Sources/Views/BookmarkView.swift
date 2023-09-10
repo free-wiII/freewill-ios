@@ -11,7 +11,7 @@ struct BookmarkView: View {
   
   // MARK: - Properties
   
-  @State var sampleBookmarks: [Bookmark] = [
+  @State var sampleBookmarkGroups: [BookmarkGroup] = [
     .init(title: "🫥 가보고싶은 카페 모음", createdAt: .init()),
     .init(title: "🌳 조용한 카페 모음", createdAt: .init()),
     .init(title: "😋 디저트가 맛있는 카페 모음", createdAt: .init())
@@ -32,12 +32,13 @@ struct BookmarkView: View {
         
         ScrollView {
           VStack(spacing: 0) {
-            ForEach(sampleBookmarks, id: \.id) { bookmark in
+            ForEach(sampleBookmarkGroups, id: \.id) { bookmark in
                 NavigationLink {
-                  Text(bookmark.title)
+                  BookmarkDetailView()
+                    .toolbar(.hidden, for: .navigationBar)
                 } label: {
                   VStack(spacing: 0) {
-                    bookmarkItem(bookmark)
+                    bookmarkGroupItem(bookmark)
                     
                     Divider()
                       .overlay(Color.fwGray20)
@@ -53,9 +54,9 @@ struct BookmarkView: View {
     }
   }
   
-  private func bookmarkItem(_ bookmark: Bookmark) -> some View {
+  private func bookmarkGroupItem(_ bookmarkGroup: BookmarkGroup) -> some View {
     VStack {
-      Text(bookmark.title)
+      Text(bookmarkGroup.title)
         .font(.system(size: 15, weight: .medium))
         .foregroundColor(.fwBlack)
         .frame(maxWidth: .infinity, alignment: .leading)
