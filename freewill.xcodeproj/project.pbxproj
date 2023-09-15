@@ -22,6 +22,9 @@
 		8E546F8D2AAD9F62005BCAD4 /* BookmarkGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */; };
 		8E546F912AADA34F005BCAD4 /* BookmarkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F902AADA34F005BCAD4 /* BookmarkDetailView.swift */; };
 		8E546F942AADA3B7005BCAD4 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F932AADA3B7005BCAD4 /* Bookmark.swift */; };
+		8E546FB32AADDCE5005BCAD4 /* FeedListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546FB22AADDCE5005BCAD4 /* FeedListUseCase.swift */; };
+		8E76226A2AB488E00096F7D7 /* FeedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7622692AB488E00096F7D7 /* FeedEntity.swift */; };
+		8E8A8A6D2AB49476000528BC /* feed_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E76226D2AB48EEC0096F7D7 /* feed_list.json */; };
 		8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */; };
 		8E9264812AA84B5D00BB63E1 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */; };
 		8E9264832AA84B5E00BB63E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9264822AA84B5E00BB63E1 /* Assets.xcassets */; };
@@ -35,11 +38,17 @@
 		8E9264CB2AA9D98000BB63E1 /* FilterCriteriaSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264CA2AA9D98000BB63E1 /* FilterCriteriaSelector.swift */; };
 		8E9264CD2AA9DB6000BB63E1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264CC2AA9DB6000BB63E1 /* MainView.swift */; };
 		8E9264CF2AA9DDE700BB63E1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264CE2AA9DDE700BB63E1 /* MainViewModel.swift */; };
-		8E9264D12AA9E0B000BB63E1 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264D02AA9E0B000BB63E1 /* FeedItem.swift */; };
+		8E9264D12AA9E0B000BB63E1 /* FeedListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264D02AA9E0B000BB63E1 /* FeedListItem.swift */; };
 		8E9264D32AA9E44800BB63E1 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264D22AA9E44800BB63E1 /* BlurView.swift */; };
 		8E9264D72AA9EDDB00BB63E1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264D62AA9EDDB00BB63E1 /* LoginView.swift */; };
 		8E9264DB2AA9EF3400BB63E1 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264DA2AA9EF3400BB63E1 /* LoginType.swift */; };
 		8EB9F6212AACE8BE00FA3EF1 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB9F6202AACE8BE00FA3EF1 /* RswiftLibrary */; };
+		8EC66CC72AB44E0A00204586 /* Respository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CC62AB44E0A00204586 /* Respository.swift */; };
+		8EC66CC92AB44FCA00204586 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CC82AB44FCA00204586 /* Feed.swift */; };
+		8EC66CCB2AB4506F00204586 /* FreeWillAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CCA2AB4506F00204586 /* FreeWillAPI.swift */; };
+		8EC66CCE2AB450AE00204586 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC66CCD2AB450AE00204586 /* CombineMoya */; };
+		8EC66CD02AB450AE00204586 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC66CCF2AB450AE00204586 /* Moya */; };
+		8EC66CD22AB4515100204586 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CD12AB4515100204586 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +67,9 @@
 		8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkGroup.swift; sourceTree = "<group>"; };
 		8E546F902AADA34F005BCAD4 /* BookmarkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDetailView.swift; sourceTree = "<group>"; };
 		8E546F932AADA3B7005BCAD4 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		8E546FB22AADDCE5005BCAD4 /* FeedListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListUseCase.swift; sourceTree = "<group>"; };
+		8E7622692AB488E00096F7D7 /* FeedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEntity.swift; sourceTree = "<group>"; };
+		8E76226D2AB48EEC0096F7D7 /* feed_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = feed_list.json; sourceTree = "<group>"; };
 		8E92647B2AA84B5D00BB63E1 /* freewill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = freewill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freewillApp.swift; sourceTree = "<group>"; };
 		8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
@@ -72,10 +84,14 @@
 		8E9264CA2AA9D98000BB63E1 /* FilterCriteriaSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCriteriaSelector.swift; sourceTree = "<group>"; };
 		8E9264CC2AA9DB6000BB63E1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		8E9264CE2AA9DDE700BB63E1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		8E9264D02AA9E0B000BB63E1 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		8E9264D02AA9E0B000BB63E1 /* FeedListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListItem.swift; sourceTree = "<group>"; };
 		8E9264D22AA9E44800BB63E1 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		8E9264D62AA9EDDB00BB63E1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8E9264DA2AA9EF3400BB63E1 /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
+		8EC66CC62AB44E0A00204586 /* Respository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respository.swift; sourceTree = "<group>"; };
+		8EC66CC82AB44FCA00204586 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		8EC66CCA2AB4506F00204586 /* FreeWillAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeWillAPI.swift; sourceTree = "<group>"; };
+		8EC66CD12AB4515100204586 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +99,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC66CCE2AB450AE00204586 /* CombineMoya in Frameworks */,
 				8EB9F6212AACE8BE00FA3EF1 /* RswiftLibrary in Frameworks */,
+				8EC66CD02AB450AE00204586 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				8E546FAB2AADCFA6005BCAD4 /* Model */,
-				8E546FAC2AADCFF5005BCAD4 /* UseCase */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -113,6 +130,7 @@
 			children = (
 				8E546FAD2AADD04D005BCAD4 /* Repository */,
 				8E546FAE2AADD056005BCAD4 /* Model */,
+				8E76226C2AB48E8A0096F7D7 /* SampleData */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -251,7 +269,7 @@
 		8E546FAA2AADCA2B005BCAD4 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				8E9264D02AA9E0B000BB63E1 /* FeedItem.swift */,
+				8E9264D02AA9E0B000BB63E1 /* FeedListItem.swift */,
 				8E9264CA2AA9D98000BB63E1 /* FilterCriteriaSelector.swift */,
 				8E9264C72AA9D6CF00BB63E1 /* FilterCriteriaChip.swift */,
 			);
@@ -261,11 +279,13 @@
 		8E546FAB2AADCFA6005BCAD4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E546FAC2AADCFF5005BCAD4 /* UseCase */,
 				8E9264C52AA9D48400BB63E1 /* FilterCriteria.swift */,
 				8E9264DA2AA9EF3400BB63E1 /* LoginType.swift */,
 				8E13CD2C2AAB51CD00D769EE /* Rating.swift */,
 				8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */,
 				8E546F932AADA3B7005BCAD4 /* Bookmark.swift */,
+				8EC66CC82AB44FCA00204586 /* Feed.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,6 +293,7 @@
 		8E546FAC2AADCFF5005BCAD4 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				8E546FB22AADDCE5005BCAD4 /* FeedListUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -280,6 +301,7 @@
 		8E546FAD2AADD04D005BCAD4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				8EC66CC62AB44E0A00204586 /* Respository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -287,6 +309,7 @@
 		8E546FAE2AADD056005BCAD4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E7622692AB488E00096F7D7 /* FeedEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +324,8 @@
 		8E546FB02AADD093005BCAD4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8EC66CCA2AB4506F00204586 /* FreeWillAPI.swift */,
+				8EC66CD12AB4515100204586 /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -311,6 +336,14 @@
 				8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		8E76226C2AB48E8A0096F7D7 /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				8E76226D2AB48EEC0096F7D7 /* feed_list.json */,
+			);
+			path = SampleData;
 			sourceTree = "<group>";
 		};
 		8E9264722AA84B5D00BB63E1 = {
@@ -388,6 +421,8 @@
 			name = freewill;
 			packageProductDependencies = (
 				8EB9F6202AACE8BE00FA3EF1 /* RswiftLibrary */,
+				8EC66CCD2AB450AE00204586 /* CombineMoya */,
+				8EC66CCF2AB450AE00204586 /* Moya */,
 			);
 			productName = freewill;
 			productReference = 8E92647B2AA84B5D00BB63E1 /* freewill.app */;
@@ -419,6 +454,7 @@
 			mainGroup = 8E9264722AA84B5D00BB63E1;
 			packageReferences = (
 				8EB9F61F2AACE8BE00FA3EF1 /* XCRemoteSwiftPackageReference "R.swift" */,
+				8EC66CCC2AB450AE00204586 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 8E92647C2AA84B5D00BB63E1 /* Products */;
 			projectDirPath = "";
@@ -436,6 +472,7 @@
 			files = (
 				8E9264862AA84B5E00BB63E1 /* Preview Assets.xcassets in Resources */,
 				8E9264832AA84B5E00BB63E1 /* Assets.xcassets in Resources */,
+				8E8A8A6D2AB49476000528BC /* feed_list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,20 +487,25 @@
 				8E13CD2A2AAB51A600D769EE /* GridView.swift in Sources */,
 				8E9264812AA84B5D00BB63E1 /* MainTabbedView.swift in Sources */,
 				8E13CD3D2AACD78300D769EE /* BottomContainerButton.swift in Sources */,
+				8EC66CC92AB44FCA00204586 /* Feed.swift in Sources */,
 				8E9264DB2AA9EF3400BB63E1 /* LoginType.swift in Sources */,
+				8E546FB32AADDCE5005BCAD4 /* FeedListUseCase.swift in Sources */,
 				8E546F942AADA3B7005BCAD4 /* Bookmark.swift in Sources */,
 				8E9264D32AA9E44800BB63E1 /* BlurView.swift in Sources */,
 				8E9264CB2AA9D98000BB63E1 /* FilterCriteriaSelector.swift in Sources */,
 				8E9264D72AA9EDDB00BB63E1 /* LoginView.swift in Sources */,
 				8E546F912AADA34F005BCAD4 /* BookmarkDetailView.swift in Sources */,
+				8E76226A2AB488E00096F7D7 /* FeedEntity.swift in Sources */,
 				8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */,
 				8E546F8A2AAD9F54005BCAD4 /* BookmarkView.swift in Sources */,
+				8EC66CCB2AB4506F00204586 /* FreeWillAPI.swift in Sources */,
 				8E13CD262AAB474600D769EE /* SearchView.swift in Sources */,
 				8E92649A2AA854C800BB63E1 /* TabItem.swift in Sources */,
 				8E13CD282AAB519800D769EE /* GridCalculator.swift in Sources */,
 				8E9264C82AA9D6CF00BB63E1 /* FilterCriteriaChip.swift in Sources */,
 				8E13CD2D2AAB51CD00D769EE /* Rating.swift in Sources */,
-				8E9264D12AA9E0B000BB63E1 /* FeedItem.swift in Sources */,
+				8EC66CD22AB4515100204586 /* NetworkService.swift in Sources */,
+				8E9264D12AA9E0B000BB63E1 /* FeedListItem.swift in Sources */,
 				8E13CD3F2AACDA9A00D769EE /* EditProfileView.swift in Sources */,
 				8E9264C42AA9C55B00BB63E1 /* NavigationBar.swift in Sources */,
 				8E13CD2F2AAB576F00D769EE /* SearchViewModel.swift in Sources */,
@@ -476,6 +518,7 @@
 				8E9264972AA854B100BB63E1 /* TabBar.swift in Sources */,
 				8E9264C62AA9D48400BB63E1 /* FilterCriteria.swift in Sources */,
 				8E9264CF2AA9DDE700BB63E1 /* MainViewModel.swift in Sources */,
+				8EC66CC72AB44E0A00204586 /* Respository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +738,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		8EC66CCC2AB450AE00204586 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = exactVersion;
+				version = 15.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -706,6 +757,16 @@
 		8EB9F6222AACEADA00FA3EF1 /* RswiftGenerateInternalResources */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = "plugin:RswiftGenerateInternalResources";
+		};
+		8EC66CCD2AB450AE00204586 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EC66CCC2AB450AE00204586 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		8EC66CCF2AB450AE00204586 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EC66CCC2AB450AE00204586 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

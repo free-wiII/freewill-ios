@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Café Parisienne",
+    "location": "New York",
+    "distance": 1.2,
+    "images": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "likeCount": 42,
+    "isLiked": true,
+    "isBookmarked": false
+  },
+  {
+    "id": 2,
+    "name": "Golden Gate Café",
+    "location": "San Francisco",
+    "distance": 2.0,
+    "images": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "likeCount": 18,
+    "isLiked": false,
+    "isBookmarked": true
+  },
+  {
+    "id": 3,
+    "name": "Sunshine Café",
+    "location": "Los Angeles",
+    "distance": 1.7,
+    "images": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "likeCount": 27,
+    "isLiked": true,
+    "isBookmarked": true
+  },
+  {
+    "id": 4,
+    "name": "Mocha Haven",
+    "location": "Chicago",
+    "distance": 1.9,
+    "images": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "likeCount": 33,
+    "isLiked": false,
+    "isBookmarked": false
+  },
+  {
+    "id": 5,
+    "name": "Harbor Brews",
+    "location": "Houston",
+    "distance": 2.5,
+    "images": ["image9.jpg"],
+    "likeCount": 10,
+    "isLiked": true,
+    "isBookmarked": false
+  },
+  {
+    "id": 6,
+    "name": "Beachside Bistro",
+    "location": "Miami",
+    "distance": 1.3,
+    "images": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "likeCount": 55,
+    "isLiked": true,
+    "isBookmarked": true
+  },
+  {
+    "id": 7,
+    "name": "Emerald Café",
+    "location": "Seattle",
+    "distance": 2.2,
+    "images": ["image12.jpg"],
+    "likeCount": 28,
+    "isLiked": false,
+    "isBookmarked": false
+  },
+  {
+    "id": 8,
+    "name": "Urban Brew House",
+    "location": "Boston",
+    "distance": 1.6,
+    "images": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "likeCount": 19,
+    "isLiked": true,
+    "isBookmarked": true
+  },
+  {
+    "id": 9,
+    "name": "Rocky Mountain Roasters",
+    "location": "Denver",
+    "distance": 2.1,
+    "images": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "likeCount": 37,
+    "isLiked": false,
+    "isBookmarked": true
+  },
+  {
+    "id": 10,
+    "name": "Desert Oasis Café",
+    "location": "Phoenix",
+    "distance": 1.8,
+    "images": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "likeCount": 24,
+    "isLiked": true,
+    "isBookmarked": false
+  }
+]

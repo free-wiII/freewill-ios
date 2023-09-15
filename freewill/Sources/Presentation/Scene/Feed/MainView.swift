@@ -11,6 +11,7 @@ struct MainView: View {
   
   // MARK: - Properties
   
+  @State private var didAppear = false
   @StateObject var viewModel = MainViewModel()
   
   
@@ -52,13 +53,19 @@ struct MainView: View {
         
         ScrollView {
           LazyVStack(spacing: 24) {
-            ForEach(0..<10) { _ in
-              FeedItem()
+            ForEach(viewModel.feeds, id: \.id) { feed in
+              FeedListItem(feed: feed)
             }
           }
           .padding(.vertical, 20)
           .padding(.horizontal, 16)
         }
+      }
+    }
+    .onAppear {
+      if didAppear == false {
+        viewModel.fetchFeed()
+        didAppear = true
       }
     }
   }

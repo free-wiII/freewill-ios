@@ -1,5 +1,5 @@
 //
-//  FeedItem.swift
+//  FeedListItem.swift
 //  freewill
 //
 //  Created by 이승기 on 2023/09/07.
@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-struct FeedItem: View {
+struct FeedListItem: View {
   
   // MARK: - Properties
+  
+  let feed: Feed
+  @State private var selectedImage: Int = 0
   
   
   // MARK: - Views
@@ -17,12 +20,12 @@ struct FeedItem: View {
   var body: some View {
     VStack(spacing: 0) {
       VStack(alignment: .leading, spacing: 2) {
-        Text("title")
+        Text(feed.name)
           .font(.system(size: 15, weight: .bold))
           .foregroundColor(Color.fwBlack)
           .frame(maxWidth: .infinity, alignment: .leading)
         
-        Text("location")
+        Text(feed.location)
           .font(.system(size: 13))
           .foregroundColor(Color.fwBlack)
           .frame(maxWidth: .infinity, alignment: .leading)
@@ -31,8 +34,20 @@ struct FeedItem: View {
       .frame(maxWidth: .infinity)
       
       ZStack {
-        RoundedRectangle(cornerRadius: 12)
-          .fill(Color.fwWhite)
+        TabView {
+          ForEach(Array(feed.images.enumerated()), id: \.offset) { _, imageUrl in
+            AsyncImage(url: URL(string: imageUrl)) { image in
+              image
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+            } placeholder: {
+              ProgressView()
+            }
+          }
+        }
+        .tabViewStyle(.page)
+        .background(Color.fwWhite)
+        .cornerRadius(12)
         
         VStack {
           HStack {
@@ -43,10 +58,10 @@ struct FeedItem: View {
                 .resizable()
                 .frame(width: 16, height: 16)
               
-              Text("00km")
+              Text("\(String(format: "%.2f", feed.distance)) km")
                 .font(.system(size: 13, weight: .medium))
             }
-            .foregroundColor(Color.fwGray)
+            .foregroundColor(Color.fwBlack)
             .padding(.horizontal, 10)
             .padding(.vertical, 6)
             .background(BlurView())
@@ -67,13 +82,13 @@ struct FeedItem: View {
           Button {
             // action
           } label: {
-            Image(uiImage: R.image.thumbsup()!)
+            Image(uiImage: feed.isLiked ? R.image.thumbsup_filled()! : R.image.thumbsup()!)
               .resizable()
               .frame(width: 24, height: 24)
-              .foregroundColor(Color.fwGray)
+              .foregroundColor(feed.isLiked ? Color.fwGreen : Color.fwGray)
           }
           
-          Text("추천 252")
+          Text("추천 \(feed.likeCount)")
             .font(.system(size: 13, weight: .bold))
             .foregroundColor(Color.fwGray)
         }
@@ -84,11 +99,11 @@ struct FeedItem: View {
         Button {
           // action
         } label: {
-          Image(uiImage: R.image.bookmark()!)
+          Image(uiImage: feed.isBookmarked ? R.image.bookmark_filled()! : R.image.bookmark()!)
             .resizable()
             .padding(6)
             .frame(width: 32, height: 32)
-            .foregroundColor(Color.fwGray)
+            .foregroundColor(feed.isBookmarked ? .fwBlack : .fwGray)
         }
       }
       .padding(.horizontal, 4)
@@ -102,6 +117,16 @@ struct FeedItem: View {
 
 struct FeedItem_Previews: PreviewProvider {
   static var previews: some View {
-    FeedItem()
+    let feed = Feed(id: 1,
+                    name: "어퍼스트로피",
+                    location: "경기도 안양시 어쩌구",
+                    distance: 1.312412,
+                    images: ["https://picsum.photos/1200/800",
+                             "https://picsum.photos/1200/800",
+                             "https://picsum.photos/1200/800"],
+                    likeCount: Array(0...999).randomElement()!,
+                    isLiked: Bool.random(),
+                    isBookmarked: Bool.random())
+    FeedListItem(feed: feed)
   }
 }
