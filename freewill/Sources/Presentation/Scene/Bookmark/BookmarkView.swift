@@ -27,26 +27,32 @@ struct BookmarkView: View {
             .foregroundColor(.fwBlack)
         })
         
-        ScrollView {
-          VStack(spacing: 0) {
-            ForEach(viewModel.bookmarkGroups, id: \.id) { bookmark in
-                NavigationLink {
-                  BookmarkDetailView(viewModel: .init())
-                    .toolbar(.hidden, for: .navigationBar)
-                } label: {
-                  VStack(spacing: 0) {
-                    bookmarkGroupItem(bookmark)
-                    
-                    Divider()
-                      .overlay(Color.fwGray20)
+        if viewModel.isLoading {
+          Spacer()
+          ProgressView()
+          Spacer()
+        } else {
+          ScrollView {
+            VStack(spacing: 0) {
+              ForEach(viewModel.bookmarkGroups, id: \.id) { bookmark in
+                  NavigationLink {
+                    BookmarkDetailView(viewModel: .init())
+                      .toolbar(.hidden, for: .navigationBar)
+                  } label: {
+                    VStack(spacing: 0) {
+                      bookmarkGroupItem(bookmark)
+                      
+                      Divider()
+                        .overlay(Color.fwGray20)
+                    }
                   }
-                }
+              }
             }
+            .padding(.horizontal, 20)
+            .padding(.vertical, 24)
           }
-          .padding(.horizontal, 20)
-          .padding(.vertical, 24)
+          .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
       }
     }
     .onAppear {

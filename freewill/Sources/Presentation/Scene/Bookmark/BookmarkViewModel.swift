@@ -14,6 +14,7 @@ final class BookmarkViewModel: ObservableObject {
   
   private var cancellables = Set<AnyCancellable>()
   
+  @Published var isLoading = false
   @Published var bookmarkGroups = [BookmarkGroup]()
   
   private let bookmarkGroupUseCase: BookmarkGroupUseCase
@@ -30,11 +31,13 @@ final class BookmarkViewModel: ObservableObject {
   // MARK: - Methods
   
   public func fetchBookmarkGroup() {
+    isLoading = true
+    
     bookmarkGroupUseCase.execute()
       .subscribe(on: DispatchQueue.global())
       .receive(on: DispatchQueue.main)
-      .sink { _ in
-        // completion
+      .sink { [weak self] _ in
+        self?.isLoading = false
       } receiveValue: { [weak self] bookmarkGroups in
         self?.bookmarkGroups = bookmarkGroups
       }
