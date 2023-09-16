@@ -23,7 +23,7 @@ final class MainViewModel: ObservableObject {
   // MARK: - Initializers
   
   init() {
-    let repository = FreeWillRepository(service: NetworkService(.stub))
+    let repository = FreeWillRepository(service: NetworkService<FreeWillAPI>(.stub))
     feedListUseCase = FeedListUseCase(repository)
   }
   

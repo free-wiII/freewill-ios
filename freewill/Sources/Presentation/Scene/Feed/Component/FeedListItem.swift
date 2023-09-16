@@ -85,7 +85,7 @@ struct FeedListItem: View {
             Image(uiImage: feed.isLiked ? R.image.thumbsup_filled()! : R.image.thumbsup()!)
               .resizable()
               .frame(width: 24, height: 24)
-              .foregroundColor(feed.isLiked ? Color.fwGreen : Color.fwGray)
+              .foregroundColor(feed.isLiked ? Color.fwPink : Color.fwGray)
           }
           
           Text("추천 \(feed.likeCount)")

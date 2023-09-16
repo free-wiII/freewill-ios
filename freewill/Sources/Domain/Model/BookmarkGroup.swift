@@ -8,12 +8,6 @@
 import Foundation
 
 struct BookmarkGroup: Identifiable {
-  
-  let id = UUID()
+  let id: Int
   let title: String
-  let createdAt: Date
-  
-  static func ==(lhs: BookmarkGroup, rhs: BookmarkGroup) -> Bool {
-    return lhs.id == rhs.id
-  }
 }

@@ -23,7 +23,7 @@ struct MainTabbedView: View {
         MainView()
           .tag(TabItem.main)
         
-        BookmarkView()
+        BookmarkView(viewModel: .init())
           .tag(TabItem.bookmark)
         
         MyPageView()
