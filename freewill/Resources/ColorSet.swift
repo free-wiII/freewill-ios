@@ -10,7 +10,7 @@ import SwiftUI
 extension Color {
   
   static let fwBlack = Color(uiColor: R.color.black()!)
-  static let fwGreen = Color(uiColor: R.color.green()!)
+  static let fwPink = Color(uiColor: R.color.pink()!)
   static let fwWhite = Color(uiColor: R.color.white()!)
   
   
