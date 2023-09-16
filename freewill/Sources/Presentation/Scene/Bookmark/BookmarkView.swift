@@ -11,12 +11,9 @@ struct BookmarkView: View {
   
   // MARK: - Properties
   
-  @State var sampleBookmarkGroups: [BookmarkGroup] = [
-    .init(title: "🫥 가보고싶은 카페 모음", createdAt: .init()),
-    .init(title: "🌳 조용한 카페 모음", createdAt: .init()),
-    .init(title: "😋 디저트가 맛있는 카페 모음", createdAt: .init())
-  ]
+  @StateObject var viewModel: BookmarkViewModel
   
+  @State private var didAppear = false
   
   
   // MARK: - Views
@@ -32,7 +29,7 @@ struct BookmarkView: View {
         
         ScrollView {
           VStack(spacing: 0) {
-            ForEach(sampleBookmarkGroups, id: \.id) { bookmark in
+            ForEach(viewModel.bookmarkGroups, id: \.id) { bookmark in
                 NavigationLink {
                   BookmarkDetailView()
                     .toolbar(.hidden, for: .navigationBar)
@@ -52,6 +49,12 @@ struct BookmarkView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
       }
     }
+    .onAppear {
+      if didAppear == false {
+        viewModel.fetchBookmarkGroup()
+        didAppear = true
+      }
+    }
   }
   
   private func bookmarkGroupItem(_ bookmarkGroup: BookmarkGroup) -> some View {
@@ -67,6 +70,6 @@ struct BookmarkView: View {
 
 struct BookmarkView_Previews: PreviewProvider {
   static var previews: some View {
-    BookmarkView()
+    BookmarkView(viewModel: .init())
   }
 }

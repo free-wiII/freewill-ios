@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E0D08E32AB5CAAD00E61FE1 /* BookmarkGroupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D08E22AB5CAAD00E61FE1 /* BookmarkGroupUseCase.swift */; };
+		8E0D08E62AB5CB8100E61FE1 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D08E52AB5CB8100E61FE1 /* UserAPI.swift */; };
+		8E0D08EB2AB5CBCE00E61FE1 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D08EA2AB5CBCE00E61FE1 /* UserRepository.swift */; };
+		8E0D08ED2AB5CC3C00E61FE1 /* BookmarkGroupEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D08EC2AB5CC3C00E61FE1 /* BookmarkGroupEntity.swift */; };
+		8E0D08EF2AB5CDA100E61FE1 /* bookmark_group_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E0D08EE2AB5CDA100E61FE1 /* bookmark_group_list.json */; };
+		8E0D08F22AB5CE6D00E61FE1 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D08F12AB5CE6D00E61FE1 /* BookmarkViewModel.swift */; };
 		8E13CD262AAB474600D769EE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13CD252AAB474600D769EE /* SearchView.swift */; };
 		8E13CD282AAB519800D769EE /* GridCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13CD272AAB519800D769EE /* GridCalculator.swift */; };
 		8E13CD2A2AAB51A600D769EE /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13CD292AAB51A600D769EE /* GridView.swift */; };
@@ -52,6 +58,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E0D08E22AB5CAAD00E61FE1 /* BookmarkGroupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkGroupUseCase.swift; sourceTree = "<group>"; };
+		8E0D08E52AB5CB8100E61FE1 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		8E0D08EA2AB5CBCE00E61FE1 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		8E0D08EC2AB5CC3C00E61FE1 /* BookmarkGroupEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkGroupEntity.swift; sourceTree = "<group>"; };
+		8E0D08EE2AB5CDA100E61FE1 /* bookmark_group_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookmark_group_list.json; sourceTree = "<group>"; };
+		8E0D08F12AB5CE6D00E61FE1 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
 		8E13CD252AAB474600D769EE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		8E13CD272AAB519800D769EE /* GridCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCalculator.swift; sourceTree = "<group>"; };
 		8E13CD292AAB51A600D769EE /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
@@ -207,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				8E546F892AAD9F54005BCAD4 /* BookmarkView.swift */,
+				8E0D08F12AB5CE6D00E61FE1 /* BookmarkViewModel.swift */,
 			);
 			path = Bookmark;
 			sourceTree = "<group>";
@@ -294,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				8E546FB22AADDCE5005BCAD4 /* FeedListUseCase.swift */,
+				8E0D08E22AB5CAAD00E61FE1 /* BookmarkGroupUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -302,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC66CC62AB44E0A00204586 /* Respository.swift */,
+				8E0D08EA2AB5CBCE00E61FE1 /* UserRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -310,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				8E7622692AB488E00096F7D7 /* FeedEntity.swift */,
+				8E0D08EC2AB5CC3C00E61FE1 /* BookmarkGroupEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC66CCA2AB4506F00204586 /* FreeWillAPI.swift */,
+				8E0D08E52AB5CB8100E61FE1 /* UserAPI.swift */,
 				8EC66CD12AB4515100204586 /* NetworkService.swift */,
 			);
 			path = Network;
@@ -342,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				8E76226D2AB48EEC0096F7D7 /* feed_list.json */,
+				8E0D08EE2AB5CDA100E61FE1 /* bookmark_group_list.json */,
 			);
 			path = SampleData;
 			sourceTree = "<group>";
@@ -471,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E9264862AA84B5E00BB63E1 /* Preview Assets.xcassets in Resources */,
+				8E0D08EF2AB5CDA100E61FE1 /* bookmark_group_list.json in Resources */,
 				8E9264832AA84B5E00BB63E1 /* Assets.xcassets in Resources */,
 				8E8A8A6D2AB49476000528BC /* feed_list.json in Resources */,
 			);
@@ -486,6 +505,8 @@
 				8E13CD452AACDDE400D769EE /* UnderlineTextField.swift in Sources */,
 				8E13CD2A2AAB51A600D769EE /* GridView.swift in Sources */,
 				8E9264812AA84B5D00BB63E1 /* MainTabbedView.swift in Sources */,
+				8E0D08E62AB5CB8100E61FE1 /* UserAPI.swift in Sources */,
+				8E0D08F22AB5CE6D00E61FE1 /* BookmarkViewModel.swift in Sources */,
 				8E13CD3D2AACD78300D769EE /* BottomContainerButton.swift in Sources */,
 				8EC66CC92AB44FCA00204586 /* Feed.swift in Sources */,
 				8E9264DB2AA9EF3400BB63E1 /* LoginType.swift in Sources */,
@@ -494,6 +515,7 @@
 				8E9264D32AA9E44800BB63E1 /* BlurView.swift in Sources */,
 				8E9264CB2AA9D98000BB63E1 /* FilterCriteriaSelector.swift in Sources */,
 				8E9264D72AA9EDDB00BB63E1 /* LoginView.swift in Sources */,
+				8E0D08ED2AB5CC3C00E61FE1 /* BookmarkGroupEntity.swift in Sources */,
 				8E546F912AADA34F005BCAD4 /* BookmarkDetailView.swift in Sources */,
 				8E76226A2AB488E00096F7D7 /* FeedEntity.swift in Sources */,
 				8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */,
@@ -508,10 +530,12 @@
 				8E9264D12AA9E0B000BB63E1 /* FeedListItem.swift in Sources */,
 				8E13CD3F2AACDA9A00D769EE /* EditProfileView.swift in Sources */,
 				8E9264C42AA9C55B00BB63E1 /* NavigationBar.swift in Sources */,
+				8E0D08EB2AB5CBCE00E61FE1 /* UserRepository.swift in Sources */,
 				8E13CD2F2AAB576F00D769EE /* SearchViewModel.swift in Sources */,
 				8E546F8D2AAD9F62005BCAD4 /* BookmarkGroup.swift in Sources */,
 				8E13CD372AACD45E00D769EE /* UnderlinedButton.swift in Sources */,
 				8E9264CD2AA9DB6000BB63E1 /* MainView.swift in Sources */,
+				8E0D08E32AB5CAAD00E61FE1 /* BookmarkGroupUseCase.swift in Sources */,
 				8E13CD352AACD24200D769EE /* MyPageView.swift in Sources */,
 				8E9264A02AA857C100BB63E1 /* ColorSet.swift in Sources */,
 				8E13CD472AACDE2F00D769EE /* FocusableTextField.swift in Sources */,
