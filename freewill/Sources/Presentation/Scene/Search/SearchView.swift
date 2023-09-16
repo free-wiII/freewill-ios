@@ -73,6 +73,13 @@ struct SearchView: View {
           RoundedRectangle(cornerRadius: 8)
             .stroke(Color.fwGray20, lineWidth: 1)
         }
+        .overlay {
+          Circle()
+            .stroke(Color.white, lineWidth: 1)
+            .background(Color.fwBlack.clipShape(Circle()))
+            .frame(width: 16, height: 16)
+            .shadow(color: .black.opacity(0.25), radius: 4, x: 0, y: 4)
+        }
     }
     .padding(.horizontal, 16)
   }
