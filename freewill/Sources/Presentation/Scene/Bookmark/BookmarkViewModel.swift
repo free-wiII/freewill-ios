@@ -22,7 +22,7 @@ final class BookmarkViewModel: ObservableObject {
   // MARK: - Initializers
   
   init() {
-    let repository = UserRepository(service: NetworkService<UserAPI>(.stub))
+    let repository = BookmarkGroupRepository(service: NetworkService<BookmarkAPI>(.stub))
     bookmarkGroupUseCase = BookmarkGroupUseCase(repository: repository)
   }
   

@@ -12,12 +12,12 @@ final class BookmarkGroupUseCase {
   
   // MARK: - Properties
   
-  private let repository: UserRepository
+  private let repository: BookmarkGroupRepository
   
   
   // MARK: - Initializers
   
-  init(repository: UserRepository) {
+  init(repository: BookmarkGroupRepository) {
     self.repository = repository
   }
   

@@ -31,7 +31,7 @@ struct BookmarkView: View {
           VStack(spacing: 0) {
             ForEach(viewModel.bookmarkGroups, id: \.id) { bookmark in
                 NavigationLink {
-                  BookmarkDetailView()
+                  BookmarkDetailView(viewModel: .init())
                     .toolbar(.hidden, for: .navigationBar)
                 } label: {
                   VStack(spacing: 0) {

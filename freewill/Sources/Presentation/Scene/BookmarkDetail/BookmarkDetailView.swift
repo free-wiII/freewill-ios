@@ -12,11 +12,9 @@ struct BookmarkDetailView: View {
   // MARK: - Properties
   
   @Environment(\.dismiss) private var dismiss
-  @State var sampleBookmarks: [Bookmark] = [
-    .init(title: "어퍼스트로피", location: "경기도 안양시 어쩌구", images: [.init(), .init(), .init()]),
-    .init(title: "title", location: "location", images: [.init()]),
-    .init(title: "title", location: "location", images: [.init(), .init()])
-  ]
+  
+  @StateObject var viewModel: BookmarkDetailViewModel
+  @State private var didAppear = false
   
   
   // MARK: - Views
@@ -39,14 +37,26 @@ struct BookmarkDetailView: View {
           .foregroundColor(.fwBlack)
       }
       
-      ScrollView {
-        LazyVStack(spacing: 24) {
-          ForEach(sampleBookmarks, id: \.id) { bookmark in
-            bookmarkItem(bookmark)
+      if viewModel.isLoading {
+        Spacer()
+        ProgressView()
+        Spacer()
+      } else {
+        ScrollView {
+          LazyVStack(spacing: 24) {
+            ForEach(viewModel.bookmarks, id: \.id) { bookmark in
+              bookmarkItem(bookmark)
+            }
           }
+          .padding(.horizontal, 20)
+          .padding(.vertical, 24)
         }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 24)
+      }
+    }
+    .onAppear {
+      if didAppear == false {
+        viewModel.fetchBookmarks()
+        didAppear = true
       }
     }
   }
@@ -73,6 +83,17 @@ struct BookmarkDetailView: View {
             .aspectRatio(bookmark.images.count == 3 ? 1/1
                          : (bookmark.images.count == 2 ? 4/3 : 2/1),
                          contentMode: .fill)
+            .overlay {
+              AsyncImage(
+                url: URL(string: image),
+                content: { image in
+                  image.resizable()
+                    .aspectRatio(contentMode: .fill)
+                }, placeholder: {
+                  ProgressView()
+              })
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 8))
         }
       }
     }
@@ -84,6 +105,6 @@ struct BookmarkDetailView: View {
 
 struct BookmarkDetailView_Previews: PreviewProvider {
   static var previews: some View {
-    BookmarkDetailView()
+    BookmarkDetailView(viewModel: .init())
   }
 }

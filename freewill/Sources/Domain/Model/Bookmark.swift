@@ -8,8 +8,8 @@
 import UIKit
 
 struct Bookmark: Identifiable {
-  let id = UUID()
+  let id: Int
   let title: String
   let location: String
-  let images: [UIImage]
+  let images: [String]
 }
