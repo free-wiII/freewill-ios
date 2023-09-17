@@ -21,17 +21,23 @@ struct SaveCafeView: View {
     VStack(spacing: 0) {
       navigationBar()
       
-      ScrollView {
-        LazyVStack(spacing: 0) {
-          makeNewGroupView()
-          ForEach(viewModel.bookmarkGroups, id: \.id) { bookmarkGroup in
-            bookmarkGroupItem(bookmarkGroup)
-            
-            Divider()
-              .overlay(Color.fwGray20)
+      if viewModel.isLoading {
+        Spacer()
+        ProgressView()
+        Spacer()
+      } else {
+        ScrollView {
+          LazyVStack(spacing: 0) {
+            makeNewGroupView()
+            ForEach(viewModel.bookmarkGroups, id: \.id) { bookmarkGroup in
+              bookmarkGroupItem(bookmarkGroup)
+              
+              Divider()
+                .overlay(Color.fwGray20)
+            }
           }
+          .padding(.horizontal, 20)
         }
-        .padding(.horizontal, 20)
       }
       
       BottomContainerButton("저장", enabled: .constant(true)) {

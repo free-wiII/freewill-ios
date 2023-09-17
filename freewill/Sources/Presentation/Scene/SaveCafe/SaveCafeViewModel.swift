@@ -14,6 +14,7 @@ final class SaveCafeViewModel: ObservableObject {
   
   private var cancellables = Set<AnyCancellable>()
   
+  @Published var isLoading = false
   @Published var selectedGroup: BookmarkGroup?
   @Published var bookmarkGroups = [BookmarkGroup]()
   
@@ -31,11 +32,13 @@ final class SaveCafeViewModel: ObservableObject {
   // MARK: - Methods
   
   public func fetchBookmarkGroups() {
+    isLoading = true
+    
     bookmarkGroupUseCase.execute()
       .subscribe(on: DispatchQueue.global())
       .receive(on: DispatchQueue.main)
-      .sink { _ in
-        // completion
+      .sink { [weak self] _ in
+        self?.isLoading = false
       } receiveValue: { [weak self] bookmarkGroups in
         self?.bookmarkGroups = bookmarkGroups
       }
