@@ -1,5 +1,5 @@
 //
-//  SaveCafeView.swift
+//  SaveBookmarkView.swift
 //  freewill
 //
 //  Created by 이승기 on 2023/09/17.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SaveCafeView: View {
+struct SaveBookmarkView: View {
   
   // MARK: - Properties
   
@@ -15,6 +15,7 @@ struct SaveCafeView: View {
   
   @State private var didAppear = false
   @StateObject var viewModel: SaveCafeViewModel
+  @State private var isMakeBookmarkGroupViewShown = false
   
   
   // MARK: - Views
@@ -56,6 +57,11 @@ struct SaveCafeView: View {
         didAppear = true
       }
     }
+    .sheet(isPresented: $isMakeBookmarkGroupViewShown, content: {
+      let viewModel = MakeBookmarkGroupViewModel()
+      MakeBookmarkGroupView(viewModel: viewModel)
+        .presentationDetents([.height(260)])
+    })
   }
   
   private func navigationBar() -> some View {
@@ -84,7 +90,7 @@ struct SaveCafeView: View {
   
   private func makeNewGroupView() -> some View {
     Button {
-      // action
+      isMakeBookmarkGroupViewShown = true
     } label: {
       HStack(spacing: 12) {
         Image(uiImage: R.image.folder_plus()!)
@@ -136,5 +142,5 @@ struct SaveCafeView: View {
 // MARK: - Preview
 
 #Preview {
-  SaveCafeView(viewModel: .init())
+  SaveBookmarkView(viewModel: .init())
 }
