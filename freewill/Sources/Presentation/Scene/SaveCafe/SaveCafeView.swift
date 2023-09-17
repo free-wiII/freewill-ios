@@ -11,6 +11,8 @@ struct SaveCafeView: View {
   
   // MARK: - Properties
   
+  @Environment(\.dismiss) private var dismiss
+  
   @State private var didAppear = false
   @StateObject var viewModel: SaveCafeViewModel
   
@@ -62,7 +64,7 @@ struct SaveCafeView: View {
         Spacer()
         
         Button {
-          // action
+          dismiss()
         } label: {
           Image(uiImage: R.image.x()!)
             .resizable()
