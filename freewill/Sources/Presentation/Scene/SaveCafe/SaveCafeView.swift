@@ -32,7 +32,11 @@ struct SaveCafeView: View {
           LazyVStack(spacing: 0) {
             makeNewGroupView()
             ForEach(viewModel.bookmarkGroups, id: \.id) { bookmarkGroup in
-              bookmarkGroupItem(bookmarkGroup)
+              Button {
+                viewModel.selectedGroup = bookmarkGroup
+              } label: {
+                bookmarkGroupItem(bookmarkGroup)
+              }
               
               Divider()
                 .overlay(Color.fwGray20)
@@ -103,30 +107,25 @@ struct SaveCafeView: View {
         .frame(maxWidth: .infinity ,alignment: .leading)
         .foregroundStyle(Color.fwBlack)
       
-      Button {
-        // action
-        viewModel.selectedGroup = bookmarkGroup
-      } label: {
-        if let selectedGroup = viewModel.selectedGroup,
-           selectedGroup == bookmarkGroup {
-          RoundedRectangle(cornerRadius: 6)
-            .fill(Color.fwBlack)
-            .overlay {
-              Image(uiImage: R.image.check()!)
-                .resizable()
-                .frame(width: 12, height: 12)
-                .foregroundStyle(Color.fwWhite)
-            }
-            .frame(width: 24, height: 24)
-        } else {
-          RoundedRectangle(cornerRadius: 6)
-            .fill(Color.fwGray20)
-            .overlay {
-              RoundedRectangle(cornerRadius: 6)
-                .stroke(Color.fwBlack, lineWidth: 1)
-            }
-            .frame(width: 24, height: 24)
-        }
+      if let selectedGroup = viewModel.selectedGroup,
+         selectedGroup == bookmarkGroup {
+        RoundedRectangle(cornerRadius: 6)
+          .fill(Color.fwBlack)
+          .overlay {
+            Image(uiImage: R.image.check()!)
+              .resizable()
+              .frame(width: 12, height: 12)
+              .foregroundStyle(Color.fwWhite)
+          }
+          .frame(width: 24, height: 24)
+      } else {
+        RoundedRectangle(cornerRadius: 6)
+          .fill(Color.fwGray20)
+          .overlay {
+            RoundedRectangle(cornerRadius: 6)
+              .stroke(Color.fwBlack, lineWidth: 1)
+          }
+          .frame(width: 24, height: 24)
       }
     }
     .frame(height: 56)
