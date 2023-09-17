@@ -47,7 +47,7 @@ struct CafeListItem: View {
             }
           }
         }
-        .tabViewStyle(.page)
+        .tabViewStyle(.page(indexDisplayMode: .never))
         .background(Color.fwWhite)
         .cornerRadius(12)
         
