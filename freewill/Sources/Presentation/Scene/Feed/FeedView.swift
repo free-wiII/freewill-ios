@@ -51,14 +51,20 @@ struct FeedView: View {
         
         FilterCriteriaSelector(selectedCriteria: $viewModel.selectedCriteria)
         
-        ScrollView {
-          LazyVStack(spacing: 24) {
-            ForEach(viewModel.feeds, id: \.id) { feed in
-              CafeListItem(feed: feed)
+        if viewModel.isLoading {
+          Spacer()
+          ProgressView()
+          Spacer()
+        } else {
+          ScrollView {
+            LazyVStack(spacing: 24) {
+              ForEach(viewModel.feeds, id: \.id) { feed in
+                CafeListItem(feed: feed)
+              }
             }
+            .padding(.vertical, 20)
+            .padding(.horizontal, 16)
           }
-          .padding(.vertical, 20)
-          .padding(.horizontal, 16)
         }
       }
     }

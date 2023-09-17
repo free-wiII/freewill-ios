@@ -14,6 +14,7 @@ final class FeedViewModel: ObservableObject {
   
   private var cancellables = Set<AnyCancellable>()
   
+  @Published var isLoading = false
   @Published var selectedCriteria: FilterCriteria = .best
   @Published var feeds = [Feed]()
   
@@ -31,11 +32,13 @@ final class FeedViewModel: ObservableObject {
   // MARK: - Methods
   
   public func fetchFeed() {
+    isLoading = true
+    
     feedListUseCase.execute()
       .subscribe(on: DispatchQueue.global())
       .receive(on: DispatchQueue.main)
-      .sink { completion in
-        print(completion)
+      .sink { [weak self] _ in
+        self?.isLoading = false
       } receiveValue: { [weak self] feeds in
         self?.feeds = feeds
       }
