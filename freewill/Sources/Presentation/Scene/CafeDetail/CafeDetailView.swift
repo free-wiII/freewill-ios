@@ -11,6 +11,8 @@ import MapKit
 struct CafeDetailView: View {
   
   // MARK: - Properties
+  
+  @Environment(\.dismiss) private var dismiss
 
   @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.5666791, longitude: 126.9782914), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
   
@@ -27,7 +29,7 @@ struct CafeDetailView: View {
       VStack(spacing: 0) {
         NavigationBar(leadingContent: {
           Button {
-            // action
+            dismiss()
           } label: {
             Image(uiImage: R.image.chevron_left()!)
               .resizable()
