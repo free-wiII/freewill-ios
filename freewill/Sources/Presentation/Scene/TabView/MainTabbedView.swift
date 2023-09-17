@@ -20,7 +20,7 @@ struct MainTabbedView: View {
   var body: some View {
     ZStack(alignment: .bottom) {
       TabView(selection: $selectedTab) {
-        MainView()
+        FeedView()
           .tag(TabItem.main)
         
         BookmarkView(viewModel: .init())
