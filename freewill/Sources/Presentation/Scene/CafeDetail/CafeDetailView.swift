@@ -249,8 +249,8 @@ struct CafeDetailView: View {
       
       Spacer()
       
-      Button {
-        // action
+      NavigationLink {
+        WriteReviewView()
       } label: {
         Text("작성하기")
           .font(.system(size: 14, weight: .bold))
