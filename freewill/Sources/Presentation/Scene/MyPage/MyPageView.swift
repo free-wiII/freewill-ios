@@ -41,6 +41,7 @@ struct MyPageView: View {
         .padding(.vertical, 20)
       }
     }
+    .navigationViewStyle(.stack)
   }
   
   private func infoSection() -> some View {

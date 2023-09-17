@@ -72,6 +72,7 @@ struct FeedView: View {
         }
       }
     }
+    .navigationViewStyle(.stack)
     .onAppear {
       if didAppear == false {
         viewModel.fetchFeed()

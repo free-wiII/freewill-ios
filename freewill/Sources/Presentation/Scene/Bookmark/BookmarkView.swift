@@ -55,6 +55,7 @@ struct BookmarkView: View {
         }
       }
     }
+    .navigationViewStyle(.stack)
     .onAppear {
       if didAppear == false {
         viewModel.fetchBookmarkGroup()
