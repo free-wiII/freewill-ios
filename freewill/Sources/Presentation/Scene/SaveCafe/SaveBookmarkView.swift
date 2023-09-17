@@ -47,7 +47,7 @@ struct SaveBookmarkView: View {
         }
       }
       
-      BottomContainerButton("저장", enabled: .constant(true)) {
+      BottomContainerButton("저장", enabled: .constant(viewModel.selectedGroup != nil)) {
         // action
       }
     }
