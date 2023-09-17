@@ -33,7 +33,7 @@ struct BottomContainerButton: View {
     ZStack {
       VStack {
         Divider()
-          .overlay(Color.fwGray30)
+          .overlay(Color.fwGray40)
         
         Spacer()
       }

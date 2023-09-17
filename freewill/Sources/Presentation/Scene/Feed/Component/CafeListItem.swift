@@ -1,5 +1,5 @@
 //
-//  FeedListItem.swift
+//  CafeListItem.swift
 //  freewill
 //
 //  Created by 이승기 on 2023/09/07.
@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct FeedListItem: View {
+struct CafeListItem: View {
   
   // MARK: - Properties
   
   let feed: Feed
   @State private var selectedImage: Int = 0
+  
+  @State private var isSaveCafeViewShown = false
   
   
   // MARK: - Views
@@ -97,7 +99,7 @@ struct FeedListItem: View {
         Spacer()
         
         Button {
-          // action
+          isSaveCafeViewShown = true
         } label: {
           Image(uiImage: feed.isBookmarked ? R.image.bookmark_filled()! : R.image.bookmark()!)
             .resizable()
@@ -109,6 +111,11 @@ struct FeedListItem: View {
       .padding(.horizontal, 4)
       .padding(.top, 16)
     }
+    .sheet(isPresented: $isSaveCafeViewShown, content: {
+      let viewModel = SaveCafeViewModel()
+      SaveCafeView(viewModel: viewModel)
+        .presentationDetents([.fraction(0.5)])
+    })
   }
 }
 
@@ -127,6 +134,6 @@ struct FeedItem_Previews: PreviewProvider {
                     likeCount: Array(0...999).randomElement()!,
                     isLiked: Bool.random(),
                     isBookmarked: Bool.random())
-    FeedListItem(feed: feed)
+    CafeListItem(feed: feed)
   }
 }

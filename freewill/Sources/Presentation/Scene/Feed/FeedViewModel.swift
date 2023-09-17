@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-final class MainViewModel: ObservableObject {
+final class FeedViewModel: ObservableObject {
   
   // MARK: - Properties
   

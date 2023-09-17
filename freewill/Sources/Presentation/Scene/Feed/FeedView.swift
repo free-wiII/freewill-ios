@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  FeedView.swift
 //  freewill
 //
 //  Created by 이승기 on 2023/09/07.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct FeedView: View {
   
   // MARK: - Properties
   
   @State private var didAppear = false
-  @StateObject var viewModel = MainViewModel()
+  @StateObject var viewModel = FeedViewModel()
   
   
   // MARK: - Views
@@ -54,7 +54,7 @@ struct MainView: View {
         ScrollView {
           LazyVStack(spacing: 24) {
             ForEach(viewModel.feeds, id: \.id) { feed in
-              FeedListItem(feed: feed)
+              CafeListItem(feed: feed)
             }
           }
           .padding(.vertical, 20)
@@ -76,6 +76,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
   static var previews: some View {
-    MainView()
+    FeedView()
   }
 }
