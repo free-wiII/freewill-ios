@@ -15,6 +15,7 @@ struct SaveBookmarkView: View {
   
   @State private var didAppear = false
   @StateObject var viewModel: SaveCafeViewModel
+  @State private var isMakeBookmarkGroupViewShown = false
   
   
   // MARK: - Views
@@ -56,6 +57,11 @@ struct SaveBookmarkView: View {
         didAppear = true
       }
     }
+    .sheet(isPresented: $isMakeBookmarkGroupViewShown, content: {
+      let viewModel = MakeBookmarkGroupViewModel()
+      MakeBookmarkGroupView(viewModel: viewModel)
+        .presentationDetents([.height(260)])
+    })
   }
   
   private func navigationBar() -> some View {
@@ -84,7 +90,7 @@ struct SaveBookmarkView: View {
   
   private func makeNewGroupView() -> some View {
     Button {
-      // action
+      isMakeBookmarkGroupViewShown = true
     } label: {
       HStack(spacing: 12) {
         Image(uiImage: R.image.folder_plus()!)
