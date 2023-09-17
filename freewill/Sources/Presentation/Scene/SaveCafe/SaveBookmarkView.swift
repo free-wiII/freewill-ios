@@ -1,5 +1,5 @@
 //
-//  SaveCafeView.swift
+//  SaveBookmarkView.swift
 //  freewill
 //
 //  Created by 이승기 on 2023/09/17.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SaveCafeView: View {
+struct SaveBookmarkView: View {
   
   // MARK: - Properties
   
@@ -136,5 +136,5 @@ struct SaveCafeView: View {
 // MARK: - Preview
 
 #Preview {
-  SaveCafeView(viewModel: .init())
+  SaveBookmarkView(viewModel: .init())
 }

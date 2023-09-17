@@ -14,7 +14,7 @@ struct CafeListItem: View {
   let feed: Feed
   @State private var selectedImage: Int = 0
   
-  @State private var isSaveCafeViewShown = false
+  @State private var isSaveBookmarkViewShown = false
   
   
   // MARK: - Views
@@ -99,7 +99,7 @@ struct CafeListItem: View {
         Spacer()
         
         Button {
-          isSaveCafeViewShown = true
+          isSaveBookmarkViewShown = true
         } label: {
           Image(uiImage: feed.isBookmarked ? R.image.bookmark_filled()! : R.image.bookmark()!)
             .resizable()
@@ -111,9 +111,9 @@ struct CafeListItem: View {
       .padding(.horizontal, 4)
       .padding(.top, 16)
     }
-    .sheet(isPresented: $isSaveCafeViewShown, content: {
+    .sheet(isPresented: $isSaveBookmarkViewShown, content: {
       let viewModel = SaveCafeViewModel()
-      SaveCafeView(viewModel: viewModel)
+      SaveBookmarkView(viewModel: viewModel)
         .presentationDetents([.fraction(0.5)])
     })
   }
