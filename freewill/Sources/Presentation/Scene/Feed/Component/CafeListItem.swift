@@ -14,6 +14,8 @@ struct CafeListItem: View {
   let feed: Feed
   @State private var selectedImage: Int = 0
   
+  @State private var isSaveCafeViewShown = false
+  
   
   // MARK: - Views
   
@@ -97,7 +99,7 @@ struct CafeListItem: View {
         Spacer()
         
         Button {
-          // action
+          isSaveCafeViewShown = true
         } label: {
           Image(uiImage: feed.isBookmarked ? R.image.bookmark_filled()! : R.image.bookmark()!)
             .resizable()
@@ -109,6 +111,11 @@ struct CafeListItem: View {
       .padding(.horizontal, 4)
       .padding(.top, 16)
     }
+    .sheet(isPresented: $isSaveCafeViewShown, content: {
+      let viewModel = SaveCafeViewModel()
+      SaveCafeView(viewModel: viewModel)
+        .presentationDetents([.fraction(0.5)])
+    })
   }
 }
 
