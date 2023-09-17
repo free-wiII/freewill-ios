@@ -45,7 +45,11 @@ struct BookmarkDetailView: View {
         ScrollView {
           LazyVStack(spacing: 24) {
             ForEach(viewModel.bookmarks, id: \.id) { bookmark in
-              bookmarkItem(bookmark)
+              NavigationLink {
+                CafeDetailView()
+              } label: {
+                bookmarkItem(bookmark)
+              }
             }
           }
           .padding(.horizontal, 20)
