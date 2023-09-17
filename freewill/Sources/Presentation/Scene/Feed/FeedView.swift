@@ -54,7 +54,7 @@ struct FeedView: View {
         ScrollView {
           LazyVStack(spacing: 24) {
             ForEach(viewModel.feeds, id: \.id) { feed in
-              FeedListItem(feed: feed)
+              CafeListItem(feed: feed)
             }
           }
           .padding(.vertical, 20)

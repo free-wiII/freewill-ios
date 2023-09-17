@@ -1,5 +1,5 @@
 //
-//  FeedListItem.swift
+//  CafeListItem.swift
 //  freewill
 //
 //  Created by 이승기 on 2023/09/07.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FeedListItem: View {
+struct CafeListItem: View {
   
   // MARK: - Properties
   
@@ -127,6 +127,6 @@ struct FeedItem_Previews: PreviewProvider {
                     likeCount: Array(0...999).randomElement()!,
                     isLiked: Bool.random(),
                     isBookmarked: Bool.random())
-    FeedListItem(feed: feed)
+    CafeListItem(feed: feed)
   }
 }
