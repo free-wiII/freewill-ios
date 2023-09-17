@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BookmarkGroup: Identifiable {
+struct BookmarkGroup: Identifiable, Equatable {
   let id: Int
   let title: String
 }
