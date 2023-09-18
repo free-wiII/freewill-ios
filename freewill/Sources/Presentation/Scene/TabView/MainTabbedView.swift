@@ -32,6 +32,7 @@ struct MainTabbedView: View {
       
       TabBar(selectedTab: $selectedTab)
     }
+    .ignoresSafeArea(.keyboard, edges: .bottom)
     .fullScreenCover(isPresented: $isLoginViewShown) {
       LoginView()
     }
