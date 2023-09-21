@@ -166,10 +166,8 @@ struct CafeDetailView: View {
                 .font(.system(size: 13, weight: .bold))
                 .foregroundStyle(Color.fwBlack)
             }
-            
-            Capsule()
-              .fill(Color.fwPink)
-              .frame(height: 6)
+        
+            RatingProgressBar(value: rating.score)
           }
         }
       })
