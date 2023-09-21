@@ -7,33 +7,30 @@
 
 import SwiftUI
 
-public struct GridView<Content>: View where Content: View {
+public struct GridView<Content, Item>: View where Content: View {
+  
   private let gridWidth: CGFloat
   private let spacing: CGFloat
-  private let numItems: Int
+  private let items: [Item]
   private let alignment: HorizontalAlignment
-  private let content: (Int) -> Content
+  private let content: (Item) -> Content
   
   public init(
     gridWidth: CGFloat,
     spacing: CGFloat,
-    numItems: Int,
+    items: [Item],
     alignment: HorizontalAlignment = .leading,
-    @ViewBuilder content: @escaping (Int) -> Content
+    @ViewBuilder content: @escaping (Item) -> Content
   ) {
     self.gridWidth = gridWidth
     self.spacing = spacing
-    self.numItems = numItems
+    self.items = items
     self.alignment = alignment
     self.content = content
   }
   
-  var items: [Int] {
-    Array(0..<numItems).map { $0 }
-  }
-  
   public var body: some View {
-    InnerGrid(
+    InnerGrid<Content, Item>(
       width: gridWidth,
       spacing: self.spacing,
       items: self.items,
@@ -43,37 +40,39 @@ public struct GridView<Content>: View where Content: View {
   }
 }
 
-private struct InnerGrid<Content>: View where Content: View {
+private struct InnerGrid<Content, Item>: View where Content: View {
   
   private let width: CGFloat
   private let spacing: CGFloat
-  private let items: [Int]
+  private let items: [Item]
   private let alignment: HorizontalAlignment
-  private let content: (Int) -> Content
+  private let content: (Item) -> Content
+  private let indices: [Int]
   private let gridCalculator = GridCalculator()
   @State var itemSizes: [CGSize] = []
   
   init(
     width: CGFloat,
     spacing: CGFloat,
-    items: [Int],
+    items: [Item],
     alignment: HorizontalAlignment = .leading,
-    @ViewBuilder content: @escaping (Int) -> Content
+    @ViewBuilder content: @escaping (Item) -> Content
   ) {
     self.width = width
     self.items = items
     self.spacing = spacing
     self.alignment = alignment
     self.content = content
+    self.indices = items.enumerated().map { $0.offset }
   }
   
   var body : some View {
     VStack(alignment: alignment, spacing: spacing) {
-      ForEach(gridCalculator.calculate(availableWidth: width, items: items, sizeItems: itemSizes, cellSpacing: spacing), id: \.self) { row in
+      ForEach(gridCalculator.calculate(availableWidth: width, items: indices, sizeItems: itemSizes, cellSpacing: spacing), id: \.self) { row in
         HStack(spacing: self.spacing) {
-          ForEach(row, id: \.self) { item in
+          ForEach(row, id: \.self) { index in
             ChildSizeReader(size: self.$itemSizes) {
-              self.content(item)
+              self.content(items[index])
             }
           }
         }.padding(.horizontal, self.spacing)

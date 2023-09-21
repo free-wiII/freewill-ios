@@ -1,0 +1,31 @@
+{
+  "id": 1,
+  "name": "SunnySide Cafe",
+  "images": ["https://picsum.photos/800/800", "https://picsum.photos/800/800", "https://picsum.photos/800/800", "https://picsum.photos/800/800"],
+  "likeCount": 120,
+  "isLiked": false,
+  "isBookmarked": true,
+  "ratings": [
+    {"criteria": "MOOD", "score": 4.0},
+    {"criteria": "BEVERAGE", "score": 3.2},
+    {"criteria": "DESERT", "score": 1.0},
+    {"criteria": "GROUP", "score": 4.2},
+    {"criteria": "QUIET", "score": 2.3},
+    {"criteria": "CONSENT", "score": 1.0}
+  ],
+  "location": {
+    "lng": 127.023890,
+    "lat": 37.564308,
+    "distance": 500.5,
+    "address": "123-45 Sunny Street, Example City, 12345"
+  },
+  "featuredReviews": [
+    {
+      "userId": 2,
+      "userName": "John Doe",
+      "image": "https://example.com/userimage.jpg",
+      "content": "Great cafe with an excellent variety of options, love the ambience!",
+      "likeCount": 20
+    }
+  ]
+}

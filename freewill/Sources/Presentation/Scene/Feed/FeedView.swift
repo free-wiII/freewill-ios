@@ -60,7 +60,8 @@ struct FeedView: View {
             LazyVStack(spacing: 24) {
               ForEach(viewModel.feeds, id: \.id) { feed in
                 NavigationLink {
-                  CafeDetailView()
+                  let viewModel = CafeDetailViewModel()
+                  CafeDetailView(viewModel: viewModel)
                 } label: {
                   CafeListItem(feed: feed)
                 }

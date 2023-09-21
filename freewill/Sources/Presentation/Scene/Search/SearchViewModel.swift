@@ -11,12 +11,12 @@ final class SearchViewModel: ObservableObject {
   
   // MARK: - Properties
   
-  @Published var selectedPriority = [Rating]()
+  @Published var selectedPriority = [RatingCriteria]()
   
   
   // MARK: - Public
   
-  public func addPriority(_ rating: Rating) {
+  public func addPriority(_ rating: RatingCriteria) {
     // 중복된 거 있으면 삭제
     removePriority(rating)
     
@@ -28,7 +28,7 @@ final class SearchViewModel: ObservableObject {
     selectedPriority.append(rating)
   }
   
-  public func removePriority(_ rating: Rating) {
+  public func removePriority(_ rating: RatingCriteria) {
     if let index = selectedPriority.firstIndex(of: rating) {
       selectedPriority.remove(at: index)
     }

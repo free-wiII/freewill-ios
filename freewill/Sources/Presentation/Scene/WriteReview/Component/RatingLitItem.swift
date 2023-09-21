@@ -11,7 +11,7 @@ struct RatingLitItem: View {
   
   // MARK: - Properties
   
-  let rating: Rating
+  let rating: RatingCriteria
   @State private var ratingNumber = 3
   
   
