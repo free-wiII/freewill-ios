@@ -57,7 +57,7 @@ struct WriteReviewView: View {
               .stroke(Color.fwGray40, lineWidth: 1)
           }
           
-          ForEach(Array(Rating.allCases.enumerated()), id: \.offset) { _, rating in
+          ForEach(Array(RatingCriteria.allCases.enumerated()), id: \.offset) { _, rating in
             RatingLitItem(rating: rating)
           }
         }

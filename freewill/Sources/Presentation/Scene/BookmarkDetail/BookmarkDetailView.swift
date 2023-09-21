@@ -46,7 +46,8 @@ struct BookmarkDetailView: View {
           LazyVStack(spacing: 24) {
             ForEach(viewModel.bookmarks, id: \.id) { bookmark in
               NavigationLink {
-                CafeDetailView()
+                let viewModel = CafeDetailViewModel()
+                CafeDetailView(viewModel: viewModel)
               } label: {
                 bookmarkItem(bookmark)
               }

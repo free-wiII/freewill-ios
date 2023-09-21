@@ -13,9 +13,11 @@ struct CafeDetailView: View {
   // MARK: - Properties
   
   @Environment(\.dismiss) private var dismiss
-
-  @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.5666791, longitude: 126.9782914), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+  @State private var didAppear = false
   
+  @StateObject var viewModel: CafeDetailViewModel
+  
+  @State private var selectedImageIndex = 0
   private let column = [
     GridItem(.flexible(minimum: 120, maximum: .infinity), spacing: 28, alignment: .center),
     GridItem(.flexible(minimum: 120, maximum: .infinity), spacing: 28, alignment: .center)
@@ -26,42 +28,55 @@ struct CafeDetailView: View {
   
   var body: some View {
     ZStack(alignment: .bottom) {
-      VStack(spacing: 0) {
-        NavigationBar(leadingContent: {
-          Button {
-            dismiss()
-          } label: {
-            Image(uiImage: R.image.chevron_left()!)
-              .resizable()
-              .padding(8)
-              .frame(width: 32, height: 32)
-              .foregroundStyle(Color.fwBlack)
-          }
-        }, centerContent: {
-          Text("title")
-            .font(.system(size: 17, weight: .bold))
-            .foregroundStyle(Color.fwBlack)
-        })
-        
-        ScrollView {
-          VStack(spacing: 28) {
-            imagePagingView()
-            ratingSection()
-            locationSection()
-            reviewSection()
-            
-            Spacer()
-              .frame(height: 100)
-          }
-          .padding(.vertical, 20)
-          .padding(.horizontal, 16)
+      if viewModel.isLoading {
+        VStack {
+          ProgressView()
         }
+        .frame(maxHeight: .infinity)
+      } else {
+        VStack(spacing: 0) {
+          NavigationBar(leadingContent: {
+            Button {
+              dismiss()
+            } label: {
+              Image(uiImage: R.image.chevron_left()!)
+                .resizable()
+                .padding(8)
+                .frame(width: 32, height: 32)
+                .foregroundStyle(Color.fwBlack)
+            }
+          }, centerContent: {
+            Text(viewModel.name)
+              .font(.system(size: 17, weight: .bold))
+              .foregroundStyle(Color.fwBlack)
+          })
+          
+          ScrollView {
+            VStack(spacing: 28) {
+              imagePagingView()
+              ratingSection()
+              locationSection()
+              reviewSection()
+              
+              Spacer()
+                .frame(height: 100)
+            }
+            .padding(.vertical, 20)
+            .padding(.horizontal, 16)
+          }
+        }
+        
+        reviewPopUp()
+          .padding(12)
       }
-      
-      reviewPopUp()
-        .padding(12)
     }
     .toolbar(.hidden, for: .navigationBar)
+    .onAppear {
+      if didAppear == false {
+        viewModel.fetchCafeDetail()
+        didAppear = true
+      }
+    }
   }
   
   private func imagePagingView() -> some View {
@@ -71,9 +86,9 @@ struct CafeDetailView: View {
           .fill(Color.fwGray30)
           .aspectRatio(1/1, contentMode: .fill)
           .overlay {
-            TabView {
-              ForEach(0..<3) { _ in
-                AsyncImage(url: URL(string: "https://picsum.photos/800/800")) { image in
+            TabView(selection: $selectedImageIndex) {
+              ForEach(Array(viewModel.images.enumerated()), id: \.offset) { index, imageUrl in
+                AsyncImage(url: URL(string: imageUrl)) { image in
                   image.resizable()
                     .aspectRatio(1/1, contentMode: .fill)
                 } placeholder: {
@@ -85,7 +100,7 @@ struct CafeDetailView: View {
             .clipShape(RoundedRectangle(cornerRadius: 12))
           }
         
-        Text("1 / 20")
+        Text("\(selectedImageIndex + 1) / \(viewModel.images.count)")
           .font(.system(size: 13, weight: .bold))
           .foregroundStyle(Color.fwBlack)
           .padding(.horizontal, 10)
@@ -100,15 +115,15 @@ struct CafeDetailView: View {
       HStack {
         HStack(spacing: 8) {
           Button {
-            // action
+            viewModel.isLiked.toggle()
           } label: {
-            Image(uiImage: R.image.thumbsup()!)
+            Image(uiImage: viewModel.isLiked ? R.image.thumbsup_filled()! : R.image.thumbsup()!)
               .resizable()
               .frame(width: 24, height: 24)
-              .foregroundStyle(Color.fwGray)
+              .foregroundStyle(viewModel.isLiked ? Color.fwPink : Color.fwGray)
           }
           
-          Text("추천 253")
+          Text("추천 \(viewModel.likeCount)")
             .font(.system(size: 13, weight: .bold))
             .foregroundStyle(Color.fwGray)
         }
@@ -116,13 +131,13 @@ struct CafeDetailView: View {
         Spacer()
         
         Button {
-          // action
+          viewModel.isBookmarked.toggle()
         } label: {
-          Image(uiImage: R.image.bookmark()!)
+          Image(uiImage: viewModel.isBookmarked ? R.image.bookmark_filled()! : R.image.bookmark()!)
             .resizable()
             .padding(6)
             .frame(width: 32, height: 32)
-            .foregroundStyle(Color.fwGray)
+            .foregroundStyle(viewModel.isBookmarked ? Color.fwBlack : Color.fwGray)
         }
       }
       .padding(.horizontal, 4)
@@ -139,15 +154,15 @@ struct CafeDetailView: View {
         .frame(maxWidth: .infinity, maxHeight: 52, alignment: .leading)
       
       LazyVGrid(columns: column, spacing: 20, content: {
-        ForEach(Array(Rating.allCases.enumerated()), id: \.offset) { _, rating in
+        ForEach(viewModel.ratings, id: \.criteria) { rating in
           VStack(spacing: 5) {
             HStack {
-              Text("\(rating.emoji) \(rating.shortDescription)")
+              Text("\(rating.criteria.emoji) \(rating.criteria.description)")
                 .font(.system(size: 13))
                 .foregroundStyle(Color.fwBlack)
                 .frame(maxWidth: .infinity, alignment: .leading)
               
-              Text("4.5")
+              Text(rating.score.description)
                 .font(.system(size: 13, weight: .bold))
                 .foregroundStyle(Color.fwBlack)
             }
@@ -170,14 +185,14 @@ struct CafeDetailView: View {
         
         Spacer()
         
-        Text("1.2km")
+        Text("\(viewModel.location.distance.asTwoDecimalString)km")
           .font(.system(size: 14, weight: .medium))
       }
       .foregroundStyle(Color.fwBlack)
       .frame(height: 52)
       
       VStack(spacing: 0) {
-        Map(coordinateRegion: $region)
+        Map(coordinateRegion: $viewModel.region)
           .frame(height: 116)
           .overlay {
             Image(uiImage: R.image.marker()!)
@@ -192,7 +207,7 @@ struct CafeDetailView: View {
             .resizable()
             .frame(width: 16, height: 16)
             
-          Text("경기도 안양시 어쩌구")
+          Text(viewModel.location.address)
             .font(.system(size: 13))
           
           Spacer()
@@ -221,7 +236,7 @@ struct CafeDetailView: View {
         Button {
           // action
         } label: {
-          Text("방명록 123개 모두 보기")
+          Text("방명록 모두 보기")
             .font(.system(size: 13, weight: .medium))
             .foregroundStyle(Color.fwBlack)
             .padding(8)
@@ -271,5 +286,5 @@ struct CafeDetailView: View {
 // MARK: - Preview
 
 #Preview {
-  CafeDetailView()
+  CafeDetailView(viewModel: .init())
 }

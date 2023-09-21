@@ -92,9 +92,8 @@ struct SearchView: View {
       
       GridView(gridWidth: UIScreen.main.bounds.size.width - 32,
                spacing: 8,
-               numItems: Rating.allCases.count,
-               alignment: .center) { index in
-        let rating = Rating(rawValue: index)!
+               items: RatingCriteria.allCases,
+               alignment: .center) { rating in
         Button {
           viewModel.addPriority(rating)
         } label: {
@@ -142,7 +141,7 @@ struct SearchView: View {
     .frame(height: 52)
   }
   
-  private func selectedPriority(index: Int, rating: Rating) -> some View {
+  private func selectedPriority(index: Int, rating: RatingCriteria) -> some View {
     HStack(spacing: 4) {
       Circle()
         .fill(Color.fwWhite)
