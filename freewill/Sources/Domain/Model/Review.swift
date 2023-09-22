@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Review: Decodable {
+struct Review {
   let userId: Int
   let userName: String
   let image: String

@@ -1,0 +1,72 @@
+[
+  {
+    "userId": 2,
+    "userName": "John Doe",
+    "image": "https://picsum.photos/300/300",
+    "content": "Great cafe with an excellent variety of options, love the ambience!",
+    "likeCount": 20
+  },
+  {
+    "userId": 3,
+    "userName": "Alice Smith",
+    "image": "https://picsum.photos/300/300",
+    "content": "Fantastic coffee and friendly staff!",
+    "likeCount": 15
+  },
+  {
+    "userId": 4,
+    "userName": "Ethan Johnson",
+    "image": "https://picsum.photos/300/300",
+    "content": "Cozy atmosphere, perfect for working or relaxing.",
+    "likeCount": 18
+  },
+  {
+    "userId": 5,
+    "userName": "Olivia Brown",
+    "image": "https://picsum.photos/300/300",
+    "content": "The desserts here are to die for!",
+    "likeCount": 25
+  },
+  {
+    "userId": 6,
+    "userName": "James Lee",
+    "image": "https://picsum.photos/300/300",
+    "content": "I come here every weekend. It's become my favorite spot!",
+    "likeCount": 22
+  },
+  {
+    "userId": 7,
+    "userName": "Sophia Kim",
+    "image": "https://picsum.photos/300/300",
+    "content": "Lovely place for a quick coffee break.",
+    "likeCount": 12
+  },
+  {
+    "userId": 8,
+    "userName": "William Wilson",
+    "image": "https://picsum.photos/300/300",
+    "content": "Excellent service and a wide range of beverages.",
+    "likeCount": 19
+  },
+  {
+    "userId": 9,
+    "userName": "Ava Anderson",
+    "image": "https://picsum.photos/300/300",
+    "content": "The staff here always makes me feel welcome!",
+    "likeCount": 16
+  },
+  {
+    "userId": 10,
+    "userName": "Liam Martinez",
+    "image": "https://picsum.photos/300/300",
+    "content": "I can't get enough of their cappuccinos!",
+    "likeCount": 21
+  },
+  {
+    "userId": 11,
+    "userName": "Emma Taylor",
+    "image": "https://picsum.photos/300/300",
+    "content": "This place is my little haven in the city.",
+    "likeCount": 17
+  }
+]

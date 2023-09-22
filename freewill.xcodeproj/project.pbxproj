@@ -46,6 +46,9 @@
 		8E59ECFE2ABCC7C9001012A1 /* Float+AsTwoDecimalString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ECFD2ABCC7C9001012A1 /* Float+AsTwoDecimalString.swift */; };
 		8E59ED022ABCC897001012A1 /* RatingProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ED012ABCC897001012A1 /* RatingProgressBar.swift */; };
 		8E59ED0B2ABD7002001012A1 /* ReviewListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ED0A2ABD7002001012A1 /* ReviewListItem.swift */; };
+		8E59ED0D2ABD7692001012A1 /* review_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E59ED0C2ABD7692001012A1 /* review_list.json */; };
+		8E59ED102ABD7729001012A1 /* ReviewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ED0F2ABD7729001012A1 /* ReviewEntity.swift */; };
+		8E59ED122ABD77BA001012A1 /* ReviewListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ED112ABD77BA001012A1 /* ReviewListUseCase.swift */; };
 		8E76226A2AB488E00096F7D7 /* FeedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7622692AB488E00096F7D7 /* FeedEntity.swift */; };
 		8E8844082AB6FCDD00764BDD /* SaveCafeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8844072AB6FCDD00764BDD /* SaveCafeViewModel.swift */; };
 		8E88440F2AB709DF00764BDD /* MakeBookmarkGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E88440E2AB709DF00764BDD /* MakeBookmarkGroupView.swift */; };
@@ -121,6 +124,9 @@
 		8E59ECFD2ABCC7C9001012A1 /* Float+AsTwoDecimalString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+AsTwoDecimalString.swift"; sourceTree = "<group>"; };
 		8E59ED012ABCC897001012A1 /* RatingProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingProgressBar.swift; sourceTree = "<group>"; };
 		8E59ED0A2ABD7002001012A1 /* ReviewListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListItem.swift; sourceTree = "<group>"; };
+		8E59ED0C2ABD7692001012A1 /* review_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = review_list.json; sourceTree = "<group>"; };
+		8E59ED0F2ABD7729001012A1 /* ReviewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEntity.swift; sourceTree = "<group>"; };
+		8E59ED112ABD77BA001012A1 /* ReviewListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListUseCase.swift; sourceTree = "<group>"; };
 		8E7622692AB488E00096F7D7 /* FeedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEntity.swift; sourceTree = "<group>"; };
 		8E76226D2AB48EEC0096F7D7 /* feed_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = feed_list.json; sourceTree = "<group>"; };
 		8E8844072AB6FCDD00764BDD /* SaveCafeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCafeViewModel.swift; sourceTree = "<group>"; };
@@ -377,6 +383,7 @@
 				8E0D08E22AB5CAAD00E61FE1 /* BookmarkGroupUseCase.swift */,
 				8E0D08FE2AB606BD00E61FE1 /* BookmarkUseCase.swift */,
 				8E59ECF92ABCB8E8001012A1 /* CafeDetailUseCase.swift */,
+				8E59ED112ABD77BA001012A1 /* ReviewListUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -398,6 +405,7 @@
 				8E0D08EC2AB5CC3C00E61FE1 /* BookmarkGroupEntity.swift */,
 				8E0D08F32AB5F9BD00E61FE1 /* BookmarkEntity.swift */,
 				8E59ECF72ABCB84C001012A1 /* CafeDetailEntity.swift */,
+				8E59ED0F2ABD7729001012A1 /* ReviewEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -460,6 +468,7 @@
 				8E0D08EE2AB5CDA100E61FE1 /* bookmark_group_list.json */,
 				8E0D08F92AB6051200E61FE1 /* bookmark_list.json */,
 				8E59ECEF2ABCB713001012A1 /* cafe_detail.json */,
+				8E59ED0C2ABD7692001012A1 /* review_list.json */,
 			);
 			path = SampleData;
 			sourceTree = "<group>";
@@ -628,6 +637,7 @@
 				8E59ECF02ABCB713001012A1 /* cafe_detail.json in Resources */,
 				8E0D08EF2AB5CDA100E61FE1 /* bookmark_group_list.json in Resources */,
 				8E9264832AA84B5E00BB63E1 /* Assets.xcassets in Resources */,
+				8E59ED0D2ABD7692001012A1 /* review_list.json in Resources */,
 				8E0D08FA2AB6051200E61FE1 /* bookmark_list.json in Resources */,
 				8E8A8A6D2AB49476000528BC /* feed_list.json in Resources */,
 			);
@@ -668,6 +678,7 @@
 				8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */,
 				8E546F8A2AAD9F54005BCAD4 /* BookmarkView.swift in Sources */,
 				8EC66CCB2AB4506F00204586 /* FreeWillAPI.swift in Sources */,
+				8E59ED102ABD7729001012A1 /* ReviewEntity.swift in Sources */,
 				8E13CD262AAB474600D769EE /* SearchView.swift in Sources */,
 				8E92649A2AA854C800BB63E1 /* TabItem.swift in Sources */,
 				8E0D08F72AB6042900E61FE1 /* BookmarkDetailViewModel.swift in Sources */,
@@ -678,6 +689,7 @@
 				8E9264D12AA9E0B000BB63E1 /* CafeListItem.swift in Sources */,
 				8E59ECFC2ABCB989001012A1 /* CafeDetailViewModel.swift in Sources */,
 				8E13CD3F2AACDA9A00D769EE /* EditProfileView.swift in Sources */,
+				8E59ED122ABD77BA001012A1 /* ReviewListUseCase.swift in Sources */,
 				8E9264C42AA9C55B00BB63E1 /* NavigationBar.swift in Sources */,
 				8E0D08EB2AB5CBCE00E61FE1 /* BookmarkGroupRepository.swift in Sources */,
 				8E13CD2F2AAB576F00D769EE /* SearchViewModel.swift in Sources */,

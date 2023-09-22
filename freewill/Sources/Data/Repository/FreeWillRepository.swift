@@ -37,4 +37,11 @@ final class FreeWillRepository {
       .map { $0.toDomain() }
       .eraseToAnyPublisher()
   }
+  
+  public func fetchReviewList() -> AnyPublisher<[Review], Error> {
+    return service
+      .request(.fetchReviewList, type: ReviewListResponse.self)
+      .map { $0.map { $0.toDomain() } }
+      .eraseToAnyPublisher()
+  }
 }
