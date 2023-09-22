@@ -23,9 +23,23 @@
     {
       "userId": 2,
       "userName": "John Doe",
-      "image": "https://example.com/userimage.jpg",
+      "image": "https://picsum.photos/300/300",
       "content": "Great cafe with an excellent variety of options, love the ambience!",
       "likeCount": 20
+    },
+    {
+      "userId": 3,
+      "userName": "Jane Smith",
+      "image": "https://picsum.photos/300/300",
+      "content": "I adore the cozy atmosphere and the delicious desserts they offer!",
+      "likeCount": 25
+    },
+    {
+      "userId": 4,
+      "userName": "Michael Brown",
+      "image": "https://picsum.photos/300/300",
+      "content": "Perfect spot to work or read. The coffee is top-notch, and the staff is friendly.",
+      "likeCount": 30
     }
   ]
 }
