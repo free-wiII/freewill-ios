@@ -11,6 +11,7 @@ import Moya
 enum FreeWillAPI {
   case fetchFeed
   case fetchCafeDetail
+  case fetchReviewList
 }
 
 extension FreeWillAPI: TargetType {
@@ -26,6 +27,9 @@ extension FreeWillAPI: TargetType {
       
     case .fetchCafeDetail:
       return "/cafeDetail"
+      
+    case .fetchReviewList:
+      return "/reviewList"
     }
   }
   
@@ -36,17 +40,14 @@ extension FreeWillAPI: TargetType {
       
     case .fetchCafeDetail:
       return .get
+    
+    case .fetchReviewList:
+      return .get
     }
   }
   
   var task: Moya.Task {
-    switch self {
-    case .fetchFeed:
-      return .requestPlain
-      
-    case .fetchCafeDetail:
-      return .requestPlain
-    }
+    return .requestPlain
   }
   
   var headers: [String : String]? {
@@ -61,6 +62,10 @@ extension FreeWillAPI: TargetType {
       
     case .fetchCafeDetail:
       let url = Bundle.main.url(forResource: "cafe_detail", withExtension: "json")!
+      return try! Data(contentsOf: url)
+    
+    case .fetchReviewList:
+      let url = Bundle.main.url(forResource: "review_list", withExtension: "json")!
       return try! Data(contentsOf: url)
     }
   }
