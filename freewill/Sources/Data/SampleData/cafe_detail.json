@@ -23,7 +23,7 @@
     {
       "userId": 2,
       "userName": "John Doe",
-      "image": "https://example.com/userimage.jpg",
+      "image": "https://picsum.photos/300/300",
       "content": "Great cafe with an excellent variety of options, love the ambience!",
       "likeCount": 20
     }
