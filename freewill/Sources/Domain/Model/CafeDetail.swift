@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CafeDetail: Decodable {
+struct CafeDetail {
   let id: Int
   let name: String
   let images: [String]

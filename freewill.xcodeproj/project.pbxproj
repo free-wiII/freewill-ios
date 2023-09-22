@@ -49,6 +49,8 @@
 		8E59ED0D2ABD7692001012A1 /* review_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E59ED0C2ABD7692001012A1 /* review_list.json */; };
 		8E59ED102ABD7729001012A1 /* ReviewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ED0F2ABD7729001012A1 /* ReviewEntity.swift */; };
 		8E59ED122ABD77BA001012A1 /* ReviewListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ED112ABD77BA001012A1 /* ReviewListUseCase.swift */; };
+		8E59ED142ABD7834001012A1 /* ReviewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ED132ABD7834001012A1 /* ReviewListView.swift */; };
+		8E59ED162ABD7939001012A1 /* ReviewListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ED152ABD7939001012A1 /* ReviewListViewModel.swift */; };
 		8E76226A2AB488E00096F7D7 /* FeedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7622692AB488E00096F7D7 /* FeedEntity.swift */; };
 		8E8844082AB6FCDD00764BDD /* SaveCafeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8844072AB6FCDD00764BDD /* SaveCafeViewModel.swift */; };
 		8E88440F2AB709DF00764BDD /* MakeBookmarkGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E88440E2AB709DF00764BDD /* MakeBookmarkGroupView.swift */; };
@@ -127,6 +129,8 @@
 		8E59ED0C2ABD7692001012A1 /* review_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = review_list.json; sourceTree = "<group>"; };
 		8E59ED0F2ABD7729001012A1 /* ReviewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEntity.swift; sourceTree = "<group>"; };
 		8E59ED112ABD77BA001012A1 /* ReviewListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListUseCase.swift; sourceTree = "<group>"; };
+		8E59ED132ABD7834001012A1 /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
+		8E59ED152ABD7939001012A1 /* ReviewListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListViewModel.swift; sourceTree = "<group>"; };
 		8E7622692AB488E00096F7D7 /* FeedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEntity.swift; sourceTree = "<group>"; };
 		8E76226D2AB48EEC0096F7D7 /* feed_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = feed_list.json; sourceTree = "<group>"; };
 		8E8844072AB6FCDD00764BDD /* SaveCafeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCafeViewModel.swift; sourceTree = "<group>"; };
@@ -448,6 +452,8 @@
 		8E59ED052ABD6FC2001012A1 /* ReviewListView */ = {
 			isa = PBXGroup;
 			children = (
+				8E59ED132ABD7834001012A1 /* ReviewListView.swift */,
+				8E59ED152ABD7939001012A1 /* ReviewListViewModel.swift */,
 				8E59ED092ABD6FF6001012A1 /* Components */,
 			);
 			path = ReviewListView;
@@ -696,6 +702,8 @@
 				8E546F8D2AAD9F62005BCAD4 /* BookmarkGroup.swift in Sources */,
 				8E13CD372AACD45E00D769EE /* UnderlinedButton.swift in Sources */,
 				8E0D09062AB6FB5300E61FE1 /* SaveBookmarkView.swift in Sources */,
+				8E59ED142ABD7834001012A1 /* ReviewListView.swift in Sources */,
+				8E59ED162ABD7939001012A1 /* ReviewListViewModel.swift in Sources */,
 				8E8844232AB7855400764BDD /* RatingLitItem.swift in Sources */,
 				8E9264CD2AA9DB6000BB63E1 /* FeedView.swift in Sources */,
 				8E8844252AB79CF300764BDD /* UINavigationController+SwipeToBack.swift in Sources */,

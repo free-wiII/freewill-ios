@@ -231,8 +231,9 @@ struct CafeDetailView: View {
         
         Spacer()
         
-        Button {
-          // action
+        NavigationLink {
+          let viewModel = ReviewListViewModel()
+          ReviewListView(viewModel: viewModel)
         } label: {
           Text("방명록 모두 보기")
             .font(.system(size: 13, weight: .medium))
