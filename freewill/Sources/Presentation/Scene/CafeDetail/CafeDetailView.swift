@@ -223,7 +223,7 @@ struct CafeDetailView: View {
   }
   
   private func reviewSection() -> some View {
-    VStack(spacing: 0) {
+    VStack(spacing: 20) {
       HStack {
         Text("방명록")
           .font(.system(size: 17, weight: .semibold))
@@ -245,6 +245,12 @@ struct CafeDetailView: View {
         }
       }
       .frame(height: 52)
+      
+      VStack(spacing: 18) {
+        ForEach(viewModel.featuresReviews, id: \.userId) { review in
+          ReviewListItem(review: review)
+        }
+      }
     }
   }
   
