@@ -140,7 +140,7 @@
 		8E88441B2AB77FF900764BDD /* WriteReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewView.swift; sourceTree = "<group>"; };
 		8E8844222AB7855400764BDD /* RatingLitItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingLitItem.swift; sourceTree = "<group>"; };
 		8E8844242AB79CF300764BDD /* UINavigationController+SwipeToBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+SwipeToBack.swift"; sourceTree = "<group>"; };
-		8E92647B2AA84B5D00BB63E1 /* freewill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = freewill.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E92647B2AA84B5D00BB63E1 /* Synergy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synergy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freewillApp.swift; sourceTree = "<group>"; };
 		8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
 		8E9264822AA84B5E00BB63E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -518,7 +518,7 @@
 		8E9264722AA84B5D00BB63E1 = {
 			isa = PBXGroup;
 			children = (
-				8E92647D2AA84B5D00BB63E1 /* freewill */,
+				8E92647D2AA84B5D00BB63E1 /* Synergy */,
 				8E92647C2AA84B5D00BB63E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -526,19 +526,19 @@
 		8E92647C2AA84B5D00BB63E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E92647B2AA84B5D00BB63E1 /* freewill.app */,
+				8E92647B2AA84B5D00BB63E1 /* Synergy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8E92647D2AA84B5D00BB63E1 /* freewill */ = {
+		8E92647D2AA84B5D00BB63E1 /* Synergy */ = {
 			isa = PBXGroup;
 			children = (
 				8E9264942AA8543A00BB63E1 /* Sources */,
 				8E9264932AA8543000BB63E1 /* Resources */,
 				8E9264842AA84B5E00BB63E1 /* Preview Content */,
 			);
-			path = freewill;
+			path = Synergy;
 			sourceTree = "<group>";
 		};
 		8E9264842AA84B5E00BB63E1 /* Preview Content */ = {
@@ -574,9 +574,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E92647A2AA84B5D00BB63E1 /* freewill */ = {
+		8E92647A2AA84B5D00BB63E1 /* Synergy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E9264892AA84B5E00BB63E1 /* Build configuration list for PBXNativeTarget "freewill" */;
+			buildConfigurationList = 8E9264892AA84B5E00BB63E1 /* Build configuration list for PBXNativeTarget "Synergy" */;
 			buildPhases = (
 				8E9264772AA84B5D00BB63E1 /* Sources */,
 				8E9264782AA84B5D00BB63E1 /* Frameworks */,
@@ -587,14 +587,14 @@
 			dependencies = (
 				8EB9F6232AACEADA00FA3EF1 /* PBXTargetDependency */,
 			);
-			name = freewill;
+			name = Synergy;
 			packageProductDependencies = (
 				8EB9F6202AACE8BE00FA3EF1 /* RswiftLibrary */,
 				8EC66CCD2AB450AE00204586 /* CombineMoya */,
 				8EC66CCF2AB450AE00204586 /* Moya */,
 			);
 			productName = freewill;
-			productReference = 8E92647B2AA84B5D00BB63E1 /* freewill.app */;
+			productReference = 8E92647B2AA84B5D00BB63E1 /* Synergy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -612,7 +612,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8E9264762AA84B5D00BB63E1 /* Build configuration list for PBXProject "freewill" */;
+			buildConfigurationList = 8E9264762AA84B5D00BB63E1 /* Build configuration list for PBXProject "Synergy" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -629,7 +629,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E92647A2AA84B5D00BB63E1 /* freewill */,
+				8E92647A2AA84B5D00BB63E1 /* Synergy */,
 			);
 		};
 /* End PBXProject section */
@@ -855,28 +855,32 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"freewill/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Synergy/Preview Content\"";
 				DEVELOPMENT_TEAM = 497P4L97SV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UIUserInterfaceStyle = LIGHT;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wallaby.freewill;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallaby.synergy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -885,35 +889,39 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"freewill/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Synergy/Preview Content\"";
 				DEVELOPMENT_TEAM = 497P4L97SV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UIUserInterfaceStyle = LIGHT;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wallaby.freewill;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallaby.synergy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E9264762AA84B5D00BB63E1 /* Build configuration list for PBXProject "freewill" */ = {
+		8E9264762AA84B5D00BB63E1 /* Build configuration list for PBXProject "Synergy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E9264872AA84B5E00BB63E1 /* Debug */,
@@ -922,7 +930,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E9264892AA84B5E00BB63E1 /* Build configuration list for PBXNativeTarget "freewill" */ = {
+		8E9264892AA84B5E00BB63E1 /* Build configuration list for PBXNativeTarget "Synergy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E92648A2AA84B5E00BB63E1 /* Debug */,
