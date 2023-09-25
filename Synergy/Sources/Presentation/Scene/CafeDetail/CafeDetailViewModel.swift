@@ -1,6 +1,6 @@
 //
 //  CafeDetailViewModel.swift
-//  freewill
+//  Synergy
 //
 //  Created by 이승기 on 2023/09/22.
 //
@@ -36,7 +36,7 @@ final class CafeDetailViewModel: ObservableObject {
   // MARK: - Initializers
   
   init() {
-    let repository = FreeWillRepository(service: .init(.stub))
+    let repository = SynergyRepository(service: .init(.stub))
     self.cafeDetailUseCase = .init(repository: repository)
   }
   

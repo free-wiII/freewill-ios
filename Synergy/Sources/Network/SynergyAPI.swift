@@ -1,5 +1,5 @@
 //
-//  FreeWillAPI.swift
+//  SynergyAPI.swift
 //  freewill
 //
 //  Created by 이승기 on 2023/09/15.
@@ -8,13 +8,13 @@
 import Foundation
 import Moya
 
-enum FreeWillAPI {
+enum SynergyAPI {
   case fetchFeed(page: Int)
   case fetchCafeDetail
   case fetchReviewList
 }
 
-extension FreeWillAPI: TargetType {
+extension SynergyAPI: TargetType {
   
   var baseURL: URL {
     return URL(string: "https://www.google.com")!

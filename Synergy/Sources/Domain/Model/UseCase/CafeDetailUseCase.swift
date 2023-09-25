@@ -1,6 +1,6 @@
 //
 //  CafeDetailUseCase.swift
-//  freewill
+//  Synergy
 //
 //  Created by 이승기 on 2023/09/22.
 //
@@ -11,12 +11,12 @@ final class CafeDetailUseCase {
   
   // MARK: - Properties
   
-  private let repository: FreeWillRepository
+  private let repository: SynergyRepository
   
   
   // MARK: - Initializers
   
-  init(repository: FreeWillRepository) {
+  init(repository: SynergyRepository) {
     self.repository = repository
   }
   

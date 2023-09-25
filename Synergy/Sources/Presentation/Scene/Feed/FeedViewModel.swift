@@ -1,6 +1,6 @@
 //
 //  MainViewModel.swift
-//  freewill
+//  Synergy
 //
 //  Created by 이승기 on 2023/09/07.
 //
@@ -25,7 +25,7 @@ final class FeedViewModel: ObservableObject {
   // MARK: - Initializers
   
   init() {
-    let repository = FreeWillRepository(service: NetworkService<FreeWillAPI>(.stub))
+    let repository = SynergyRepository(service: NetworkService<SynergyAPI>(.stub))
     feedListUseCase = FeedListUseCase(repository)
   }
   
@@ -34,7 +34,6 @@ final class FeedViewModel: ObservableObject {
   
   public func fetchFeed() {
     page += 1
-    print(page, "🔥 loading")
     
     if page == 1 {
       isFirstPageLoading = true

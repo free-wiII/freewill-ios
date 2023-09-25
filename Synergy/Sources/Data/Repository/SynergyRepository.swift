@@ -1,6 +1,6 @@
 //
-//  FreeWillRepository.swift
-//  freewill
+//  SynergyRepository.swift
+//  Synergy
 //
 //  Created by 이승기 on 2023/09/15.
 //
@@ -8,16 +8,16 @@
 import UIKit
 import Combine
 
-final class FreeWillRepository {
+final class SynergyRepository {
   
   // MARK: - Properties
   
-  private let service: NetworkService<FreeWillAPI>
+  private let service: NetworkService<SynergyAPI>
   
   
   // MARK: - Initializers
   
-  init(service: NetworkService<FreeWillAPI>) {
+  init(service: NetworkService<SynergyAPI>) {
     self.service = service
   }
   
