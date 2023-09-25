@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/leeseunggi/Workspace/iOSProjects/Releases/freewill-ios/Synergy.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

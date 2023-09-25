@@ -14,11 +14,12 @@ final class FeedViewModel: ObservableObject {
   
   private var cancellables = Set<AnyCancellable>()
   
-  @Published var isLoading = false
+  @Published var isFirstPageLoading = false
   @Published var selectedCriteria: FilterCriteria = .best
   @Published var feeds = [Feed]()
   
   private let feedListUseCase: FeedListUseCase
+  private var page = 0
   
   
   // MARK: - Initializers
@@ -32,15 +33,20 @@ final class FeedViewModel: ObservableObject {
   // MARK: - Methods
   
   public func fetchFeed() {
-    isLoading = true
+    page += 1
+    print(page, "🔥 loading")
     
-    feedListUseCase.execute()
+    if page == 1 {
+      isFirstPageLoading = true
+    }
+    
+    feedListUseCase.execute(page: page)
       .subscribe(on: DispatchQueue.global())
       .receive(on: DispatchQueue.main)
       .sink { [weak self] _ in
-        self?.isLoading = false
+        self?.isFirstPageLoading = false
       } receiveValue: { [weak self] feeds in
-        self?.feeds = feeds
+        self?.feeds.append(contentsOf: feeds)
       }
       .store(in: &cancellables)
   }

@@ -24,7 +24,7 @@ final class FeedListUseCase {
   
   // MARK: - Methods
   
-  func execute() -> AnyPublisher<[Feed], Error> {
-    return repository.fetchFeed()
+  func execute(page: Int) -> AnyPublisher<[Feed], Error> {
+    return repository.fetchFeed(page: page)
   }
 }

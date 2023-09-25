@@ -51,7 +51,7 @@ struct FeedView: View {
         
         FilterCriteriaSelector(selectedCriteria: $viewModel.selectedCriteria)
         
-        if viewModel.isLoading {
+        if viewModel.isFirstPageLoading {
           Spacer()
           ProgressView()
           Spacer()
@@ -64,6 +64,17 @@ struct FeedView: View {
                   CafeDetailView(viewModel: viewModel)
                 } label: {
                   CafeListItem(feed: feed)
+                }
+              }
+              
+              // LoadingView
+              if viewModel.isFirstPageLoading == false {
+                VStack {
+                  ProgressView()
+                }
+                .frame(height: 100)
+                .onAppear {
+                  viewModel.fetchFeed()
                 }
               }
             }

@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum FreeWillAPI {
-  case fetchFeed
+  case fetchFeed(page: Int)
   case fetchCafeDetail
   case fetchReviewList
 }
@@ -56,9 +56,18 @@ extension FreeWillAPI: TargetType {
   
   var sampleData: Data {
     switch self {
-    case .fetchFeed:
-      let url = Bundle.main.url(forResource: "feed_list", withExtension: "json")!
-      return try! Data(contentsOf: url)
+    case .fetchFeed(let page):
+      
+      switch page {
+      case 1:
+        let url = Bundle.main.url(forResource: "feed_list1", withExtension: "json")!
+        return try! Data(contentsOf: url)
+      case 2:
+        let url = Bundle.main.url(forResource: "feed_list2", withExtension: "json")!
+        return try! Data(contentsOf: url)
+      default:
+        return Data()
+      }
       
     case .fetchCafeDetail:
       let url = Bundle.main.url(forResource: "cafe_detail", withExtension: "json")!

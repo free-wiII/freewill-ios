@@ -24,9 +24,9 @@ final class FreeWillRepository {
   
   // MARK: - Methods
   
-  public func fetchFeed() -> AnyPublisher<[Feed], Error> {
+  public func fetchFeed(page: Int) -> AnyPublisher<[Feed], Error> {
     return service
-      .request(.fetchFeed, type: FeedEntityResponse.self)
+      .request(.fetchFeed(page: page), type: FeedEntityResponse.self)
       .map { $0.map { $0.toDomain() } }
       .eraseToAnyPublisher()
   }
