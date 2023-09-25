@@ -44,14 +44,14 @@ final class CafeDetailViewModel: ObservableObject {
   // MARK: - Public
   
   public func fetchCafeDetail() {
-    isLoading = true
+    DispatchQueue.main.async { [weak self] in
+      self?.isLoading = true
+    }
     
     cafeDetailUseCase.execute()
       .subscribe(on: DispatchQueue.global())
       .receive(on: DispatchQueue.main)
-      .sink { [weak self] completion in
-        // completion
-        print(completion)
+      .sink { [weak self] _ in
         self?.isLoading = false
       } receiveValue: { [weak self] cafeDetail in
         guard let self else { return }

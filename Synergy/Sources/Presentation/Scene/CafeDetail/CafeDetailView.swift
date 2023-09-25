@@ -28,29 +28,29 @@ struct CafeDetailView: View {
   
   var body: some View {
     ZStack(alignment: .bottom) {
-      if viewModel.isLoading {
-        VStack {
-          ProgressView()
-        }
-        .frame(maxHeight: .infinity)
-      } else {
-        VStack(spacing: 0) {
-          NavigationBar(leadingContent: {
-            Button {
-              dismiss()
-            } label: {
-              Image(uiImage: R.image.chevron_left()!)
-                .resizable()
-                .padding(8)
-                .frame(width: 32, height: 32)
-                .foregroundStyle(Color.fwBlack)
-            }
-          }, centerContent: {
-            Text(viewModel.name)
-              .font(.system(size: 17, weight: .bold))
+      VStack(spacing: 0) {
+        NavigationBar(leadingContent: {
+          Button {
+            dismiss()
+          } label: {
+            Image(uiImage: R.image.chevron_left()!)
+              .resizable()
+              .padding(8)
+              .frame(width: 32, height: 32)
               .foregroundStyle(Color.fwBlack)
-          })
-          
+          }
+        }, centerContent: {
+          Text(viewModel.name)
+            .font(.system(size: 17, weight: .bold))
+            .foregroundStyle(Color.fwBlack)
+        })
+        
+        if viewModel.isLoading {
+          VStack {
+            ProgressView()
+          }
+          .frame(maxHeight: .infinity)
+        } else {
           ScrollView {
             VStack(spacing: 28) {
               imagePagingView()
@@ -65,7 +65,9 @@ struct CafeDetailView: View {
             .padding(.horizontal, 16)
           }
         }
-        
+      }
+      
+      if viewModel.isLoading == false {
         reviewPopUp()
           .padding(12)
       }
