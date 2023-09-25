@@ -1,6 +1,6 @@
 //
 //  FeedListUseCase.swift
-//  freewill
+//  Synergy
 //
 //  Created by 이승기 on 2023/09/10.
 //
@@ -12,12 +12,12 @@ final class FeedListUseCase {
   
   // MARK: - Properties
   
-  private let repository: FreeWillRepository
+  private let repository: SynergyRepository
   
   
   // MARK: - Initializers
   
-  init(_ repository: FreeWillRepository) {
+  init(_ repository: SynergyRepository) {
     self.repository = repository
   }
   

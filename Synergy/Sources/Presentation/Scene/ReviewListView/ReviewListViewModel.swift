@@ -1,6 +1,6 @@
 //
 //  ReviewListViewModel.swift
-//  freewill
+//  Synergy
 //
 //  Created by 이승기 on 2023/09/22.
 //
@@ -23,7 +23,7 @@ final class ReviewListViewModel: ObservableObject {
   // MARK: - Initializers
   
   init() {
-    let repository = FreeWillRepository(service: .init(.stub))
+    let repository = SynergyRepository(service: .init(.stub))
     self.reviewListUseCase = ReviewListUseCase(repository: repository)
   }
   

@@ -60,7 +60,7 @@
 		8E8844232AB7855400764BDD /* RatingLitItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8844222AB7855400764BDD /* RatingLitItem.swift */; };
 		8E8844252AB79CF300764BDD /* UINavigationController+SwipeToBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8844242AB79CF300764BDD /* UINavigationController+SwipeToBack.swift */; };
 		8E8A8A6D2AB49476000528BC /* feed_list1.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E76226D2AB48EEC0096F7D7 /* feed_list1.json */; };
-		8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */; };
+		8E92647F2AA84B5D00BB63E1 /* SynergyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92647E2AA84B5D00BB63E1 /* SynergyApp.swift */; };
 		8E9264812AA84B5D00BB63E1 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */; };
 		8E9264832AA84B5E00BB63E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9264822AA84B5E00BB63E1 /* Assets.xcassets */; };
 		8E9264862AA84B5E00BB63E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9264852AA84B5E00BB63E1 /* Preview Assets.xcassets */; };
@@ -79,9 +79,9 @@
 		8E9264DB2AA9EF3400BB63E1 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264DA2AA9EF3400BB63E1 /* LoginType.swift */; };
 		8E9765E82AC116D3003E0B2C /* feed_list2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E9765E72AC116D3003E0B2C /* feed_list2.json */; };
 		8EB9F6212AACE8BE00FA3EF1 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB9F6202AACE8BE00FA3EF1 /* RswiftLibrary */; };
-		8EC66CC72AB44E0A00204586 /* FreeWillRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CC62AB44E0A00204586 /* FreeWillRepository.swift */; };
+		8EC66CC72AB44E0A00204586 /* SynergyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CC62AB44E0A00204586 /* SynergyRepository.swift */; };
 		8EC66CC92AB44FCA00204586 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CC82AB44FCA00204586 /* Feed.swift */; };
-		8EC66CCB2AB4506F00204586 /* FreeWillAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CCA2AB4506F00204586 /* FreeWillAPI.swift */; };
+		8EC66CCB2AB4506F00204586 /* SynergyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CCA2AB4506F00204586 /* SynergyAPI.swift */; };
 		8EC66CCE2AB450AE00204586 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC66CCD2AB450AE00204586 /* CombineMoya */; };
 		8EC66CD02AB450AE00204586 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC66CCF2AB450AE00204586 /* Moya */; };
 		8EC66CD22AB4515100204586 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CD12AB4515100204586 /* NetworkService.swift */; };
@@ -142,7 +142,7 @@
 		8E8844222AB7855400764BDD /* RatingLitItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingLitItem.swift; sourceTree = "<group>"; };
 		8E8844242AB79CF300764BDD /* UINavigationController+SwipeToBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+SwipeToBack.swift"; sourceTree = "<group>"; };
 		8E92647B2AA84B5D00BB63E1 /* Synergy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synergy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freewillApp.swift; sourceTree = "<group>"; };
+		8E92647E2AA84B5D00BB63E1 /* SynergyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynergyApp.swift; sourceTree = "<group>"; };
 		8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
 		8E9264822AA84B5E00BB63E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E9264852AA84B5E00BB63E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -160,9 +160,9 @@
 		8E9264D62AA9EDDB00BB63E1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8E9264DA2AA9EF3400BB63E1 /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
 		8E9765E72AC116D3003E0B2C /* feed_list2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = feed_list2.json; sourceTree = "<group>"; };
-		8EC66CC62AB44E0A00204586 /* FreeWillRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeWillRepository.swift; sourceTree = "<group>"; };
+		8EC66CC62AB44E0A00204586 /* SynergyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynergyRepository.swift; sourceTree = "<group>"; };
 		8EC66CC82AB44FCA00204586 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
-		8EC66CCA2AB4506F00204586 /* FreeWillAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeWillAPI.swift; sourceTree = "<group>"; };
+		8EC66CCA2AB4506F00204586 /* SynergyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynergyAPI.swift; sourceTree = "<group>"; };
 		8EC66CD12AB4515100204586 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -397,7 +397,7 @@
 		8E546FAD2AADD04D005BCAD4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				8EC66CC62AB44E0A00204586 /* FreeWillRepository.swift */,
+				8EC66CC62AB44E0A00204586 /* SynergyRepository.swift */,
 				8E0D08EA2AB5CBCE00E61FE1 /* BookmarkGroupRepository.swift */,
 				8E0D08FC2AB605E400E61FE1 /* BookmarkRepository.swift */,
 			);
@@ -428,7 +428,7 @@
 		8E546FB02AADD093005BCAD4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				8EC66CCA2AB4506F00204586 /* FreeWillAPI.swift */,
+				8EC66CCA2AB4506F00204586 /* SynergyAPI.swift */,
 				8E0D08E52AB5CB8100E61FE1 /* BookmarkAPI.swift */,
 				8EC66CD12AB4515100204586 /* NetworkService.swift */,
 			);
@@ -438,7 +438,7 @@
 		8E546FB12AADD22B005BCAD4 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				8E92647E2AA84B5D00BB63E1 /* freewillApp.swift */,
+				8E92647E2AA84B5D00BB63E1 /* SynergyApp.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -685,9 +685,9 @@
 				8E59ECF42ABCB75A001012A1 /* Rating.swift in Sources */,
 				8E0D08FD2AB605E400E61FE1 /* BookmarkRepository.swift in Sources */,
 				8E88440F2AB709DF00764BDD /* MakeBookmarkGroupView.swift in Sources */,
-				8E92647F2AA84B5D00BB63E1 /* freewillApp.swift in Sources */,
+				8E92647F2AA84B5D00BB63E1 /* SynergyApp.swift in Sources */,
 				8E546F8A2AAD9F54005BCAD4 /* BookmarkView.swift in Sources */,
-				8EC66CCB2AB4506F00204586 /* FreeWillAPI.swift in Sources */,
+				8EC66CCB2AB4506F00204586 /* SynergyAPI.swift in Sources */,
 				8E59ED102ABD7729001012A1 /* ReviewEntity.swift in Sources */,
 				8E13CD262AAB474600D769EE /* SearchView.swift in Sources */,
 				8E92649A2AA854C800BB63E1 /* TabItem.swift in Sources */,
@@ -725,7 +725,7 @@
 				8E59ECF62ABCB764001012A1 /* Location.swift in Sources */,
 				8E8844122AB70A9100764BDD /* MakeBookmarkGroupViewModel.swift in Sources */,
 				8E9264CF2AA9DDE700BB63E1 /* FeedViewModel.swift in Sources */,
-				8EC66CC72AB44E0A00204586 /* FreeWillRepository.swift in Sources */,
+				8EC66CC72AB44E0A00204586 /* SynergyRepository.swift in Sources */,
 				8E8844082AB6FCDD00764BDD /* SaveCafeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
