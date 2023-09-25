@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Café Parisienne",
+    "location": "New York",
+    "distance": 1.2,
+    "images": ["https://picsum.photos/800/600", "https://picsum.photos/800/600", "https://picsum.photos/800/600"],
+    "likeCount": 42,
+    "isLiked": true,
+    "isBookmarked": false
+  },
+  {
+    "id": 2,
+    "name": "Golden Gate Café",
+    "location": "San Francisco",
+    "distance": 2.0,
+    "images": ["https://picsum.photos/800/600", "https://picsum.photos/800/600", "https://picsum.photos/800/600"],
+    "likeCount": 18,
+    "isLiked": false,
+    "isBookmarked": true
+  },
+  {
+    "id": 3,
+    "name": "Sunshine Café",
+    "location": "Los Angeles",
+    "distance": 1.7,
+    "images": ["https://picsum.photos/800/600", "https://picsum.photos/800/600", "https://picsum.photos/800/600"],
+    "likeCount": 27,
+    "isLiked": true,
+    "isBookmarked": true
+  },
+  {
+    "id": 4,
+    "name": "Mocha Haven",
+    "location": "Chicago",
+    "distance": 1.9,
+    "images": ["https://picsum.photos/800/600", "https://picsum.photos/800/600", "https://picsum.photos/800/600"],
+    "likeCount": 33,
+    "isLiked": false,
+    "isBookmarked": false
+  }
+]
