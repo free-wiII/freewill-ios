@@ -12,6 +12,7 @@ struct UploadCafeNameView: View {
   // MARK: - Properties
   
   @Environment(\.dismiss) private var dismiss
+  @EnvironmentObject private var tabBarConfig: TabBarConfig
   
   @StateObject var viewModel: UploadCafeNameViewModel
   
@@ -41,15 +42,20 @@ struct UploadCafeNameView: View {
                          focused: true)
       .padding(.top, 20)
       .padding(.horizontal, 16)
+      
+      ScrollView {
+        // auto complete content
+      }
+      
+      BottomContainerButton("다음",
+                            enabled: .constant(!viewModel.cafeName.isEmpty)) {
+        // do something
+      }
     }
-    
-    ScrollView {
-      // auto complete content
-    }
-    
-    BottomContainerButton("다음",
-                          enabled: .constant(!viewModel.cafeName.isEmpty)) {
-      // do something
+    .onAppear {
+      if isPreview == false {
+        tabBarConfig.isTabBarHidden = true
+      }
     }
   }
 }

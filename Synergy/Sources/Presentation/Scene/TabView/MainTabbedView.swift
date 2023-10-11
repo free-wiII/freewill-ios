@@ -11,6 +11,8 @@ struct MainTabbedView: View {
   
   // MARK: - Properties
   
+  @StateObject private var tabBarConfig = TabBarConfig()
+  
   @State private var selectedTab: TabItem = .main
   @State private var isLoginViewShown = false
   
@@ -22,15 +24,21 @@ struct MainTabbedView: View {
       TabView(selection: $selectedTab) {
         FeedView()
           .tag(TabItem.main)
+          .toolbar(.hidden, for: .tabBar)
         
         BookmarkView(viewModel: .init())
           .tag(TabItem.bookmark)
+          .toolbar(.hidden, for: .tabBar)
         
         MyPageView()
           .tag(TabItem.myPage)
+          .toolbar(.hidden, for: .tabBar)
       }
+      .ignoresSafeArea()
       
       TabBar(selectedTab: $selectedTab)
+        .offset(y: tabBarConfig.isTabBarHidden ? 100 : 0)
+        .animation(.spring(), value: tabBarConfig.isTabBarHidden)
     }
     .ignoresSafeArea(.keyboard, edges: .bottom)
     .fullScreenCover(isPresented: $isLoginViewShown) {
@@ -39,6 +47,7 @@ struct MainTabbedView: View {
     .onAppear {
       isLoginViewShown = true
     }
+    .environmentObject(tabBarConfig)
   }
 }
 

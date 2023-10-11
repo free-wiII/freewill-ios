@@ -32,6 +32,8 @@
 		8E13CD472AACDE2F00D769EE /* FocusableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13CD462AACDE2F00D769EE /* FocusableTextField.swift */; };
 		8E266BF42AD62FF300E7EFD2 /* UploadCafeNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266BF32AD62FF300E7EFD2 /* UploadCafeNameView.swift */; };
 		8E266BF62AD630B100E7EFD2 /* UploadCafeNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266BF52AD630B100E7EFD2 /* UploadCafeNameViewModel.swift */; };
+		8E266BFD2AD6342500E7EFD2 /* TabBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266BFC2AD6342500E7EFD2 /* TabBarConfig.swift */; };
+		8E266BFF2AD637EB00E7EFD2 /* View+PreviewDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266BFE2AD637EB00E7EFD2 /* View+PreviewDetector.swift */; };
 		8E546F8A2AAD9F54005BCAD4 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F892AAD9F54005BCAD4 /* BookmarkView.swift */; };
 		8E546F8D2AAD9F62005BCAD4 /* BookmarkGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */; };
 		8E546F912AADA34F005BCAD4 /* BookmarkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F902AADA34F005BCAD4 /* BookmarkDetailView.swift */; };
@@ -115,6 +117,8 @@
 		8E13CD462AACDE2F00D769EE /* FocusableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusableTextField.swift; sourceTree = "<group>"; };
 		8E266BF32AD62FF300E7EFD2 /* UploadCafeNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCafeNameView.swift; sourceTree = "<group>"; };
 		8E266BF52AD630B100E7EFD2 /* UploadCafeNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCafeNameViewModel.swift; sourceTree = "<group>"; };
+		8E266BFC2AD6342500E7EFD2 /* TabBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfig.swift; sourceTree = "<group>"; };
+		8E266BFE2AD637EB00E7EFD2 /* View+PreviewDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PreviewDetector.swift"; sourceTree = "<group>"; };
 		8E546F892AAD9F54005BCAD4 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
 		8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkGroup.swift; sourceTree = "<group>"; };
 		8E546F902AADA34F005BCAD4 /* BookmarkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDetailView.swift; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */,
+				8E266BFC2AD6342500E7EFD2 /* TabBarConfig.swift */,
 				8E546FA92AADC9CD005BCAD4 /* Component */,
 			);
 			path = TabView;
@@ -435,6 +440,7 @@
 			children = (
 				8E8844242AB79CF300764BDD /* UINavigationController+SwipeToBack.swift */,
 				8E59ECFD2ABCC7C9001012A1 /* Float+AsTwoDecimalString.swift */,
+				8E266BFE2AD637EB00E7EFD2 /* View+PreviewDetector.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -681,6 +687,8 @@
 				8E8844172AB76C3C00764BDD /* CafeDetailView.swift in Sources */,
 				8E59ECEC2ABCB45A001012A1 /* CafeDetail.swift in Sources */,
 				8E0D08E62AB5CB8100E61FE1 /* BookmarkAPI.swift in Sources */,
+				8E266BFF2AD637EB00E7EFD2 /* View+PreviewDetector.swift in Sources */,
+				8E266BFD2AD6342500E7EFD2 /* TabBarConfig.swift in Sources */,
 				8E0D08F22AB5CE6D00E61FE1 /* BookmarkViewModel.swift in Sources */,
 				8E13CD3D2AACD78300D769EE /* BottomContainerButton.swift in Sources */,
 				8E0D08F42AB5F9BD00E61FE1 /* BookmarkEntity.swift in Sources */,
