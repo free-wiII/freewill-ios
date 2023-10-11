@@ -13,6 +13,7 @@ struct CafeDetailView: View {
   // MARK: - Properties
   
   @Environment(\.dismiss) private var dismiss
+  @EnvironmentObject private var tabBarConfig: TabBarConfig
   @State private var didAppear = false
   
   @StateObject var viewModel: CafeDetailViewModel
@@ -73,10 +74,15 @@ struct CafeDetailView: View {
       }
     }
     .toolbar(.hidden, for: .navigationBar)
+    .toolbar(.hidden, for: .tabBar)
     .onAppear {
       if didAppear == false {
         viewModel.fetchCafeDetail()
         didAppear = true
+      }
+      
+      if isPreview == false {
+        tabBarConfig.isTabBarHidden = true
       }
     }
   }

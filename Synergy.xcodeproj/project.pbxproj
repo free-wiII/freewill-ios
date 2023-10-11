@@ -30,6 +30,10 @@
 		8E13CD3F2AACDA9A00D769EE /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13CD3E2AACDA9A00D769EE /* EditProfileView.swift */; };
 		8E13CD452AACDDE400D769EE /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13CD442AACDDE400D769EE /* UnderlineTextField.swift */; };
 		8E13CD472AACDE2F00D769EE /* FocusableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13CD462AACDE2F00D769EE /* FocusableTextField.swift */; };
+		8E266BF42AD62FF300E7EFD2 /* UploadCafeNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266BF32AD62FF300E7EFD2 /* UploadCafeNameView.swift */; };
+		8E266BF62AD630B100E7EFD2 /* UploadCafeNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266BF52AD630B100E7EFD2 /* UploadCafeNameViewModel.swift */; };
+		8E266BFD2AD6342500E7EFD2 /* TabBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266BFC2AD6342500E7EFD2 /* TabBarConfig.swift */; };
+		8E266BFF2AD637EB00E7EFD2 /* View+PreviewDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266BFE2AD637EB00E7EFD2 /* View+PreviewDetector.swift */; };
 		8E546F8A2AAD9F54005BCAD4 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F892AAD9F54005BCAD4 /* BookmarkView.swift */; };
 		8E546F8D2AAD9F62005BCAD4 /* BookmarkGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */; };
 		8E546F912AADA34F005BCAD4 /* BookmarkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F902AADA34F005BCAD4 /* BookmarkDetailView.swift */; };
@@ -111,6 +115,10 @@
 		8E13CD3E2AACDA9A00D769EE /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		8E13CD442AACDDE400D769EE /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		8E13CD462AACDE2F00D769EE /* FocusableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusableTextField.swift; sourceTree = "<group>"; };
+		8E266BF32AD62FF300E7EFD2 /* UploadCafeNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCafeNameView.swift; sourceTree = "<group>"; };
+		8E266BF52AD630B100E7EFD2 /* UploadCafeNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCafeNameViewModel.swift; sourceTree = "<group>"; };
+		8E266BFC2AD6342500E7EFD2 /* TabBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfig.swift; sourceTree = "<group>"; };
+		8E266BFE2AD637EB00E7EFD2 /* View+PreviewDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PreviewDetector.swift"; sourceTree = "<group>"; };
 		8E546F892AAD9F54005BCAD4 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
 		8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkGroup.swift; sourceTree = "<group>"; };
 		8E546F902AADA34F005BCAD4 /* BookmarkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDetailView.swift; sourceTree = "<group>"; };
@@ -198,6 +206,15 @@
 			path = GirdView;
 			sourceTree = "<group>";
 		};
+		8E266BF22AD62FD400E7EFD2 /* UploadCafe */ = {
+			isa = PBXGroup;
+			children = (
+				8E266BF32AD62FF300E7EFD2 /* UploadCafeNameView.swift */,
+				8E266BF52AD630B100E7EFD2 /* UploadCafeNameViewModel.swift */,
+			);
+			path = UploadCafe;
+			sourceTree = "<group>";
+		};
 		8E546F972AADC836005BCAD4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +258,7 @@
 				8E546F9F2AADC911005BCAD4 /* Search */,
 				8E546F9E2AADC8FB005BCAD4 /* Feed */,
 				8E546F9D2AADC8F0005BCAD4 /* Login */,
+				8E266BF22AD62FD400E7EFD2 /* UploadCafe */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -249,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				8E9264802AA84B5D00BB63E1 /* MainTabbedView.swift */,
+				8E266BFC2AD6342500E7EFD2 /* TabBarConfig.swift */,
 				8E546FA92AADC9CD005BCAD4 /* Component */,
 			);
 			path = TabView;
@@ -421,6 +440,7 @@
 			children = (
 				8E8844242AB79CF300764BDD /* UINavigationController+SwipeToBack.swift */,
 				8E59ECFD2ABCC7C9001012A1 /* Float+AsTwoDecimalString.swift */,
+				8E266BFE2AD637EB00E7EFD2 /* View+PreviewDetector.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -667,6 +687,8 @@
 				8E8844172AB76C3C00764BDD /* CafeDetailView.swift in Sources */,
 				8E59ECEC2ABCB45A001012A1 /* CafeDetail.swift in Sources */,
 				8E0D08E62AB5CB8100E61FE1 /* BookmarkAPI.swift in Sources */,
+				8E266BFF2AD637EB00E7EFD2 /* View+PreviewDetector.swift in Sources */,
+				8E266BFD2AD6342500E7EFD2 /* TabBarConfig.swift in Sources */,
 				8E0D08F22AB5CE6D00E61FE1 /* BookmarkViewModel.swift in Sources */,
 				8E13CD3D2AACD78300D769EE /* BottomContainerButton.swift in Sources */,
 				8E0D08F42AB5F9BD00E61FE1 /* BookmarkEntity.swift in Sources */,
@@ -677,6 +699,7 @@
 				8E546F942AADA3B7005BCAD4 /* Bookmark.swift in Sources */,
 				8E9264D32AA9E44800BB63E1 /* BlurView.swift in Sources */,
 				8E9264CB2AA9D98000BB63E1 /* FilterCriteriaSelector.swift in Sources */,
+				8E266BF62AD630B100E7EFD2 /* UploadCafeNameViewModel.swift in Sources */,
 				8E9264D72AA9EDDB00BB63E1 /* LoginView.swift in Sources */,
 				8E0D08ED2AB5CC3C00E61FE1 /* BookmarkGroupEntity.swift in Sources */,
 				8E546F912AADA34F005BCAD4 /* BookmarkDetailView.swift in Sources */,
@@ -719,6 +742,7 @@
 				8E13CD472AACDE2F00D769EE /* FocusableTextField.swift in Sources */,
 				8E59ED022ABCC897001012A1 /* RatingProgressBar.swift in Sources */,
 				8E9264972AA854B100BB63E1 /* TabBar.swift in Sources */,
+				8E266BF42AD62FF300E7EFD2 /* UploadCafeNameView.swift in Sources */,
 				8E9264C62AA9D48400BB63E1 /* FilterCriteria.swift in Sources */,
 				8E59ECF22ABCB743001012A1 /* Review.swift in Sources */,
 				8E59ECF82ABCB84C001012A1 /* CafeDetailEntity.swift in Sources */,

@@ -11,6 +11,8 @@ struct MainTabbedView: View {
   
   // MARK: - Properties
   
+  @StateObject private var tabBarConfig = TabBarConfig()
+  
   @State private var selectedTab: TabItem = .main
   @State private var isLoginViewShown = false
   
@@ -31,6 +33,8 @@ struct MainTabbedView: View {
       }
       
       TabBar(selectedTab: $selectedTab)
+        .offset(y: tabBarConfig.isTabBarHidden ? 100 : 0)
+        .animation(.spring(), value: tabBarConfig.isTabBarHidden)
     }
     .ignoresSafeArea(.keyboard, edges: .bottom)
     .fullScreenCover(isPresented: $isLoginViewShown) {
@@ -39,6 +43,7 @@ struct MainTabbedView: View {
     .onAppear {
       isLoginViewShown = true
     }
+    .environmentObject(tabBarConfig)
   }
 }
 

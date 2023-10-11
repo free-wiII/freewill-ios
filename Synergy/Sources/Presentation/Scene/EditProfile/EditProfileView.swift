@@ -12,6 +12,7 @@ struct EditProfileView: View {
   // MARK: - Properties
   
   @Environment(\.dismiss) private var dismiss
+  @EnvironmentObject private var tabBarConfig: TabBarConfig
   
   
   // MARK: - Views
@@ -75,6 +76,11 @@ struct EditProfileView: View {
       
       BottomContainerButton("적용", enabled: .constant(true)) {
         dismiss()
+      }
+    }
+    .onAppear {
+      if isPreview == false {
+        tabBarConfig.isTabBarHidden = true
       }
     }
   }

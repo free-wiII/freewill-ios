@@ -11,6 +11,8 @@ struct FeedView: View {
   
   // MARK: - Properties
   
+  @EnvironmentObject private var tabBarConfig: TabBarConfig
+  
   @State private var didAppear = false
   @StateObject var viewModel = FeedViewModel()
   
@@ -28,7 +30,11 @@ struct FeedView: View {
           HStack(spacing: 8) {
             NavigationLink {
               SearchView(viewModel: .init())
-                .toolbar(.hidden, for: .navigationBar)
+                .onDisappear {
+                  if isPreview == false {
+                    tabBarConfig.isTabBarHidden = false
+                  }
+                }
             } label: {
               Image(uiImage: R.image.loupe()!)
                 .resizable()
@@ -37,8 +43,13 @@ struct FeedView: View {
                 .foregroundColor(Color.fwBlack)
             }
             
-            Button {
-              // action
+            NavigationLink {
+              UploadCafeNameView(viewModel: .init())
+                .onDisappear {
+                  if isPreview == false {
+                    tabBarConfig.isTabBarHidden = false
+                  }
+                }
             } label: {
               Image(uiImage: R.image.plus()!)
                 .resizable()
@@ -62,6 +73,11 @@ struct FeedView: View {
                 NavigationLink {
                   let viewModel = CafeDetailViewModel()
                   CafeDetailView(viewModel: viewModel)
+                    .onDisappear {
+                      if isPreview == false {
+                        tabBarConfig.isTabBarHidden = false
+                      }
+                    }
                 } label: {
                   CafeListItem(feed: feed)
                 }

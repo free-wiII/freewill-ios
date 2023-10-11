@@ -1,21 +1,20 @@
 //
-//  ReviewListView.swift
+//  UploadCafeNameView.swift
 //  Synergy
 //
-//  Created by 이승기 on 2023/09/22.
+//  Created by 이승기 on 2023/10/11.
 //
 
 import SwiftUI
 
-struct ReviewListView: View {
+struct UploadCafeNameView: View {
   
   // MARK: - Properties
   
   @Environment(\.dismiss) private var dismiss
   @EnvironmentObject private var tabBarConfig: TabBarConfig
-  @State private var didAppear = false
   
-  @StateObject var viewModel: ReviewListViewModel
+  @StateObject var viewModel: UploadCafeNameViewModel
   
   
   // MARK: - Views
@@ -33,41 +32,39 @@ struct ReviewListView: View {
             .foregroundStyle(Color.fwBlack)
         }
       }, centerContent: {
-        Text("방명록")
+        Text("카페 이름")
           .font(.system(size: 17, weight: .bold))
           .foregroundStyle(Color.fwBlack)
       })
       
-      if viewModel.isLoading {
-        VStack {
-          ProgressView()
-        }
-        .frame(maxHeight: .infinity)
-      } else {
-        ScrollView {
-          LazyVStack(spacing: 20) {
-            ForEach(viewModel.reviews, id: \.userId) { review in
-              ReviewListItem(review: review)
-            }
-          }
-          .padding(.horizontal, 16)
-          .padding(.vertical, 24)
-        }
+      UnderlineTextField(placeholder: "카페 이름을 설정해 주세요",
+                         text: $viewModel.cafeName,
+                         focused: true)
+      .padding(.top, 20)
+      .padding(.horizontal, 16)
+      
+      ScrollView {
+        // auto complete content
+      }
+      
+      BottomContainerButton("다음",
+                            enabled: .constant(!viewModel.cafeName.isEmpty)) {
+        // do something
       }
     }
     .toolbar(.hidden, for: .navigationBar)
     .toolbar(.hidden, for: .tabBar)
     .onAppear {
-      if didAppear == false {
-        viewModel.fetchReviewList()
-        didAppear = true
+      if isPreview == false {
+        tabBarConfig.isTabBarHidden = true
       }
-      
-      tabBarConfig.isTabBarHidden = true
     }
   }
 }
 
+
+// MARK: - Preview
+
 #Preview {
-  ReviewListView(viewModel: .init())
+  UploadCafeNameView(viewModel: .init())
 }

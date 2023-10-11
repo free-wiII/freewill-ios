@@ -12,6 +12,7 @@ struct BookmarkDetailView: View {
   // MARK: - Properties
   
   @Environment(\.dismiss) private var dismiss
+  @EnvironmentObject private var tabBarConfig: TabBarConfig
   
   @StateObject var viewModel: BookmarkDetailViewModel
   @State private var didAppear = false
@@ -58,10 +59,15 @@ struct BookmarkDetailView: View {
         }
       }
     }
+    .toolbar(.hidden, for: .navigationBar)
     .onAppear {
       if didAppear == false {
         viewModel.fetchBookmarks()
         didAppear = true
+      }
+      
+      if isPreview == false {
+        tabBarConfig.isTabBarHidden = false
       }
     }
   }
