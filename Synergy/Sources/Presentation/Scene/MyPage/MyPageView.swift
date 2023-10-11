@@ -9,6 +9,11 @@ import SwiftUI
 
 struct MyPageView: View {
   
+  // MARK: - Properties
+  
+  @EnvironmentObject private var tabBarConfig: TabBarConfig
+  
+  
   // MARK: - Views
   
   var body: some View {
@@ -22,6 +27,12 @@ struct MyPageView: View {
           NavigationLink {
             EditProfileView()
               .toolbar(.hidden, for: .navigationBar)
+              .toolbar(.hidden, for: .tabBar)
+              .onDisappear {
+                if isPreview == false {
+                  tabBarConfig.isTabBarHidden = false
+                }
+              }
           } label: {
             Image(uiImage: R.image.edit()!)
               .resizable()

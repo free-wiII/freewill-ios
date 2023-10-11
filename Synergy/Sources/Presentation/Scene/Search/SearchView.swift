@@ -13,6 +13,7 @@ struct SearchView: View {
   // MARK: - Properties
   
   @Environment(\.dismiss) private var dismiss
+  @EnvironmentObject private var tabBarConfig: TabBarConfig
   
   @StateObject var viewModel: SearchViewModel
   
@@ -57,6 +58,13 @@ struct SearchView: View {
         // action
       }
       .shadow(color: .fwBlack.opacity(0.1), radius: 20, x: 0, y: -4)
+    }
+    .toolbar(.hidden, for: .navigationBar)
+    .toolbar(.hidden, for: .tabBar)
+    .onAppear {
+      if isPreview == false {
+        tabBarConfig.isTabBarHidden = true
+      }
     }
   }
   

@@ -11,9 +11,10 @@ struct BookmarkView: View {
   
   // MARK: - Properties
   
-  @StateObject var viewModel: BookmarkViewModel
-  
+  @EnvironmentObject private var tabBarConfig: TabBarConfig
   @State private var didAppear = false
+  
+  @StateObject var viewModel: BookmarkViewModel
   
   
   // MARK: - Views
@@ -37,7 +38,6 @@ struct BookmarkView: View {
               ForEach(viewModel.bookmarkGroups, id: \.id) { bookmark in
                   NavigationLink {
                     BookmarkDetailView(viewModel: .init())
-                      .toolbar(.hidden, for: .navigationBar)
                   } label: {
                     VStack(spacing: 0) {
                       bookmarkGroupItem(bookmark)

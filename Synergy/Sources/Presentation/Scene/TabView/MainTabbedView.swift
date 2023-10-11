@@ -24,17 +24,13 @@ struct MainTabbedView: View {
       TabView(selection: $selectedTab) {
         FeedView()
           .tag(TabItem.main)
-          .toolbar(.hidden, for: .tabBar)
         
         BookmarkView(viewModel: .init())
           .tag(TabItem.bookmark)
-          .toolbar(.hidden, for: .tabBar)
         
         MyPageView()
           .tag(TabItem.myPage)
-          .toolbar(.hidden, for: .tabBar)
       }
-      .ignoresSafeArea()
       
       TabBar(selectedTab: $selectedTab)
         .offset(y: tabBarConfig.isTabBarHidden ? 100 : 0)

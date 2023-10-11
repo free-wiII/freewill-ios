@@ -52,6 +52,8 @@ struct UploadCafeNameView: View {
         // do something
       }
     }
+    .toolbar(.hidden, for: .navigationBar)
+    .toolbar(.hidden, for: .tabBar)
     .onAppear {
       if isPreview == false {
         tabBarConfig.isTabBarHidden = true

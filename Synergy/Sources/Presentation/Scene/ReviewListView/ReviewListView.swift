@@ -12,6 +12,8 @@ struct ReviewListView: View {
   // MARK: - Properties
   
   @Environment(\.dismiss) private var dismiss
+  @EnvironmentObject private var tabBarConfig: TabBarConfig
+  @State private var didAppear = false
   
   @StateObject var viewModel: ReviewListViewModel
   
@@ -54,8 +56,14 @@ struct ReviewListView: View {
       }
     }
     .toolbar(.hidden, for: .navigationBar)
+    .toolbar(.hidden, for: .tabBar)
     .onAppear {
-      viewModel.fetchReviewList()
+      if didAppear == false {
+        viewModel.fetchReviewList()
+        didAppear = true
+      }
+      
+      tabBarConfig.isTabBarHidden = true
     }
   }
 }

@@ -12,6 +12,7 @@ struct WriteReviewView: View {
   // MARK: - Properties
   
   @Environment(\.dismiss) private var dismiss
+  @EnvironmentObject private var tabBarConfig: TabBarConfig
   
   @State private var reviewText = ""
   
@@ -70,6 +71,12 @@ struct WriteReviewView: View {
       }
     }
     .toolbar(.hidden, for: .navigationBar)
+    .toolbar(.hidden, for: .tabBar)
+    .onAppear {
+      if isPreview == false {
+        tabBarConfig.isTabBarHidden = true
+      }
+    }
   }
 }
 
