@@ -37,8 +37,9 @@ struct FeedView: View {
                 .foregroundColor(Color.fwBlack)
             }
             
-            Button {
-              // action
+            NavigationLink {
+              UploadCafeNameView(viewModel: .init())
+                .toolbar(.hidden, for: .navigationBar)
             } label: {
               Image(uiImage: R.image.plus()!)
                 .resizable()
