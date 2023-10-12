@@ -34,6 +34,9 @@
 		8E266BF62AD630B100E7EFD2 /* UploadCafeNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266BF52AD630B100E7EFD2 /* UploadCafeNameViewModel.swift */; };
 		8E266BFD2AD6342500E7EFD2 /* TabBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266BFC2AD6342500E7EFD2 /* TabBarConfig.swift */; };
 		8E266BFF2AD637EB00E7EFD2 /* View+PreviewDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266BFE2AD637EB00E7EFD2 /* View+PreviewDetector.swift */; };
+		8E266C072AD797FB00E7EFD2 /* UploadCafeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266C062AD797FB00E7EFD2 /* UploadCafeImageView.swift */; };
+		8E266C0C2AD7BE8B00E7EFD2 /* BottomNavigationContainerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266C0B2AD7BE8B00E7EFD2 /* BottomNavigationContainerButton.swift */; };
+		8E266C112AD8367D00E7EFD2 /* UploadCafeImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266C102AD8367D00E7EFD2 /* UploadCafeImageViewModel.swift */; };
 		8E546F8A2AAD9F54005BCAD4 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F892AAD9F54005BCAD4 /* BookmarkView.swift */; };
 		8E546F8D2AAD9F62005BCAD4 /* BookmarkGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */; };
 		8E546F912AADA34F005BCAD4 /* BookmarkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F902AADA34F005BCAD4 /* BookmarkDetailView.swift */; };
@@ -119,6 +122,9 @@
 		8E266BF52AD630B100E7EFD2 /* UploadCafeNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCafeNameViewModel.swift; sourceTree = "<group>"; };
 		8E266BFC2AD6342500E7EFD2 /* TabBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfig.swift; sourceTree = "<group>"; };
 		8E266BFE2AD637EB00E7EFD2 /* View+PreviewDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PreviewDetector.swift"; sourceTree = "<group>"; };
+		8E266C062AD797FB00E7EFD2 /* UploadCafeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCafeImageView.swift; sourceTree = "<group>"; };
+		8E266C0B2AD7BE8B00E7EFD2 /* BottomNavigationContainerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationContainerButton.swift; sourceTree = "<group>"; };
+		8E266C102AD8367D00E7EFD2 /* UploadCafeImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCafeImageViewModel.swift; sourceTree = "<group>"; };
 		8E546F892AAD9F54005BCAD4 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
 		8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkGroup.swift; sourceTree = "<group>"; };
 		8E546F902AADA34F005BCAD4 /* BookmarkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDetailView.swift; sourceTree = "<group>"; };
@@ -211,6 +217,8 @@
 			children = (
 				8E266BF32AD62FF300E7EFD2 /* UploadCafeNameView.swift */,
 				8E266BF52AD630B100E7EFD2 /* UploadCafeNameViewModel.swift */,
+				8E266C062AD797FB00E7EFD2 /* UploadCafeImageView.swift */,
+				8E266C102AD8367D00E7EFD2 /* UploadCafeImageViewModel.swift */,
 			);
 			path = UploadCafe;
 			sourceTree = "<group>";
@@ -357,6 +365,7 @@
 				8E9264C32AA9C55B00BB63E1 /* NavigationBar.swift */,
 				8E13CD362AACD45E00D769EE /* UnderlinedButton.swift */,
 				8E13CD3C2AACD78300D769EE /* BottomContainerButton.swift */,
+				8E266C0B2AD7BE8B00E7EFD2 /* BottomNavigationContainerButton.swift */,
 				8E13CD442AACDDE400D769EE /* UnderlineTextField.swift */,
 				8E13CD462AACDE2F00D769EE /* FocusableTextField.swift */,
 				8E13CD2B2AAB51B200D769EE /* GirdView */,
@@ -730,6 +739,7 @@
 				8E13CD372AACD45E00D769EE /* UnderlinedButton.swift in Sources */,
 				8E0D09062AB6FB5300E61FE1 /* SaveBookmarkView.swift in Sources */,
 				8E59ED142ABD7834001012A1 /* ReviewListView.swift in Sources */,
+				8E266C112AD8367D00E7EFD2 /* UploadCafeImageViewModel.swift in Sources */,
 				8E59ED162ABD7939001012A1 /* ReviewListViewModel.swift in Sources */,
 				8E8844232AB7855400764BDD /* RatingLitItem.swift in Sources */,
 				8E9264CD2AA9DB6000BB63E1 /* FeedView.swift in Sources */,
@@ -742,6 +752,8 @@
 				8E13CD472AACDE2F00D769EE /* FocusableTextField.swift in Sources */,
 				8E59ED022ABCC897001012A1 /* RatingProgressBar.swift in Sources */,
 				8E9264972AA854B100BB63E1 /* TabBar.swift in Sources */,
+				8E266C072AD797FB00E7EFD2 /* UploadCafeImageView.swift in Sources */,
+				8E266C0C2AD7BE8B00E7EFD2 /* BottomNavigationContainerButton.swift in Sources */,
 				8E266BF42AD62FF300E7EFD2 /* UploadCafeNameView.swift in Sources */,
 				8E9264C62AA9D48400BB63E1 /* FilterCriteria.swift in Sources */,
 				8E59ECF22ABCB743001012A1 /* Review.swift in Sources */,
