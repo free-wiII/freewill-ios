@@ -47,9 +47,9 @@ struct UploadCafeNameView: View {
         // auto complete content
       }
       
-      BottomContainerButton("다음",
-                            enabled: .constant(!viewModel.cafeName.isEmpty)) {
-        // do something
+      BottomNavigationContainerButton("다음", enabled: .constant(!viewModel.cafeName.isEmpty)) {
+        let viewModel = UploadCafeImageViewModel()
+        UploadCafeImageView(viewModel: viewModel)
       }
     }
     .toolbar(.hidden, for: .navigationBar)
@@ -66,5 +66,7 @@ struct UploadCafeNameView: View {
 // MARK: - Preview
 
 #Preview {
-  UploadCafeNameView(viewModel: .init())
+  NavigationView(content: {
+    UploadCafeNameView(viewModel: .init())
+  })
 }

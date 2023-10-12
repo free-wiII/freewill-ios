@@ -33,10 +33,12 @@ struct FocusableTextField: UIViewRepresentable {
     uiView.text = text
     uiView.placeholder = placeholder
     
-    if focused {
-      uiView.becomeFirstResponder()
-    } else {
-      uiView.resignFirstResponder()
+    DispatchQueue.main.asyncAfter(deadline: .now()) {
+      if focused {
+        uiView.becomeFirstResponder()
+      } else {
+        uiView.resignFirstResponder()
+      }
     }
   }
   
