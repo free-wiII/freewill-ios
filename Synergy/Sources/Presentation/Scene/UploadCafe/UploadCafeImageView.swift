@@ -53,7 +53,7 @@ struct UploadCafeImageView: View {
         .padding(.vertical, 20)
       }
       
-      BottomContainerButton("다음", enabled: .constant(false)) {
+      BottomContainerButton("다음", enabled: .constant(!viewModel.selectedImages.isEmpty)) {
         // action
       }
     }
