@@ -7,11 +7,45 @@
 
 import SwiftUI
 
+import KakaoSDKCommon
+import KakaoSDKAuth
+
 @main
 struct SynergyApp: App {
+  
+  // MARK: - Initializers
+  
+  init() {
+    setup()
+  }
+  
+  
+  // MARK: - Views
+  
   var body: some Scene {
     WindowGroup {
-      MainTabbedView()
+      MainTabbedView().onOpenURL(perform: { url in
+        if AuthApi.isKakaoTalkLoginUrl(url) {
+          _ = AuthController.handleOpenUrl(url: url)
+        }
+      })
+    }
+  }
+  
+  // MARK: - Methods
+  
+  private func setup() {
+    initKakaoSDK()
+  }
+  
+  private func initKakaoSDK() {
+    guard let url = Bundle.main.url(forResource: "Info", withExtension: "plist"),
+          let dictionary = NSDictionary(contentsOf: url) else {
+      return
+    }
+    
+    if let appKey = dictionary["KAKAO_APP_KEY"] as? String {
+      KakaoSDK.initSDK(appKey: appKey)
     }
   }
 }

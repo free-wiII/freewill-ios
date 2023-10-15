@@ -9,6 +9,10 @@ import SwiftUI
 
 import AuthenticationServices
 
+import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKUser
+
 final class LoginViewModel: NSObject, ObservableObject {
   
   // MARK: - Properties
@@ -24,6 +28,22 @@ final class LoginViewModel: NSObject, ObservableObject {
     controller.delegate = self
     controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
     controller.performRequests()
+  }
+  
+  public func requestKakaoLogin() {
+    if (UserApi.isKakaoTalkLoginAvailable()) {
+      UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+        if let error = error {
+          print(error)
+        }
+        else {
+          _ = oauthToken
+          UserApi.shared.me { user, error in
+            print(user)
+          }
+        }
+      }
+    }
   }
 }
 

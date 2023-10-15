@@ -51,7 +51,7 @@ struct LoginView: View {
   
   private func kakaoLoginButton() -> some View {
     Button {
-      // action
+      viewModel.requestKakaoLogin()
     } label: {
       ZStack {
         Capsule()
