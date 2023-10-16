@@ -38,7 +38,8 @@ struct MainTabbedView: View {
     }
     .ignoresSafeArea(.keyboard, edges: .bottom)
     .fullScreenCover(isPresented: $isLoginViewShown) {
-      LoginView()
+      let viewModel = LoginViewModel()
+      LoginView(viewModel: viewModel)
     }
     .onAppear {
       isLoginViewShown = true

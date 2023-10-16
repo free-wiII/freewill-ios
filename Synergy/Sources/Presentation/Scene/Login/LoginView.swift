@@ -13,6 +13,8 @@ struct LoginView: View {
   
   @Environment(\.dismiss) private var dismiss
   
+  @StateObject var viewModel: LoginViewModel
+  
   
   // MARK: - Views
   
@@ -49,7 +51,7 @@ struct LoginView: View {
   
   private func kakaoLoginButton() -> some View {
     Button {
-      // action
+      viewModel.requestKakaoLogin()
     } label: {
       ZStack {
         Capsule()
@@ -75,7 +77,9 @@ struct LoginView: View {
   
   private func googleLoginButton() -> some View {
     Button {
-      // action
+      if let rootViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController {
+        viewModel.requestGoogleLogin(rootViewController: rootViewController)
+      }
     } label: {
       ZStack {
         Capsule()
@@ -101,7 +105,7 @@ struct LoginView: View {
   
   private func appleLoginButton() -> some View {
     Button {
-      // action
+        viewModel.requestAppleLogin()
     } label: {
       ZStack {
         Text(LoginType.apple.description)
@@ -127,6 +131,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
   static var previews: some View {
-    LoginView()
+    LoginView(viewModel: .init())
   }
 }
