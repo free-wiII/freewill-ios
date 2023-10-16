@@ -77,7 +77,9 @@ struct LoginView: View {
   
   private func googleLoginButton() -> some View {
     Button {
-      // action
+      if let rootViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController {
+        viewModel.requestGoogleLogin(rootViewController: rootViewController)
+      }
     } label: {
       ZStack {
         Capsule()

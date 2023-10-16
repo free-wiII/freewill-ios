@@ -89,6 +89,8 @@
 		8EA147602ADBED660014C2BF /* RxKakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA1475F2ADBED660014C2BF /* RxKakaoSDK */; };
 		8EA147622ADBED660014C2BF /* RxKakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA147612ADBED660014C2BF /* RxKakaoSDKAuth */; };
 		8EA147642ADBED660014C2BF /* RxKakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA147632ADBED660014C2BF /* RxKakaoSDKCommon */; };
+		8EA147742ADCDB6D0014C2BF /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA147732ADCDB6D0014C2BF /* GoogleSignIn */; };
+		8EA147762ADCDB6D0014C2BF /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA147752ADCDB6D0014C2BF /* GoogleSignInSwift */; };
 		8EB9F6212AACE8BE00FA3EF1 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB9F6202AACE8BE00FA3EF1 /* RswiftLibrary */; };
 		8EC66CC72AB44E0A00204586 /* SynergyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CC62AB44E0A00204586 /* SynergyRepository.swift */; };
 		8EC66CC92AB44FCA00204586 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CC82AB44FCA00204586 /* Feed.swift */; };
@@ -195,9 +197,11 @@
 				8EA147642ADBED660014C2BF /* RxKakaoSDKCommon in Frameworks */,
 				8EC66CCE2AB450AE00204586 /* CombineMoya in Frameworks */,
 				8EA147602ADBED660014C2BF /* RxKakaoSDK in Frameworks */,
+				8EA147762ADCDB6D0014C2BF /* GoogleSignInSwift in Frameworks */,
 				8EB9F6212AACE8BE00FA3EF1 /* RswiftLibrary in Frameworks */,
 				8EA147622ADBED660014C2BF /* RxKakaoSDKAuth in Frameworks */,
 				8EC66CD02AB450AE00204586 /* Moya in Frameworks */,
+				8EA147742ADCDB6D0014C2BF /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,6 +644,8 @@
 				8EA1475F2ADBED660014C2BF /* RxKakaoSDK */,
 				8EA147612ADBED660014C2BF /* RxKakaoSDKAuth */,
 				8EA147632ADBED660014C2BF /* RxKakaoSDKCommon */,
+				8EA147732ADCDB6D0014C2BF /* GoogleSignIn */,
+				8EA147752ADCDB6D0014C2BF /* GoogleSignInSwift */,
 			);
 			productName = freewill;
 			productReference = 8E92647B2AA84B5D00BB63E1 /* Synergy.app */;
@@ -673,6 +679,7 @@
 				8EB9F61F2AACE8BE00FA3EF1 /* XCRemoteSwiftPackageReference "R.swift" */,
 				8EC66CCC2AB450AE00204586 /* XCRemoteSwiftPackageReference "Moya" */,
 				8EA1475E2ADBED660014C2BF /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */,
+				8EA147722ADCDB6D0014C2BF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 8E92647C2AA84B5D00BB63E1 /* Products */;
 			projectDirPath = "";
@@ -1012,6 +1019,14 @@
 				minimumVersion = 2.18.0;
 			};
 		};
+		8EA147722ADCDB6D0014C2BF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		8EB9F61F2AACE8BE00FA3EF1 /* XCRemoteSwiftPackageReference "R.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
@@ -1045,6 +1060,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8EA1475E2ADBED660014C2BF /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
 			productName = RxKakaoSDKCommon;
+		};
+		8EA147732ADCDB6D0014C2BF /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EA147722ADCDB6D0014C2BF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		8EA147752ADCDB6D0014C2BF /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EA147722ADCDB6D0014C2BF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 		8EB9F6202AACE8BE00FA3EF1 /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;

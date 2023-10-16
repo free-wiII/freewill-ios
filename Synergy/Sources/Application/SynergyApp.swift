@@ -10,6 +10,8 @@ import SwiftUI
 import KakaoSDKCommon
 import KakaoSDKAuth
 
+import GoogleSignIn
+
 @main
 struct SynergyApp: App {
   
@@ -28,6 +30,8 @@ struct SynergyApp: App {
         if AuthApi.isKakaoTalkLoginUrl(url) {
           _ = AuthController.handleOpenUrl(url: url)
         }
+        
+        GIDSignIn.sharedInstance.handle(url)
       })
     }
   }

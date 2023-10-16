@@ -13,6 +13,9 @@ import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
 
+import GoogleSignIn
+import UIKit
+
 final class LoginViewModel: NSObject, ObservableObject {
   
   // MARK: - Properties
@@ -42,6 +45,20 @@ final class LoginViewModel: NSObject, ObservableObject {
             print(user)
           }
         }
+      }
+    }
+  }
+  
+  public func requestGoogleLogin(rootViewController: UIViewController) {
+    GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController) { result, error in
+      if let error {
+        print(error)
+        return
+      }
+      
+      if let result {
+        print("🔥 구글 로그인 성공")
+        print(result.user.profile?.email, result.user.profile?.name)
       }
     }
   }

@@ -12,8 +12,17 @@
 				<string>kakaocc89fa2a913221daad4172aff1e088ba</string>
 			</array>
 		</dict>
-		<dict/>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.206246415179-9jpg3ng39mb49e66aeis5g5gkn2e5ng6</string>
+			</array>
+		</dict>
 	</array>
+	<key>GIDClientID</key>
+	<string>206246415179-9jpg3ng39mb49e66aeis5g5gkn2e5ng6.apps.googleusercontent.com</string>
 	<key>KAKAO_APP_KEY</key>
 	<string>cc89fa2a913221daad4172aff1e088ba</string>
 	<key>LSApplicationQueriesSchemes</key>
