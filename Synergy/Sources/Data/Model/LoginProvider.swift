@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LoginProvider: String {
+enum LoginProvider: String, Encodable {
   case kakao = "KAKAO"
   case google = "GOOGLE"
   case apple = "APPLE"
