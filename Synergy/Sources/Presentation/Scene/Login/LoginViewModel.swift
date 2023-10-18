@@ -43,6 +43,8 @@ final class LoginViewModel: NSObject, ObservableObject {
           _ = oauthToken
           UserApi.shared.me { user, error in
             print(user)
+            print("🔑 kakao id token")
+            print(oauthToken?.idToken)
           }
         }
       }
@@ -57,8 +59,9 @@ final class LoginViewModel: NSObject, ObservableObject {
       }
       
       if let result {
-        print("🔥 구글 로그인 성공")
         print(result.user.profile?.email, result.user.profile?.name)
+        print("🔑 google id token")
+        print(result.user.idToken)
       }
     }
   }
@@ -74,6 +77,9 @@ extension LoginViewModel: ASAuthorizationControllerDelegate {
 //      if let token = String(data: credential.identityToken ?? Data(), encoding: .utf8) {
 //        let email = decode
 //      }
+      // idToken
+      print("🔑 apple id token")
+      print(String(data: credential.identityToken!, encoding: .utf8))
     }
   }
   

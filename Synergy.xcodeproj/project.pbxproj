@@ -85,12 +85,15 @@
 		8E9264D72AA9EDDB00BB63E1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264D62AA9EDDB00BB63E1 /* LoginView.swift */; };
 		8E9264DB2AA9EF3400BB63E1 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264DA2AA9EF3400BB63E1 /* LoginType.swift */; };
 		8E9765E82AC116D3003E0B2C /* feed_list2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E9765E72AC116D3003E0B2C /* feed_list2.json */; };
+		8E9C11C02ADFC6BD00421B8D /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C11BF2ADFC6BD00421B8D /* LoginAPI.swift */; };
+		8E9C11C32ADFCCAF00421B8D /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C11C22ADFCCAF00421B8D /* LoginEntity.swift */; };
 		8EA1475B2ADBDF790014C2BF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1475A2ADBDF790014C2BF /* LoginViewModel.swift */; };
 		8EA147602ADBED660014C2BF /* RxKakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA1475F2ADBED660014C2BF /* RxKakaoSDK */; };
 		8EA147622ADBED660014C2BF /* RxKakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA147612ADBED660014C2BF /* RxKakaoSDKAuth */; };
 		8EA147642ADBED660014C2BF /* RxKakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA147632ADBED660014C2BF /* RxKakaoSDKCommon */; };
 		8EA147742ADCDB6D0014C2BF /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA147732ADCDB6D0014C2BF /* GoogleSignIn */; };
 		8EA147762ADCDB6D0014C2BF /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA147752ADCDB6D0014C2BF /* GoogleSignInSwift */; };
+		8EA1477C2ADD625D0014C2BF /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1477B2ADD625D0014C2BF /* LoginProvider.swift */; };
 		8EB9F6212AACE8BE00FA3EF1 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB9F6202AACE8BE00FA3EF1 /* RswiftLibrary */; };
 		8EC66CC72AB44E0A00204586 /* SynergyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CC62AB44E0A00204586 /* SynergyRepository.swift */; };
 		8EC66CC92AB44FCA00204586 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CC82AB44FCA00204586 /* Feed.swift */; };
@@ -180,9 +183,12 @@
 		8E9264D62AA9EDDB00BB63E1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8E9264DA2AA9EF3400BB63E1 /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
 		8E9765E72AC116D3003E0B2C /* feed_list2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = feed_list2.json; sourceTree = "<group>"; };
+		8E9C11BF2ADFC6BD00421B8D /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		8E9C11C22ADFCCAF00421B8D /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
 		8EA1475A2ADBDF790014C2BF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8EA1475D2ADBE0BE0014C2BF /* Synergy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Synergy.entitlements; sourceTree = "<group>"; };
 		8EA147662ADBEFA70014C2BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8EA1477B2ADD625D0014C2BF /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
 		8EC66CC62AB44E0A00204586 /* SynergyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynergyRepository.swift; sourceTree = "<group>"; };
 		8EC66CC82AB44FCA00204586 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		8EC66CCA2AB4506F00204586 /* SynergyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynergyAPI.swift; sourceTree = "<group>"; };
@@ -455,6 +461,8 @@
 				8E0D08F32AB5F9BD00E61FE1 /* BookmarkEntity.swift */,
 				8E59ECF72ABCB84C001012A1 /* CafeDetailEntity.swift */,
 				8E59ED0F2ABD7729001012A1 /* ReviewEntity.swift */,
+				8E9C11C22ADFCCAF00421B8D /* LoginEntity.swift */,
+				8EA1477B2ADD625D0014C2BF /* LoginProvider.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -474,6 +482,7 @@
 			children = (
 				8EC66CCA2AB4506F00204586 /* SynergyAPI.swift */,
 				8E0D08E52AB5CB8100E61FE1 /* BookmarkAPI.swift */,
+				8E9C11BF2ADFC6BD00421B8D /* LoginAPI.swift */,
 				8EC66CD12AB4515100204586 /* NetworkService.swift */,
 			);
 			path = Network;
@@ -736,6 +745,7 @@
 				8E9264D72AA9EDDB00BB63E1 /* LoginView.swift in Sources */,
 				8E0D08ED2AB5CC3C00E61FE1 /* BookmarkGroupEntity.swift in Sources */,
 				8E546F912AADA34F005BCAD4 /* BookmarkDetailView.swift in Sources */,
+				8E9C11C02ADFC6BD00421B8D /* LoginAPI.swift in Sources */,
 				8E76226A2AB488E00096F7D7 /* FeedEntity.swift in Sources */,
 				8E59ED0B2ABD7002001012A1 /* ReviewListItem.swift in Sources */,
 				8E59ECF42ABCB75A001012A1 /* Rating.swift in Sources */,
@@ -751,6 +761,7 @@
 				8E13CD282AAB519800D769EE /* GridCalculator.swift in Sources */,
 				8E9264C82AA9D6CF00BB63E1 /* FilterCriteriaChip.swift in Sources */,
 				8E13CD2D2AAB51CD00D769EE /* RatingCriteria.swift in Sources */,
+				8EA1477C2ADD625D0014C2BF /* LoginProvider.swift in Sources */,
 				8EA1475B2ADBDF790014C2BF /* LoginViewModel.swift in Sources */,
 				8EC66CD22AB4515100204586 /* NetworkService.swift in Sources */,
 				8E9264D12AA9E0B000BB63E1 /* CafeListItem.swift in Sources */,
@@ -761,6 +772,7 @@
 				8E0D08EB2AB5CBCE00E61FE1 /* BookmarkGroupRepository.swift in Sources */,
 				8E13CD2F2AAB576F00D769EE /* SearchViewModel.swift in Sources */,
 				8E546F8D2AAD9F62005BCAD4 /* BookmarkGroup.swift in Sources */,
+				8E9C11C32ADFCCAF00421B8D /* LoginEntity.swift in Sources */,
 				8E13CD372AACD45E00D769EE /* UnderlinedButton.swift in Sources */,
 				8E0D09062AB6FB5300E61FE1 /* SaveBookmarkView.swift in Sources */,
 				8E59ED142ABD7834001012A1 /* ReviewListView.swift in Sources */,
