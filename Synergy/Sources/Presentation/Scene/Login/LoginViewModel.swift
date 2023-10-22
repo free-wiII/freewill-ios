@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 import AuthenticationServices
 
@@ -23,13 +24,14 @@ final class LoginViewModel: NSObject, ObservableObject {
   // MARK: - Properties
   
   private let loginService = MoyaProvider<LoginAPI>()
+  private var cancellables = Set<AnyCancellable>()
   
   enum LoginError: Error {
-    case failToLogin
-    case failToGetUserInfo
+    case failToSignUp
+    case failToSignIn
   }
   
-  enum LoginRequestState {
+  enum LoginRequestState: Equatable {
     case idle
     case success
     case loading
@@ -58,32 +60,16 @@ final class LoginViewModel: NSObject, ObservableObject {
       UserApi.shared.loginWithKakaoTalk { [weak self] (oauthToken, error) in
         if let error = error {
           print(error)
-          self?.loginRequestState = .failure(.failToLogin)
+          self?.loginRequestState = .failure(.failToSignUp)
         } else {
           UserApi.shared.me { [weak self] user, error in
             guard let idToken = oauthToken?.idToken,
-                  let name = user?.kakaoAccount?.name else {
-              self?.loginRequestState = .failure(.failToGetUserInfo)
+                  let name = user?.properties?["nickname"] else {
+              self?.loginRequestState = .failure(.failToSignUp)
               return
             }
             
-            self?.loginService
-              .request(.login(provider: .kakao,
-                              idToken: idToken,
-                              name: name,
-                              email: user?.kakaoAccount?.email)) { result in
-                switch result {
-                case .success(let response):
-                  if response.statusCode == 100 {
-                    self?.loginRequestState = .success
-                  } else {
-                    self?.loginRequestState = .failure(.failToLogin)
-                  }
-                case .failure(let error):
-                  print(error)
-                  self?.loginRequestState = .failure(.failToLogin)
-                }
-              }
+            self?.singUp(provider: .kakao, idToken: idToken, name: name, email: user?.kakaoAccount?.email)
           }
         }
       }
@@ -96,7 +82,7 @@ final class LoginViewModel: NSObject, ObservableObject {
     GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController) { [weak self] result, error in
       if let error = error {
         print(error)
-        self?.loginRequestState = .failure(.failToLogin)
+        self?.loginRequestState = .failure(.failToSignUp)
         return
       }
       
@@ -104,68 +90,111 @@ final class LoginViewModel: NSObject, ObservableObject {
             let idToken = result.user.idToken?.tokenString,
             let name = result.user.profile?.name,
             let email = result.user.profile?.email else {
-        self?.loginRequestState = .failure(.failToGetUserInfo)
+        self?.loginRequestState = .failure(.failToSignUp)
         return
       }
       
-      self?.loginService
-        .request(.login(provider: .google,
-                        idToken: idToken,
-                        name: name,
-                        email: email)) { result in
-          switch result {
-          case .success(let response):
-            if response.statusCode == 100 {
-              self?.loginRequestState = .success
-            } else {
-              self?.loginRequestState = .failure(.failToLogin)
-            }
-          case .failure(let error):
-            print(error)
-            self?.loginRequestState = .failure(.failToLogin)
+      self?.singUp(provider: .google, idToken: idToken, name: name, email: email)
+    }
+  }
+  
+  
+  // MARK: - Private
+  
+  private func singUp(provider: LoginProvider, idToken: String, name: String, email: String?) {
+    loginRequestState = .loading
+    
+    loginService.requestPublisher(.signUp(provider: provider, idToken: idToken, name: name, email: email))
+      .subscribe(on: DispatchQueue.global())
+      .receive(on: DispatchQueue.main)
+      .sink { [weak self] completion in
+        switch completion {
+        case .failure(let error):
+          print(error)
+          self?.loginRequestState = .failure(.failToSignUp)
+        case .finished:
+          break
+        }
+      } receiveValue: { [weak self] response in
+        if 200..<300 ~= response.statusCode {
+          do {
+            let signUpResponse = try JSONDecoder().decode(SignUpResponse.self, from: response.data)
+            // Response로 받은 access, refresh 토큰 키체인에 저장
+            let tokenKeyChain = TokenKeyChain()
+            tokenKeyChain.save(tokenType: .accessToken, value: signUpResponse.data.accessToken)
+            tokenKeyChain.save(tokenType: .refreshToken, value: signUpResponse.data.refreshToken)
+            self?.loginRequestState = .success
+          } catch {
+            self?.loginRequestState = .failure(.failToSignUp)
+          }
+        } else {
+          self?.loginRequestState = .failure(.failToSignUp)
+        }
+      }
+      .store(in: &cancellables)
+  }
+  
+  private func singIn(provider: LoginProvider) {
+    // 키체인에 저장한 access 토큰 불러와서 사용
+    let tokenKeyChain = TokenKeyChain()
+    guard let accessToken = tokenKeyChain.read(tokenType: .accessToken) else {
+      loginRequestState = .failure(.failToSignIn)
+      return
+    }
+    
+    loginService.requestPublisher(.signIn(provider: provider, accessToken: accessToken))
+      .subscribe(on: DispatchQueue.global())
+      .receive(on: DispatchQueue.main)
+      .sink { [weak self] completion in
+        switch completion {
+        case .failure(let error):
+          print(error)
+          self?.loginRequestState = .failure(.failToSignIn)
+        case .finished:
+          break
+        }
+      } receiveValue: { [weak self] response in
+        if 200..<300 ~= response.statusCode {
+          do {
+            let signInResponse = try JSONDecoder().decode(SignInResponse.self, from: response.data)
+            // Response로 받은 access, refresh 토큰 갱신
+            let tokenKeyChain = TokenKeyChain()
+            tokenKeyChain.save(tokenType: .accessToken, value: signInResponse.data.accessToken)
+            tokenKeyChain.save(tokenType: .refreshToken, value: signInResponse.data.refreshToken)
+            self?.loginRequestState = .success
+          } catch {
+            self?.loginRequestState = .failure(.failToSignIn)
           }
         }
-    }
+      }
+      .store(in: &cancellables)
   }
 }
 
 extension LoginViewModel: ASAuthorizationControllerDelegate {
   func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
     guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential else {
-      loginRequestState = .failure(.failToLogin)
+      loginRequestState = .failure(.failToSignUp)
       return
     }
     
     if let email = credential.email {
-      print(email)
-    } else {
+      // 회원가입
       guard let idToken = String(data: credential.identityToken!, encoding: .utf8),
-            let namePrefix = credential.fullName?.namePrefix,
-            let nameSuffix = credential.fullName?.nameSuffix else {
-        loginRequestState = .failure(.failToLogin)
+            let name = credential.fullName,
+            let email = credential.email else {
+        loginRequestState = .failure(.failToSignUp)
         return
       }
       
-      loginService.request(.login(provider: .apple,
-                                  idToken: idToken,
-                                  name: "\(namePrefix) \(nameSuffix)",
-                                  email: credential.email)) { [weak self] result in
-        switch result {
-        case .success(let response):
-          if response.statusCode == 100 {
-            self?.loginRequestState = .success
-          } else {
-            self?.loginRequestState = .failure(.failToLogin)
-          }
-        case .failure(let error):
-          print(error)
-          self?.loginRequestState = .failure(.failToLogin)
-        }
-      }
+      singUp(provider: .apple, idToken: idToken, name: "\(name.familyName ?? "") \(name.givenName ?? "")", email: email)
+    } else {
+      // 로그인
+      singIn(provider: .apple)
     }
   }
   
   func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-    loginRequestState = .failure(.failToLogin)
+    loginRequestState = .failure(.failToSignIn)
   }
 }

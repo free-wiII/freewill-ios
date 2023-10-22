@@ -37,6 +37,11 @@
 		8E266C072AD797FB00E7EFD2 /* UploadCafeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266C062AD797FB00E7EFD2 /* UploadCafeImageView.swift */; };
 		8E266C0C2AD7BE8B00E7EFD2 /* BottomNavigationContainerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266C0B2AD7BE8B00E7EFD2 /* BottomNavigationContainerButton.swift */; };
 		8E266C112AD8367D00E7EFD2 /* UploadCafeImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E266C102AD8367D00E7EFD2 /* UploadCafeImageViewModel.swift */; };
+		8E3984972AE3F70A008A155F /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3984962AE3F70A008A155F /* SignUpResponse.swift */; };
+		8E39849D2AE3FCF4008A155F /* TokenKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E39849C2AE3FCF4008A155F /* TokenKeyChain.swift */; };
+		8E39849F2AE49829008A155F /* SignInEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E39849E2AE49829008A155F /* SignInEntity.swift */; };
+		8E3984A12AE49A53008A155F /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3984A02AE49A53008A155F /* SignInResponse.swift */; };
+		8E3984A32AE49A8C008A155F /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3984A22AE49A8C008A155F /* TokenData.swift */; };
 		8E546F8A2AAD9F54005BCAD4 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F892AAD9F54005BCAD4 /* BookmarkView.swift */; };
 		8E546F8D2AAD9F62005BCAD4 /* BookmarkGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */; };
 		8E546F912AADA34F005BCAD4 /* BookmarkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E546F902AADA34F005BCAD4 /* BookmarkDetailView.swift */; };
@@ -86,7 +91,7 @@
 		8E9264DB2AA9EF3400BB63E1 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9264DA2AA9EF3400BB63E1 /* LoginType.swift */; };
 		8E9765E82AC116D3003E0B2C /* feed_list2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E9765E72AC116D3003E0B2C /* feed_list2.json */; };
 		8E9C11C02ADFC6BD00421B8D /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C11BF2ADFC6BD00421B8D /* LoginAPI.swift */; };
-		8E9C11C32ADFCCAF00421B8D /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C11C22ADFCCAF00421B8D /* LoginEntity.swift */; };
+		8E9C11C32ADFCCAF00421B8D /* SignUpEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C11C22ADFCCAF00421B8D /* SignUpEntity.swift */; };
 		8EA1475B2ADBDF790014C2BF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1475A2ADBDF790014C2BF /* LoginViewModel.swift */; };
 		8EA147602ADBED660014C2BF /* RxKakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA1475F2ADBED660014C2BF /* RxKakaoSDK */; };
 		8EA147622ADBED660014C2BF /* RxKakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA147612ADBED660014C2BF /* RxKakaoSDKAuth */; };
@@ -134,6 +139,11 @@
 		8E266C062AD797FB00E7EFD2 /* UploadCafeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCafeImageView.swift; sourceTree = "<group>"; };
 		8E266C0B2AD7BE8B00E7EFD2 /* BottomNavigationContainerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationContainerButton.swift; sourceTree = "<group>"; };
 		8E266C102AD8367D00E7EFD2 /* UploadCafeImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCafeImageViewModel.swift; sourceTree = "<group>"; };
+		8E3984962AE3F70A008A155F /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		8E39849C2AE3FCF4008A155F /* TokenKeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenKeyChain.swift; sourceTree = "<group>"; };
+		8E39849E2AE49829008A155F /* SignInEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEntity.swift; sourceTree = "<group>"; };
+		8E3984A02AE49A53008A155F /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
+		8E3984A22AE49A8C008A155F /* TokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
 		8E546F892AAD9F54005BCAD4 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
 		8E546F8C2AAD9F62005BCAD4 /* BookmarkGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkGroup.swift; sourceTree = "<group>"; };
 		8E546F902AADA34F005BCAD4 /* BookmarkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDetailView.swift; sourceTree = "<group>"; };
@@ -184,7 +194,7 @@
 		8E9264DA2AA9EF3400BB63E1 /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
 		8E9765E72AC116D3003E0B2C /* feed_list2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = feed_list2.json; sourceTree = "<group>"; };
 		8E9C11BF2ADFC6BD00421B8D /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
-		8E9C11C22ADFCCAF00421B8D /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
+		8E9C11C22ADFCCAF00421B8D /* SignUpEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEntity.swift; sourceTree = "<group>"; };
 		8EA1475A2ADBDF790014C2BF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8EA1475D2ADBE0BE0014C2BF /* Synergy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Synergy.entitlements; sourceTree = "<group>"; };
 		8EA147662ADBEFA70014C2BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -241,6 +251,14 @@
 				8E266C102AD8367D00E7EFD2 /* UploadCafeImageViewModel.swift */,
 			);
 			path = UploadCafe;
+			sourceTree = "<group>";
+		};
+		8E39849B2AE3FCE3008A155F /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				8E39849C2AE3FCF4008A155F /* TokenKeyChain.swift */,
+			);
+			path = KeyChain;
 			sourceTree = "<group>";
 		};
 		8E546F972AADC836005BCAD4 /* Domain */ = {
@@ -461,8 +479,12 @@
 				8E0D08F32AB5F9BD00E61FE1 /* BookmarkEntity.swift */,
 				8E59ECF72ABCB84C001012A1 /* CafeDetailEntity.swift */,
 				8E59ED0F2ABD7729001012A1 /* ReviewEntity.swift */,
-				8E9C11C22ADFCCAF00421B8D /* LoginEntity.swift */,
+				8E9C11C22ADFCCAF00421B8D /* SignUpEntity.swift */,
+				8E39849E2AE49829008A155F /* SignInEntity.swift */,
 				8EA1477B2ADD625D0014C2BF /* LoginProvider.swift */,
+				8E3984962AE3F70A008A155F /* SignUpResponse.swift */,
+				8E3984A02AE49A53008A155F /* SignInResponse.swift */,
+				8E3984A22AE49A8C008A155F /* TokenData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -492,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				8E92647E2AA84B5D00BB63E1 /* SynergyApp.swift */,
+				8E39849B2AE3FCE3008A155F /* KeyChain */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -744,6 +767,7 @@
 				8E266BF62AD630B100E7EFD2 /* UploadCafeNameViewModel.swift in Sources */,
 				8E9264D72AA9EDDB00BB63E1 /* LoginView.swift in Sources */,
 				8E0D08ED2AB5CC3C00E61FE1 /* BookmarkGroupEntity.swift in Sources */,
+				8E3984972AE3F70A008A155F /* SignUpResponse.swift in Sources */,
 				8E546F912AADA34F005BCAD4 /* BookmarkDetailView.swift in Sources */,
 				8E9C11C02ADFC6BD00421B8D /* LoginAPI.swift in Sources */,
 				8E76226A2AB488E00096F7D7 /* FeedEntity.swift in Sources */,
@@ -756,10 +780,13 @@
 				8EC66CCB2AB4506F00204586 /* SynergyAPI.swift in Sources */,
 				8E59ED102ABD7729001012A1 /* ReviewEntity.swift in Sources */,
 				8E13CD262AAB474600D769EE /* SearchView.swift in Sources */,
+				8E3984A32AE49A8C008A155F /* TokenData.swift in Sources */,
 				8E92649A2AA854C800BB63E1 /* TabItem.swift in Sources */,
 				8E0D08F72AB6042900E61FE1 /* BookmarkDetailViewModel.swift in Sources */,
+				8E39849D2AE3FCF4008A155F /* TokenKeyChain.swift in Sources */,
 				8E13CD282AAB519800D769EE /* GridCalculator.swift in Sources */,
 				8E9264C82AA9D6CF00BB63E1 /* FilterCriteriaChip.swift in Sources */,
+				8E3984A12AE49A53008A155F /* SignInResponse.swift in Sources */,
 				8E13CD2D2AAB51CD00D769EE /* RatingCriteria.swift in Sources */,
 				8EA1477C2ADD625D0014C2BF /* LoginProvider.swift in Sources */,
 				8EA1475B2ADBDF790014C2BF /* LoginViewModel.swift in Sources */,
@@ -772,7 +799,7 @@
 				8E0D08EB2AB5CBCE00E61FE1 /* BookmarkGroupRepository.swift in Sources */,
 				8E13CD2F2AAB576F00D769EE /* SearchViewModel.swift in Sources */,
 				8E546F8D2AAD9F62005BCAD4 /* BookmarkGroup.swift in Sources */,
-				8E9C11C32ADFCCAF00421B8D /* LoginEntity.swift in Sources */,
+				8E9C11C32ADFCCAF00421B8D /* SignUpEntity.swift in Sources */,
 				8E13CD372AACD45E00D769EE /* UnderlinedButton.swift in Sources */,
 				8E0D09062AB6FB5300E61FE1 /* SaveBookmarkView.swift in Sources */,
 				8E59ED142ABD7834001012A1 /* ReviewListView.swift in Sources */,
@@ -784,6 +811,7 @@
 				8E0D08E32AB5CAAD00E61FE1 /* BookmarkGroupUseCase.swift in Sources */,
 				8E13CD352AACD24200D769EE /* MyPageView.swift in Sources */,
 				8E88441C2AB77FF900764BDD /* WriteReviewView.swift in Sources */,
+				8E39849F2AE49829008A155F /* SignInEntity.swift in Sources */,
 				8E9264A02AA857C100BB63E1 /* ColorSet.swift in Sources */,
 				8E59ECFA2ABCB8E8001012A1 /* CafeDetailUseCase.swift in Sources */,
 				8E13CD472AACDE2F00D769EE /* FocusableTextField.swift in Sources */,
