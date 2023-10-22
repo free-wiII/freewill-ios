@@ -15,6 +15,10 @@ struct LoginView: View {
   
   @StateObject var viewModel: LoginViewModel
   
+  @State private var isFailToSignInAlertShown = false
+  @State private var isFailToSignUpAlertShown = false
+  @State private var isLoading = false
+  
   
   // MARK: - Views
   
@@ -28,7 +32,6 @@ struct LoginView: View {
       
       Spacer()
       
-
       VStack(spacing: 14) {
         kakaoLoginButton()
         googleLoginButton()
@@ -45,6 +48,42 @@ struct LoginView: View {
   
       Spacer()
         .frame(height: 20)
+    }
+    .overlay {
+      if isLoading {
+        ProgressView()
+      }
+    }
+    .alert("로그인 실패", isPresented: $isFailToSignInAlertShown, actions: {
+      Button("확인", role: .cancel) { }
+    }, message: {
+      Text("다시 시도하여 주시기 바랍니다.")
+    })
+    .alert("회원가입 실패", isPresented: $isFailToSignUpAlertShown, actions: {
+      Button("확인", role: .cancel) { }
+    }, message: {
+      Text("다시 시도하여 주시기 바랍니다.")
+    })
+    .onChange(of: viewModel.loginRequestState) { newValue in
+      isLoading = false
+      
+      switch newValue {
+      case .loading:
+        isLoading = true
+        break
+      case .success:
+        dismiss()
+      case .failure(let error):
+        switch error {
+        case .failToSignIn:
+          isFailToSignInAlertShown = true
+        case .failToSignUp:
+          isFailToSignUpAlertShown = true
+        }
+      default:
+        isLoading = false
+        break
+      }
     }
   }
   
