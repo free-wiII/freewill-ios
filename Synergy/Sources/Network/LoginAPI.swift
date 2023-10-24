@@ -10,7 +10,7 @@ import Moya
 
 enum LoginAPI {
   case signUp(provider: LoginProvider, idToken: String, name: String, email: String?)
-  case signIn(provider: LoginProvider, accessToken: String)
+  case signIn(provider: LoginProvider, idToken: String)
 }
 
 extension LoginAPI: TargetType {
@@ -41,16 +41,12 @@ extension LoginAPI: TargetType {
   var task: Moya.Task {
     switch self {
     case .signUp(let provider, let idToken, let name, let email):
-      let singUpEntity = SignUpEntity(provider: provider, idToken: idToken, name: name, email: email)
-      let singUpData = try! JSONEncoder().encode(singUpEntity)
-      let signUpPart = MultipartFormData(provider: .data(singUpData), name: "signUpRequest", mimeType: "application/json")
-      return .uploadMultipart([signUpPart])
+      let signUpEntity = SignUpEntity(provider: provider, idToken: idToken, name: name, email: email)
+      return .requestCustomJSONEncodable(signUpEntity, encoder: JSONEncoder())
     
-    case .signIn(provider: let provider, accessToken: let accessToken):
-      let signInEntity = SignInEntity(provider: provider, accessToken: accessToken)
-      let signInData = try! JSONEncoder().encode(signInEntity)
-      let singInPart = MultipartFormData(provider: .data(signInData), name: "signInRequest", mimeType: "application/json")
-      return .uploadMultipart([singInPart])
+    case .signIn(let provider, let idToken):
+      let signInEntity = SignInEntity(provider: provider, idToken: idToken)
+      return .requestCustomJSONEncodable(signInEntity, encoder: JSONEncoder())
     }
   }
   
