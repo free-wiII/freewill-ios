@@ -12,6 +12,7 @@ struct UnderlineTextField: View {
   // MARK: - Properties
   
   public var placeholder: String
+  private let textAlignment: NSTextAlignment
   @Binding public var text: String
   @State private var isFocused: Bool
   
@@ -20,9 +21,11 @@ struct UnderlineTextField: View {
   
   public init(placeholder: String = "",
               text: Binding<String>,
+              textAlignment: NSTextAlignment = .left,
               focused: Bool = false) {
     self.placeholder = placeholder
     self._text = text
+    self.textAlignment = textAlignment
     self.isFocused = focused
   }
   
@@ -31,7 +34,8 @@ struct UnderlineTextField: View {
   
   public var body: some View {
     VStack {
-      FocusableTextField(placeholder: placeholder,
+      FocusableTextField(placeholder: placeholder, 
+                         textAlignment: textAlignment,
                          text: $text,
                          focused: $isFocused)
       .foregroundColor(isFocused ? .fwBlack : .fwGray60)
