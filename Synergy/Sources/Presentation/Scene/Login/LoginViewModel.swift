@@ -119,10 +119,11 @@ final class LoginViewModel: NSObject, ObservableObject {
         if 200..<300 ~= response.statusCode {
           do {
             let signUpResponse = try JSONDecoder().decode(SignUpResponse.self, from: response.data)
-            // Response로 받은 access, refresh 토큰 키체인에 저장
+            // Response로 받은 id, access, refresh 토큰 키체인에 저장
             let tokenKeyChain = TokenKeyChain()
-            tokenKeyChain.save(tokenType: .accessToken, value: signUpResponse.data.accessToken)
-            tokenKeyChain.save(tokenType: .refreshToken, value: signUpResponse.data.refreshToken)
+            tokenKeyChain.create(tokenType: .idToken, value: idToken)
+            tokenKeyChain.create(tokenType: .accessToken, value: signUpResponse.data.accessToken)
+            tokenKeyChain.create(tokenType: .refreshToken, value: signUpResponse.data.refreshToken)
             self?.loginRequestState = .success
           } catch {
             self?.loginRequestState = .failure(.failToSignUp)
@@ -137,12 +138,12 @@ final class LoginViewModel: NSObject, ObservableObject {
   private func singIn(provider: LoginProvider) {
     // 키체인에 저장한 access 토큰 불러와서 사용
     let tokenKeyChain = TokenKeyChain()
-    guard let accessToken = tokenKeyChain.read(tokenType: .accessToken) else {
+    guard let idToken = tokenKeyChain.read(tokenType: .accessToken) else {
       loginRequestState = .failure(.failToSignIn)
       return
     }
     
-    loginService.requestPublisher(.signIn(provider: provider, accessToken: accessToken))
+    loginService.requestPublisher(.signIn(provider: provider, idToken: idToken))
       .subscribe(on: DispatchQueue.global())
       .receive(on: DispatchQueue.main)
       .sink { [weak self] completion in
@@ -159,12 +160,14 @@ final class LoginViewModel: NSObject, ObservableObject {
             let signInResponse = try JSONDecoder().decode(SignInResponse.self, from: response.data)
             // Response로 받은 access, refresh 토큰 갱신
             let tokenKeyChain = TokenKeyChain()
-            tokenKeyChain.save(tokenType: .accessToken, value: signInResponse.data.accessToken)
-            tokenKeyChain.save(tokenType: .refreshToken, value: signInResponse.data.refreshToken)
+            tokenKeyChain.create(tokenType: .accessToken, value: signInResponse.data.accessToken)
+            tokenKeyChain.create(tokenType: .refreshToken, value: signInResponse.data.refreshToken)
             self?.loginRequestState = .success
           } catch {
             self?.loginRequestState = .failure(.failToSignIn)
           }
+        } else {
+          self?.loginRequestState = .failure(.failToSignIn)
         }
       }
       .store(in: &cancellables)

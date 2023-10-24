@@ -9,5 +9,5 @@ import Foundation
 
 struct SignInEntity: Encodable {
   let provider: LoginProvider
-  let accessToken: String
+  let idToken: String
 }
