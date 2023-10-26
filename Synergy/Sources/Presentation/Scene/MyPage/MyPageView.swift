@@ -12,13 +12,14 @@ struct MyPageView: View {
   // MARK: - Properties
   
   @EnvironmentObject private var tabBarConfig: TabBarConfig
+  @StateObject var viewModel: MyPageViewModel
   
   
   // MARK: - Views
   
   var body: some View {
     NavigationView {
-      VStack {
+      VStack(spacing: 0) {
         NavigationBar {
           Text("마이 페이지")
             .font(.system(size: 24, weight: .bold))
@@ -42,20 +43,32 @@ struct MyPageView: View {
           }
         }
         
-        VStack(spacing: 0) {
-          infoSection()
-          
-          Spacer()
-          
-          logoutButton()
+        if viewModel.isLoading {
+          VStack {
+            ProgressView()
+          }
+          .frame(maxHeight: .infinity)
+        } else {
+          if let profile = viewModel.profile {
+            VStack(spacing: 0) {
+              infoSection(profile: profile)
+              
+              Spacer()
+              
+              logoutButton()
+            }
+            .padding(.vertical, 20)
+          }
         }
-        .padding(.vertical, 20)
       }
     }
     .navigationViewStyle(.stack)
+    .onAppear {
+      viewModel.fetchProfile()
+    }
   }
   
-  private func infoSection() -> some View {
+  private func infoSection(profile: Profile) -> some View {
     HStack {
       Circle()
         .fill(Color.fwGray20)
@@ -64,11 +77,11 @@ struct MyPageView: View {
       Spacer()
       
       VStack(alignment: .trailing, spacing: 8) {
-        Text("편의점 떡볶이")
+        Text(profile.nickname)
           .font(.system(size: 22, weight: .bold))
           .foregroundColor(.fwBlack)
         
-        Text("avocado34.131@gmail.com")
+        Text(profile.email)
           .font(.system(size: 15))
           .foregroundColor(.fwGray60)
           .tint(Color.fwGray60) // url color tinting 들어가는 거 방지
@@ -86,6 +99,6 @@ struct MyPageView: View {
 
 struct MyPageView_Previews: PreviewProvider {
   static var previews: some View {
-    MyPageView()
+    MyPageView(viewModel: .init())
   }
 }

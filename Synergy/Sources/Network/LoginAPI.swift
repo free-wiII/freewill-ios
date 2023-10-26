@@ -51,6 +51,12 @@ extension LoginAPI: TargetType {
   }
   
   var headers: [String : String]? {
-    return nil
+    switch self {
+    case .signUp:
+      return nil
+    
+    case .signIn:
+      return nil
+    }
   }
 }

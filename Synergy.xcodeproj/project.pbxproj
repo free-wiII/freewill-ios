@@ -106,6 +106,12 @@
 		8EC66CCE2AB450AE00204586 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC66CCD2AB450AE00204586 /* CombineMoya */; };
 		8EC66CD02AB450AE00204586 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC66CCF2AB450AE00204586 /* Moya */; };
 		8EC66CD22AB4515100204586 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CD12AB4515100204586 /* NetworkService.swift */; };
+		8ED77D732AE7812C00B788F9 /* ProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED77D722AE7812C00B788F9 /* ProfileUseCase.swift */; };
+		8ED77D762AE781D600B788F9 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED77D752AE781D600B788F9 /* ProfileRepository.swift */; };
+		8ED77D782AE7820D00B788F9 /* ProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED77D772AE7820D00B788F9 /* ProfileAPI.swift */; };
+		8ED77D7C2AE782A700B788F9 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED77D7B2AE782A700B788F9 /* ProfileEntity.swift */; };
+		8ED77D7E2AE783A000B788F9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED77D7D2AE783A000B788F9 /* Profile.swift */; };
+		8ED77D822AE7866400B788F9 /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED77D812AE7866400B788F9 /* MyPageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -203,6 +209,12 @@
 		8EC66CC82AB44FCA00204586 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		8EC66CCA2AB4506F00204586 /* SynergyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynergyAPI.swift; sourceTree = "<group>"; };
 		8EC66CD12AB4515100204586 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		8ED77D722AE7812C00B788F9 /* ProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCase.swift; sourceTree = "<group>"; };
+		8ED77D752AE781D600B788F9 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		8ED77D772AE7820D00B788F9 /* ProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAPI.swift; sourceTree = "<group>"; };
+		8ED77D7B2AE782A700B788F9 /* ProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
+		8ED77D7D2AE783A000B788F9 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		8ED77D812AE7866400B788F9 /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				8E13CD342AACD24200D769EE /* MyPageView.swift */,
+				8ED77D812AE7866400B788F9 /* MyPageViewModel.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -445,6 +458,7 @@
 				8E59ECF12ABCB743001012A1 /* Review.swift */,
 				8E59ECF32ABCB75A001012A1 /* Rating.swift */,
 				8E59ECF52ABCB764001012A1 /* Location.swift */,
+				8ED77D7D2AE783A000B788F9 /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -457,6 +471,7 @@
 				8E0D08FE2AB606BD00E61FE1 /* BookmarkUseCase.swift */,
 				8E59ECF92ABCB8E8001012A1 /* CafeDetailUseCase.swift */,
 				8E59ED112ABD77BA001012A1 /* ReviewListUseCase.swift */,
+				8ED77D722AE7812C00B788F9 /* ProfileUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -467,6 +482,7 @@
 				8EC66CC62AB44E0A00204586 /* SynergyRepository.swift */,
 				8E0D08EA2AB5CBCE00E61FE1 /* BookmarkGroupRepository.swift */,
 				8E0D08FC2AB605E400E61FE1 /* BookmarkRepository.swift */,
+				8ED77D752AE781D600B788F9 /* ProfileRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -485,6 +501,7 @@
 				8E3984962AE3F70A008A155F /* SignUpResponse.swift */,
 				8E3984A02AE49A53008A155F /* SignInResponse.swift */,
 				8E3984A22AE49A8C008A155F /* TokenData.swift */,
+				8ED77D7B2AE782A700B788F9 /* ProfileEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -506,6 +523,7 @@
 				8E0D08E52AB5CB8100E61FE1 /* BookmarkAPI.swift */,
 				8E9C11BF2ADFC6BD00421B8D /* LoginAPI.swift */,
 				8EC66CD12AB4515100204586 /* NetworkService.swift */,
+				8ED77D772AE7820D00B788F9 /* ProfileAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -764,7 +782,10 @@
 				8E546F942AADA3B7005BCAD4 /* Bookmark.swift in Sources */,
 				8E9264D32AA9E44800BB63E1 /* BlurView.swift in Sources */,
 				8E9264CB2AA9D98000BB63E1 /* FilterCriteriaSelector.swift in Sources */,
+				8ED77D7E2AE783A000B788F9 /* Profile.swift in Sources */,
 				8E266BF62AD630B100E7EFD2 /* UploadCafeNameViewModel.swift in Sources */,
+				8ED77D822AE7866400B788F9 /* MyPageViewModel.swift in Sources */,
+				8ED77D7C2AE782A700B788F9 /* ProfileEntity.swift in Sources */,
 				8E9264D72AA9EDDB00BB63E1 /* LoginView.swift in Sources */,
 				8E0D08ED2AB5CC3C00E61FE1 /* BookmarkGroupEntity.swift in Sources */,
 				8E3984972AE3F70A008A155F /* SignUpResponse.swift in Sources */,
@@ -784,7 +805,9 @@
 				8E92649A2AA854C800BB63E1 /* TabItem.swift in Sources */,
 				8E0D08F72AB6042900E61FE1 /* BookmarkDetailViewModel.swift in Sources */,
 				8E39849D2AE3FCF4008A155F /* TokenKeyChain.swift in Sources */,
+				8ED77D732AE7812C00B788F9 /* ProfileUseCase.swift in Sources */,
 				8E13CD282AAB519800D769EE /* GridCalculator.swift in Sources */,
+				8ED77D782AE7820D00B788F9 /* ProfileAPI.swift in Sources */,
 				8E9264C82AA9D6CF00BB63E1 /* FilterCriteriaChip.swift in Sources */,
 				8E3984A12AE49A53008A155F /* SignInResponse.swift in Sources */,
 				8E13CD2D2AAB51CD00D769EE /* RatingCriteria.swift in Sources */,
@@ -812,6 +835,7 @@
 				8E13CD352AACD24200D769EE /* MyPageView.swift in Sources */,
 				8E88441C2AB77FF900764BDD /* WriteReviewView.swift in Sources */,
 				8E39849F2AE49829008A155F /* SignInEntity.swift in Sources */,
+				8ED77D762AE781D600B788F9 /* ProfileRepository.swift in Sources */,
 				8E9264A02AA857C100BB63E1 /* ColorSet.swift in Sources */,
 				8E59ECFA2ABCB8E8001012A1 /* CafeDetailUseCase.swift in Sources */,
 				8E13CD472AACDE2F00D769EE /* FocusableTextField.swift in Sources */,

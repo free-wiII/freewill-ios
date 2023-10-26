@@ -13,6 +13,7 @@ struct FocusableTextField: UIViewRepresentable {
   // MARK: - Properties
   
   var placeholder = ""
+  let textAlignment: NSTextAlignment
   @Binding var text: String
   @Binding var focused: Bool
   
@@ -22,6 +23,7 @@ struct FocusableTextField: UIViewRepresentable {
   func makeUIView(context: Context) -> UITextField {
     let textField = UITextField()
     textField.placeholder = placeholder
+    textField.textAlignment = textAlignment
     
     textField.delegate = context.coordinator
     textField.addTarget(context.coordinator, action: #selector(Coordinator.textFieldEditingChanged(_:)), for: .editingChanged)

@@ -38,8 +38,8 @@ struct EditProfileView: View {
       VStack(spacing: 10) {
         Circle()
           .fill(Color.fwGray20)
-          .frame(width: 112, height: 112)
-          .padding(.top, 24)
+          .frame(width: 200, height: 200)
+          .padding(.top, 56)
         
         Button {
           
@@ -63,9 +63,12 @@ struct EditProfileView: View {
         }
       }
       
-      UnderlineTextField(placeholder: "새로운 닉네임", text: .constant("홍길동"), focused: false)
-        .padding(.horizontal, 24)
-        .padding(.top, 48)
+      UnderlineTextField(placeholder: "새로운 닉네임",
+                         text: .constant("홍길동"),
+                         textAlignment: .center,
+                         focused: false)
+      .frame(width: 200)
+      .padding(.top, 48)
       
       Spacer()
       
