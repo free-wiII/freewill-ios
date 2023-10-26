@@ -28,7 +28,7 @@ struct MainTabbedView: View {
         BookmarkView(viewModel: .init())
           .tag(TabItem.bookmark)
         
-        MyPageView()
+        MyPageView(viewModel: .init())
           .tag(TabItem.myPage)
       }
       

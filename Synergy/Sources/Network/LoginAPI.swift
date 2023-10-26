@@ -11,7 +11,6 @@ import Moya
 enum LoginAPI {
   case signUp(provider: LoginProvider, idToken: String, name: String, email: String?)
   case signIn(provider: LoginProvider, idToken: String)
-  case profile(idToken: String)
 }
 
 extension LoginAPI: TargetType {
@@ -26,9 +25,6 @@ extension LoginAPI: TargetType {
     
     case .signIn:
       return "/api/v1/auth/sign-in"
-      
-    case .profile:
-      return "/api/v1/profiles"
     }
   }
   
@@ -39,9 +35,6 @@ extension LoginAPI: TargetType {
     
     case .signIn:
       return .post
-      
-    case .profile:
-      return .get
     }
   }
   
@@ -54,9 +47,6 @@ extension LoginAPI: TargetType {
     case .signIn(let provider, let idToken):
       let signInEntity = SignInEntity(provider: provider, idToken: idToken)
       return .requestCustomJSONEncodable(signInEntity, encoder: JSONEncoder())
-      
-    case .profile:
-      return .requestPlain
     }
   }
   
@@ -67,9 +57,6 @@ extension LoginAPI: TargetType {
     
     case .signIn:
       return nil
-      
-    case .profile(let idToken):
-      return ["Authorization": idToken]
     }
   }
 }
