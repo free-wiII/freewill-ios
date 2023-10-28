@@ -138,7 +138,7 @@ final class LoginViewModel: NSObject, ObservableObject {
   private func singIn(provider: LoginProvider) {
     // 키체인에 저장한 access 토큰 불러와서 사용
     let tokenKeyChain = TokenKeyChain()
-    guard let idToken = tokenKeyChain.read(tokenType: .accessToken) else {
+    guard let idToken = tokenKeyChain.read(tokenType: .idToken) else {
       loginRequestState = .failure(.failToSignIn)
       return
     }
