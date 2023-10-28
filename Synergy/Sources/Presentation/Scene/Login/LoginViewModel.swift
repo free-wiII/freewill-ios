@@ -58,18 +58,25 @@ final class LoginViewModel: NSObject, ObservableObject {
     
     if UserApi.isKakaoTalkLoginAvailable() {
       UserApi.shared.loginWithKakaoTalk { [weak self] (oauthToken, error) in
-        if let error = error {
-          print(error)
-          self?.loginRequestState = .failure(.failToSignUp)
-        } else {
-          UserApi.shared.me { [weak self] user, error in
-            guard let idToken = oauthToken?.idToken,
-                  let name = user?.properties?["nickname"] else {
-              self?.loginRequestState = .failure(.failToSignUp)
-              return
+        UserApi.shared.me { [weak self] user, error in
+          if let error {
+            // 카카오로 회원가입
+            UserApi.shared.me { [weak self] user, error in
+              guard let idToken = oauthToken?.idToken,
+                    let name = user?.properties?["nickname"] else {
+                self?.loginRequestState = .failure(.failToSignUp)
+                return
+              }
+              
+              self?.signUp(provider: .kakao, idToken: idToken, name: name, email: user?.kakaoAccount?.email)
             }
-            
-            self?.singUp(provider: .kakao, idToken: idToken, name: name, email: user?.kakaoAccount?.email)
+          } else {
+            // 카카오로 로그인
+            if let idToken = oauthToken?.idToken {
+              self?.signIn(provider: .kakao, idToken: idToken)
+            } else {
+              self?.loginRequestState = .failure(.failToSignIn)
+            }
           }
         }
       }
@@ -94,14 +101,14 @@ final class LoginViewModel: NSObject, ObservableObject {
         return
       }
       
-      self?.singUp(provider: .google, idToken: idToken, name: name, email: email)
+      self?.signUp(provider: .google, idToken: idToken, name: name, email: email)
     }
   }
   
   
   // MARK: - Private
   
-  private func singUp(provider: LoginProvider, idToken: String, name: String, email: String?) {
+  private func signUp(provider: LoginProvider, idToken: String, name: String, email: String?) {
     loginRequestState = .loading
     
     loginService.requestPublisher(.signUp(provider: provider, idToken: idToken, name: name, email: email))
@@ -135,14 +142,7 @@ final class LoginViewModel: NSObject, ObservableObject {
       .store(in: &cancellables)
   }
   
-  private func singIn(provider: LoginProvider) {
-    // 키체인에 저장한 access 토큰 불러와서 사용
-    let tokenKeyChain = TokenKeyChain()
-    guard let idToken = tokenKeyChain.read(tokenType: .idToken) else {
-      loginRequestState = .failure(.failToSignIn)
-      return
-    }
-    
+  private func signIn(provider: LoginProvider, idToken: String) {
     loginService.requestPublisher(.signIn(provider: provider, idToken: idToken))
       .subscribe(on: DispatchQueue.global())
       .receive(on: DispatchQueue.main)
@@ -190,10 +190,17 @@ extension LoginViewModel: ASAuthorizationControllerDelegate {
         return
       }
       
-      singUp(provider: .apple, idToken: idToken, name: "\(name.familyName ?? "") \(name.givenName ?? "")", email: email)
+      signUp(provider: .apple, idToken: idToken, name: "\(name.familyName ?? "") \(name.givenName ?? "")", email: email)
     } else {
       // 로그인
-      singIn(provider: .apple)
+      // 키체인에 저장한 idToken 불러와서 사용
+      let tokenKeyChain = TokenKeyChain()
+      guard let idToken = tokenKeyChain.read(tokenType: .idToken) else {
+        loginRequestState = .failure(.failToSignIn)
+        return
+      }
+      
+      signIn(provider: .apple, idToken: idToken)
     }
   }
   
