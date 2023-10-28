@@ -14,6 +14,11 @@ struct MyPageView: View {
   @EnvironmentObject private var tabBarConfig: TabBarConfig
   @StateObject var viewModel: MyPageViewModel
   
+  private let sessionManager = LoginSessionManager()
+  
+  @State private var isLoggedIn = false
+  @State private var isLoginViewShown = false
+  
   
   // MARK: - Views
   
@@ -41,30 +46,81 @@ struct MyPageView: View {
               .frame(width: 32, height: 32)
               .foregroundColor(.fwBlack)
           }
+          .opacity(isLoggedIn ? 1.0 : 0)
         }
         
-        if viewModel.isLoading {
-          VStack {
-            ProgressView()
-          }
-          .frame(maxHeight: .infinity)
+        if isLoggedIn {
+          loggedInView()
         } else {
-          if let profile = viewModel.profile {
-            VStack(spacing: 0) {
-              infoSection(profile: profile)
-              
-              Spacer()
-              
-              logoutButton()
-            }
-            .padding(.vertical, 20)
-          }
+          loggedOutView()
         }
       }
     }
     .navigationViewStyle(.stack)
     .onAppear {
+      checkLoginState()
+    }
+    .sheet(isPresented: $isLoginViewShown) {
+      let viewModel = LoginViewModel()
+      LoginView(viewModel: viewModel)
+        .onDisappear {
+          checkLoginState()
+        }
+    }
+  }
+  
+  private func checkLoginState() {
+    if sessionManager.isLoggedIn() {
       viewModel.fetchProfile()
+      isLoggedIn = true
+    } else {
+      isLoggedIn = false
+    }
+  }
+  
+  private func loggedOutView() -> some View {
+    VStack(spacing: 28) {
+      Text("로그인 및 회원가입을 하여 더 많은\n기능을 사용해 보세요!")
+        .font(.system(size: 15, weight: .medium))
+        .foregroundStyle(Color.fwGray70)
+        .multilineTextAlignment(.center)
+      
+      Button {
+        isLoginViewShown = true
+      } label: {
+        RoundedRectangle(cornerRadius: 12)
+          .fill(Color.fwBlack)
+          .overlay {
+            Text("로그인/회원가입")
+              .font(.system(size: 15, weight: .bold))
+              .foregroundStyle(Color.fwWhite)
+          }
+          .frame(width: 140, height: 52)
+      }
+    }
+    .frame(maxHeight: .infinity)
+  }
+  
+  @ViewBuilder
+  private func loggedInView() -> some View {
+    if viewModel.isLoading {
+      VStack {
+        ProgressView()
+      }
+      .frame(maxHeight: .infinity)
+    } else {
+      if let profile = viewModel.profile {
+        VStack(spacing: 0) {
+          infoSection(profile: profile)
+          
+          Spacer()
+          
+          UnderlinedButton("로그아웃") {
+            isLoggedIn = false
+          }
+        }
+        .padding(.vertical, 20)
+      }
     }
   }
   
@@ -88,12 +144,6 @@ struct MyPageView: View {
       }
     }
     .padding(.horizontal, 24)
-  }
-  
-  private func logoutButton() -> some View {
-    UnderlinedButton("로그아웃") {
-      // logout action
-    }
   }
 }
 
