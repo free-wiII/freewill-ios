@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 import Combine
 
 import AuthenticationServices
@@ -15,9 +16,9 @@ import KakaoSDKAuth
 import KakaoSDKUser
 
 import GoogleSignIn
-import UIKit
 
 import Moya
+import SwiftyJSON
 
 final class LoginViewModel: NSObject, ObservableObject {
   
@@ -60,23 +61,20 @@ final class LoginViewModel: NSObject, ObservableObject {
       UserApi.shared.loginWithKakaoTalk { [weak self] (oauthToken, error) in
         UserApi.shared.me { [weak self] user, error in
           if let error {
-            // 카카오로 회원가입
-            UserApi.shared.me { [weak self] user, error in
-              guard let idToken = oauthToken?.idToken,
-                    let name = user?.properties?["nickname"] else {
-                self?.loginRequestState = .failure(.failToSignUp)
-                return
-              }
-              
-              self?.signUp(provider: .kakao, idToken: idToken, name: name, email: user?.kakaoAccount?.email)
+            print(error)
+            self?.loginRequestState = .failure(.failToSignUp)
+            return
+          }
+          
+          // 회원 가입 및 로그인 시도
+          UserApi.shared.me { [weak self] user, error in
+            guard let idToken = oauthToken?.idToken,
+                  let name = user?.properties?["nickname"] else {
+              self?.loginRequestState = .failure(.failToSignUp)
+              return
             }
-          } else {
-            // 카카오로 로그인
-            if let idToken = oauthToken?.idToken {
-              self?.signIn(provider: .kakao, idToken: idToken)
-            } else {
-              self?.loginRequestState = .failure(.failToSignIn)
-            }
+            
+            self?.signUp(provider: .kakao, idToken: idToken, name: name, email: user?.kakaoAccount?.email)
           }
         }
       }
@@ -123,17 +121,25 @@ final class LoginViewModel: NSObject, ObservableObject {
           break
         }
       } receiveValue: { [weak self] response in
+        let responseJson = JSON(response.data)
         if 200..<300 ~= response.statusCode {
-          do {
-            let signUpResponse = try JSONDecoder().decode(SignUpResponse.self, from: response.data)
-            // Response로 받은 id, access, refresh 토큰 키체인에 저장
-            let tokenKeyChain = TokenKeyChain()
-            tokenKeyChain.create(tokenType: .idToken, value: idToken)
-            tokenKeyChain.create(tokenType: .accessToken, value: signUpResponse.data.accessToken)
-            tokenKeyChain.create(tokenType: .refreshToken, value: signUpResponse.data.refreshToken)
-            self?.loginRequestState = .success
-          } catch {
-            self?.loginRequestState = .failure(.failToSignUp)
+          let status = responseJson["status"]
+          if status == "SUCCESS" {
+            // 회원가입 성공
+            do {
+              let signUpResponse = try JSONDecoder().decode(SignUpResponse.self, from: response.data)
+              // Response로 받은 id, access, refresh 토큰 키체인에 저장
+              let tokenKeyChain = TokenKeyChain()
+              tokenKeyChain.create(tokenType: .idToken, value: idToken)
+              tokenKeyChain.create(tokenType: .accessToken, value: signUpResponse.data.accessToken)
+              tokenKeyChain.create(tokenType: .refreshToken, value: signUpResponse.data.refreshToken)
+              self?.loginRequestState = .success
+            } catch {
+              self?.loginRequestState = .failure(.failToSignUp)
+            }
+          } else if status == "FAIL" {
+            // 이미 가입된 유저 -> 로그인 시도
+            self?.signIn(provider: provider, idToken: idToken)
           }
         } else {
           self?.loginRequestState = .failure(.failToSignUp)
@@ -156,16 +162,24 @@ final class LoginViewModel: NSObject, ObservableObject {
         }
       } receiveValue: { [weak self] response in
         if 200..<300 ~= response.statusCode {
-          do {
-            let signInResponse = try JSONDecoder().decode(SignInResponse.self, from: response.data)
-            // Response로 받은 access, refresh 토큰 갱신
-            let tokenKeyChain = TokenKeyChain()
-            tokenKeyChain.create(tokenType: .accessToken, value: signInResponse.data.accessToken)
-            tokenKeyChain.create(tokenType: .refreshToken, value: signInResponse.data.refreshToken)
-            self?.loginRequestState = .success
-          } catch {
-            self?.loginRequestState = .failure(.failToSignIn)
-          }
+          
+            let responseJson = JSON(response.data)
+            let status = responseJson["status"]
+            
+            if status == "SUCCESS" {
+              do {
+                let signInResponse = try JSONDecoder().decode(SignInResponse.self, from: response.data)
+                // Response로 받은 access, refresh 토큰 갱신
+                let tokenKeyChain = TokenKeyChain()
+                tokenKeyChain.create(tokenType: .accessToken, value: signInResponse.data.accessToken)
+                tokenKeyChain.create(tokenType: .refreshToken, value: signInResponse.data.refreshToken)
+                self?.loginRequestState = .success
+              } catch {
+                self?.loginRequestState = .failure(.failToSignIn)
+              }
+            } else if status == "FAIL" {
+              self?.loginRequestState = .failure(.failToSignIn)
+            }
         } else {
           self?.loginRequestState = .failure(.failToSignIn)
         }
@@ -200,7 +214,7 @@ extension LoginViewModel: ASAuthorizationControllerDelegate {
         return
       }
       
-      signIn(provider: .apple, idToken: idToken)
+      signUp(provider: .apple, idToken: idToken, name: "", email: nil)
     }
   }
   

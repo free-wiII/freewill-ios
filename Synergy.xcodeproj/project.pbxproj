@@ -107,6 +107,7 @@
 		8EC66CCE2AB450AE00204586 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC66CCD2AB450AE00204586 /* CombineMoya */; };
 		8EC66CD02AB450AE00204586 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC66CCF2AB450AE00204586 /* Moya */; };
 		8EC66CD22AB4515100204586 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC66CD12AB4515100204586 /* NetworkService.swift */; };
+		8ECD228F2AF7483400FF836B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 8ECD228E2AF7483400FF836B /* SwiftyJSON */; };
 		8ED77D732AE7812C00B788F9 /* ProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED77D722AE7812C00B788F9 /* ProfileUseCase.swift */; };
 		8ED77D762AE781D600B788F9 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED77D752AE781D600B788F9 /* ProfileRepository.swift */; };
 		8ED77D782AE7820D00B788F9 /* ProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED77D772AE7820D00B788F9 /* ProfileAPI.swift */; };
@@ -224,6 +225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ECD228F2AF7483400FF836B /* SwiftyJSON in Frameworks */,
 				8EA147642ADBED660014C2BF /* RxKakaoSDKCommon in Frameworks */,
 				8EC66CCE2AB450AE00204586 /* CombineMoya in Frameworks */,
 				8EA147602ADBED660014C2BF /* RxKakaoSDK in Frameworks */,
@@ -707,6 +709,7 @@
 				8EA147632ADBED660014C2BF /* RxKakaoSDKCommon */,
 				8EA147732ADCDB6D0014C2BF /* GoogleSignIn */,
 				8EA147752ADCDB6D0014C2BF /* GoogleSignInSwift */,
+				8ECD228E2AF7483400FF836B /* SwiftyJSON */,
 			);
 			productName = freewill;
 			productReference = 8E92647B2AA84B5D00BB63E1 /* Synergy.app */;
@@ -741,6 +744,7 @@
 				8EC66CCC2AB450AE00204586 /* XCRemoteSwiftPackageReference "Moya" */,
 				8EA1475E2ADBED660014C2BF /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */,
 				8EA147722ADCDB6D0014C2BF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				8ECD228D2AF7483400FF836B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 8E92647C2AA84B5D00BB63E1 /* Products */;
 			projectDirPath = "";
@@ -1119,6 +1123,14 @@
 				version = 15.0.3;
 			};
 		};
+		8ECD228D2AF7483400FF836B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1165,6 +1177,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8EC66CCC2AB450AE00204586 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		8ECD228E2AF7483400FF836B /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8ECD228D2AF7483400FF836B /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
